@@ -1,0 +1,37 @@
+version: v1beta11
+
+# `images` specifies all images that may need to be built for this project
+images:
+  frontend: # This image is called `frontend` and refers to the frontend directory which has the source code for our frontend container
+    dockerfile: ./frontend/Dockerfile
+    image: 319923562419.dkr.ecr.ap-southeast-2.amazonaws.com/lumina-images/frontend
+    context: frontend/
+    build: # Build on the clusters architecture (which may not be running on ARM)
+      buildKit:
+        inCluster: {}
+
+deployments:
+  - $(node ./kubernetes/service-prep.js NAMESPACE=${DEVSPACE_NAMESPACE})
+
+# `deployments` tells DevSpace how to deploy this project
+dev:
+  sync:
+  - imageSelector: 319923562419.dkr.ecr.ap-southeast-2.amazonaws.com/lumina-images/frontend # Select the Pod that runs our `frontend` image
+    localSubPath: './frontend'
+    excludePaths:
+      - .git/
+
+vars:
+  - name: ENV
+    value: dev
+
+profiles:
+- name: development
+
+hooks:
+- command: |
+    aws sso login
+  events: ["devCommand:before:execute"]
+- command: |
+    aws ecr get-login-password | docker login --username AWS --password-stdin 319923562419.dkr.ecr.ap-southeast-2.amazonaws.com
+  events: ["devCommand:before:execute"]

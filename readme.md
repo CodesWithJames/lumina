@@ -59,7 +59,7 @@ Write the following text into the nano text editor, and when finished, press con
 [default]
 sso_start_url = https://framework-app.awsapps.com/start
 sso_region = ap-southeast-2
-sso_account_id = 239930134035
+sso_account_id = {YOUR USER ACCOUNT ID HERE}
 sso_role_name = AdministratorAccess
 region = ap-southeast-2
 output = json

@@ -1,0 +1,568 @@
+{"level":"info","msg":"[0:sync] Trying to download devspacehelper into pod albert/frontend-deployment-albert-99d7487dd-wvmr5","time":"2022-01-05T17:43:20+10:30"}
+{"level":"info","msg":"[0:sync] Warning: Couldn't download devspacehelper in container, error: stdout, stderr: \n sh: curl: not found\n: command terminated with exit code 127","time":"2022-01-05T17:43:21+10:30"}
+{"level":"info","msg":"[0:sync] Trying to inject devspacehelper from local machine","time":"2022-01-05T17:43:21+10:30"}
+{"level":"info","msg":"[0:sync] Start syncing","time":"2022-01-05T17:43:25+10:30"}
+{"level":"info","msg":"[0:sync] Helper - Use inotify as watching method in container","time":"2022-01-05T17:43:25+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/node-which","time":"2022-01-05T17:43:27+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/sander/node_modules/.bin/rimraf","time":"2022-01-05T17:43:27+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/resolve","time":"2022-01-05T17:43:27+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/sorcery","time":"2022-01-05T17:43:27+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/semver","time":"2022-01-05T17:43:27+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/svelte-kit","time":"2022-01-05T17:43:27+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/mkdirp","time":"2022-01-05T17:43:27+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/rimraf","time":"2022-01-05T17:43:27+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/svelte-check","time":"2022-01-05T17:43:27+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/rollup","time":"2022-01-05T17:43:27+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/esvalidate","time":"2022-01-05T17:43:27+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/tsserver","time":"2022-01-05T17:43:27+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/js-yaml","time":"2022-01-05T17:43:27+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/nanoid","time":"2022-01-05T17:43:27+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/eslint","time":"2022-01-05T17:43:27+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/tsc","time":"2022-01-05T17:43:27+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/esparse","time":"2022-01-05T17:43:27+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/esbuild","time":"2022-01-05T17:43:27+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/vite","time":"2022-01-05T17:43:27+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/acorn","time":"2022-01-05T17:43:27+10:30"}
+{"level":"info","msg":"[0:sync] Downstream - Initial sync completed","time":"2022-01-05T17:43:27+10:30"}
+{"level":"info","msg":"[0:sync] Downstream - Download 21 file(s) (Uncompressed: ~217.18 KB)","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Downstream - Successfully processed 21 change(s)","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Handling 82 removes","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/fira-mono-greek-ext-400-normal-8659ae46.woff2'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/chunks/index-22591d9c.js'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/endpoints/todos/index.json.ts.js'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/pages/todos/index.svelte-784042c1.css'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/app.js'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/pages'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove 'node_modules/esbuild-linux-64/bin/esbuild'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/pages'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/app/env.js'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/pages/__layout.svelte-cb26f3b2.js'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/nodes/1.js'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/pages/error.svelte.js'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/fira-mono-latin-400-normal-a2f9dbe8.woff2'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/pages/index.svelte.js'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/pages/about.svelte.js'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/pages/todos/index.svelte.js'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/generated/manifest.js'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/components/layout.svelte'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/endpoints'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/internal/start.js'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/app.js'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/generated/root.svelte'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/fira-mono-all-400-normal-0d19eb5d.woff'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/start-cad90ddf.js'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/app/stores.js'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/fira-mono-cyrillic-ext-400-normal-b3140dd3.woff2'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/fira-mono-latin-ext-400-normal-b6331a25.woff2'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/internal/singletons.js'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/pages/todos'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/start-61d1577b.css'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove 'node_modules/esbuild-linux-64/README.md'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/app'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/nodes/4.js'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/pages/about.svelte-bf4528fa.css'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/kit.js'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/chunks'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/env.js'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/nodes/2.js'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/pages/__layout.svelte-a7861b78.css'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/app/navigation.js'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/chunks'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/endpoints/todos'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/pages/todos'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/pages/about.svelte-2d51dc8e.js'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/generated'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/manifest.js'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove 'node_modules/esbuild-linux-64/package.json'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/nodes/3.js'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/components/error.svelte'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/pages/index.svelte-f4f814c9.js'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/pages/todos'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/pages/index.svelte-c63fe1c6.css'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/chunks'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/chunks/utils.js'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/components'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/pages'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove 'node_modules/esbuild-linux-64/bin'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/app/paths.js'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/nodes/0.js'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/chunks/vendor-92f01141.js'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/nodes'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/chunks/_api-e66b1c82.js'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/fira-mono-cyrillic-400-normal-046b609f.woff2'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/internal'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/pages/todos/index.svelte-9e9775cc.js'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/error.svelte-b65a9f21.js'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/manifest.json'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/paths.js'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove 'node_modules/esbuild-linux-64'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/fira-mono-greek-400-normal-1f8b3a07.woff2'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/manifest.json'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/endpoints/todos/_uid_.json.ts.js'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/pages/__layout.svelte.js'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/svelte-logo-87df40b8.svg'","time":"2022-01-05T17:43:28+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Upload File 'node_modules/.vite/_metadata.json'","time":"2022-01-05T17:43:29+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Upload 1 create change(s) (Uncompressed ~1.68 KB)","time":"2022-01-05T17:43:29+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Successfully processed 83 change(s)","time":"2022-01-05T17:43:29+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Initial sync completed","time":"2022-01-05T17:43:30+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Upload File 'package.json'","time":"2022-01-05T17:45:52+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Upload 1 create change(s) (Uncompressed ~0.93 KB)","time":"2022-01-05T17:45:52+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Successfully processed 1 change(s)","time":"2022-01-05T17:45:52+10:30"}
+{"level":"info","msg":"[0:sync] Trying to download devspacehelper into pod albert/frontend-deployment-albert-7b7f6cc465-4m6ct","time":"2022-01-05T17:47:26+10:30"}
+{"level":"info","msg":"[0:sync] Warning: Couldn't download devspacehelper in container, error: stdout, stderr: \n sh: curl: not found\n: command terminated with exit code 127","time":"2022-01-05T17:47:27+10:30"}
+{"level":"info","msg":"[0:sync] Trying to inject devspacehelper from local machine","time":"2022-01-05T17:47:27+10:30"}
+{"level":"info","msg":"[0:sync] Start syncing","time":"2022-01-05T17:47:31+10:30"}
+{"level":"info","msg":"[0:sync] Helper - Use inotify as watching method in container","time":"2022-01-05T17:47:32+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/tsserver","time":"2022-01-05T17:47:33+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/svelte-kit","time":"2022-01-05T17:47:33+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/rollup","time":"2022-01-05T17:47:33+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/tsc","time":"2022-01-05T17:47:33+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/node-which","time":"2022-01-05T17:47:33+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/esparse","time":"2022-01-05T17:47:33+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/sander/node_modules/.bin/rimraf","time":"2022-01-05T17:47:33+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/rimraf","time":"2022-01-05T17:47:33+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/nanoid","time":"2022-01-05T17:47:33+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/vite","time":"2022-01-05T17:47:33+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/mkdirp","time":"2022-01-05T17:47:33+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/svelte-check","time":"2022-01-05T17:47:33+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/esbuild","time":"2022-01-05T17:47:33+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/sorcery","time":"2022-01-05T17:47:33+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/esvalidate","time":"2022-01-05T17:47:33+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/eslint","time":"2022-01-05T17:47:33+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/acorn","time":"2022-01-05T17:47:33+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/resolve","time":"2022-01-05T17:47:33+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/js-yaml","time":"2022-01-05T17:47:33+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/semver","time":"2022-01-05T17:47:33+10:30"}
+{"level":"info","msg":"[0:sync] Downstream - Initial sync completed","time":"2022-01-05T17:47:33+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Handling 82 removes","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/pages/index.svelte-c63fe1c6.css'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/start-61d1577b.css'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/pages/todos/index.svelte-784042c1.css'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/pages/index.svelte.js'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/chunks/_api-e66b1c82.js'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/components'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/chunks'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove 'node_modules/esbuild-linux-64/package.json'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/pages'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/manifest.js'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/internal/singletons.js'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/app/paths.js'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/pages/todos'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/fira-mono-latin-400-normal-a2f9dbe8.woff2'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/nodes/2.js'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/generated/root.svelte'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/fira-mono-greek-ext-400-normal-8659ae46.woff2'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/pages/about.svelte-2d51dc8e.js'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/pages/__layout.svelte.js'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/endpoints/todos/_uid_.json.ts.js'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/endpoints/todos'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/endpoints'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/pages'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/nodes/1.js'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/pages/error.svelte.js'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/chunks/vendor-92f01141.js'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/manifest.json'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/fira-mono-all-400-normal-0d19eb5d.woff'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/endpoints/todos/index.json.ts.js'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove 'node_modules/esbuild-linux-64/README.md'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/fira-mono-cyrillic-400-normal-046b609f.woff2'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/pages/about.svelte.js'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/pages'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/internal'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/chunks'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/pages/about.svelte-bf4528fa.css'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/internal/start.js'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/generated/manifest.js'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/paths.js'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/kit.js'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/fira-mono-greek-400-normal-1f8b3a07.woff2'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/nodes/3.js'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/error.svelte-b65a9f21.js'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/components/error.svelte'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/pages/__layout.svelte-a7861b78.css'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/app.js'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/start-cad90ddf.js'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/app/stores.js'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/nodes'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/components/layout.svelte'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/chunks'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/app/env.js'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/nodes/0.js'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/svelte-logo-87df40b8.svg'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove 'node_modules/esbuild-linux-64/bin/esbuild'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/env.js'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove 'node_modules/esbuild-linux-64'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/pages/todos'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove 'node_modules/esbuild-linux-64/bin'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/nodes/4.js'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/app.js'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/pages/todos/index.svelte.js'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/pages/todos/index.svelte-9e9775cc.js'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/manifest.json'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/generated'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/fira-mono-cyrillic-ext-400-normal-b3140dd3.woff2'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/pages/__layout.svelte-cb26f3b2.js'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/chunks/index-22591d9c.js'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/app'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/fira-mono-latin-ext-400-normal-b6331a25.woff2'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/pages/todos'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/app/navigation.js'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/chunks/utils.js'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/pages/index.svelte-f4f814c9.js'","time":"2022-01-05T17:47:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Successfully processed 82 change(s)","time":"2022-01-05T17:47:35+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Initial sync completed","time":"2022-01-05T17:47:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Upload File 'Dockerfile'","time":"2022-01-05T17:55:37+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Upload 1 create change(s) (Uncompressed ~0.30 KB)","time":"2022-01-05T17:55:37+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Successfully processed 1 change(s)","time":"2022-01-05T17:55:37+10:30"}
+{"level":"info","msg":"[0:sync] Trying to download devspacehelper into pod albert/frontend-deployment-albert-6ff7cfff78-mjwsz","time":"2022-01-05T17:56:33+10:30"}
+{"level":"info","msg":"[0:sync] Warning: Couldn't download devspacehelper in container, error: stdout, stderr: \n sh: curl: not found\n: command terminated with exit code 127","time":"2022-01-05T17:56:34+10:30"}
+{"level":"info","msg":"[0:sync] Trying to inject devspacehelper from local machine","time":"2022-01-05T17:56:34+10:30"}
+{"level":"info","msg":"[0:sync] Start syncing","time":"2022-01-05T17:56:38+10:30"}
+{"level":"info","msg":"[0:sync] Helper - Use inotify as watching method in container","time":"2022-01-05T17:56:38+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/semver","time":"2022-01-05T17:56:39+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/rollup","time":"2022-01-05T17:56:39+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/node-which","time":"2022-01-05T17:56:39+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/esvalidate","time":"2022-01-05T17:56:39+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/nanoid","time":"2022-01-05T17:56:39+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/sander/node_modules/.bin/rimraf","time":"2022-01-05T17:56:39+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/resolve","time":"2022-01-05T17:56:39+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/vite","time":"2022-01-05T17:56:39+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/tsc","time":"2022-01-05T17:56:39+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/tsserver","time":"2022-01-05T17:56:39+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/rimraf","time":"2022-01-05T17:56:39+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/esparse","time":"2022-01-05T17:56:39+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/acorn","time":"2022-01-05T17:56:39+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/sorcery","time":"2022-01-05T17:56:39+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/esbuild","time":"2022-01-05T17:56:39+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/mkdirp","time":"2022-01-05T17:56:39+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/svelte-check","time":"2022-01-05T17:56:39+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/eslint","time":"2022-01-05T17:56:39+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/js-yaml","time":"2022-01-05T17:56:39+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/svelte-kit","time":"2022-01-05T17:56:39+10:30"}
+{"level":"info","msg":"[0:sync] Downstream - Initial sync completed","time":"2022-01-05T17:56:39+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Handling 82 removes","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/nodes/3.js'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove 'node_modules/esbuild-linux-64/package.json'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/chunks'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/chunks/index-22591d9c.js'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/chunks/vendor-92f01141.js'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/pages/about.svelte-2d51dc8e.js'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/pages/todos/index.svelte-9e9775cc.js'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/endpoints/todos/index.json.ts.js'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/nodes'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/pages'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/internal/singletons.js'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/app.js'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/app/stores.js'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/generated/root.svelte'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/fira-mono-latin-400-normal-a2f9dbe8.woff2'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/pages/todos'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/generated'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/pages'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/app'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/components'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/fira-mono-cyrillic-ext-400-normal-b3140dd3.woff2'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/pages/todos/index.svelte-784042c1.css'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/pages/about.svelte.js'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/start-61d1577b.css'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/pages'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/paths.js'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/app/env.js'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/manifest.js'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/app/paths.js'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/pages/todos'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/pages/index.svelte-c63fe1c6.css'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/pages/error.svelte.js'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/components/layout.svelte'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/nodes/0.js'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/pages/__layout.svelte-a7861b78.css'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/chunks'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/internal/start.js'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/error.svelte-b65a9f21.js'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/pages/index.svelte.js'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/nodes/2.js'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove 'node_modules/esbuild-linux-64'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/generated/manifest.js'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/endpoints/todos/_uid_.json.ts.js'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/chunks/_api-e66b1c82.js'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/app/navigation.js'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/fira-mono-all-400-normal-0d19eb5d.woff'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/kit.js'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove 'node_modules/esbuild-linux-64/bin'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/endpoints/todos'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/nodes/1.js'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/chunks'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/start-cad90ddf.js'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/nodes/4.js'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/pages/todos/index.svelte.js'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove 'node_modules/esbuild-linux-64/README.md'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove 'node_modules/esbuild-linux-64/bin/esbuild'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/manifest.json'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/internal'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/components/error.svelte'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/fira-mono-latin-ext-400-normal-b6331a25.woff2'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/svelte-logo-87df40b8.svg'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/fira-mono-greek-ext-400-normal-8659ae46.woff2'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/pages/__layout.svelte.js'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/pages/todos'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/chunks/utils.js'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/app.js'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/pages/about.svelte-bf4528fa.css'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/env.js'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/fira-mono-cyrillic-400-normal-046b609f.woff2'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/pages/index.svelte-f4f814c9.js'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/fira-mono-greek-400-normal-1f8b3a07.woff2'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/pages/__layout.svelte-cb26f3b2.js'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/endpoints'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/manifest.json'","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Successfully processed 82 change(s)","time":"2022-01-05T17:56:41+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Initial sync completed","time":"2022-01-05T17:56:42+10:30"}
+{"level":"info","msg":"[0:sync] Trying to download devspacehelper into pod albert/frontend-deployment-albert-699757d7d5-2fc4j","time":"2022-01-05T18:06:29+10:30"}
+{"level":"info","msg":"[0:sync] Warning: Couldn't download devspacehelper in container, error: stdout, stderr: \n sh: curl: not found\n: command terminated with exit code 127","time":"2022-01-05T18:06:30+10:30"}
+{"level":"info","msg":"[0:sync] Trying to inject devspacehelper from local machine","time":"2022-01-05T18:06:30+10:30"}
+{"level":"info","msg":"[0:sync] Start syncing","time":"2022-01-05T18:06:34+10:30"}
+{"level":"info","msg":"[0:sync] Helper - Use inotify as watching method in container","time":"2022-01-05T18:06:34+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/semver","time":"2022-01-05T18:06:35+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/tsserver","time":"2022-01-05T18:06:35+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/vite","time":"2022-01-05T18:06:35+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/tsc","time":"2022-01-05T18:06:35+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/svelte-check","time":"2022-01-05T18:06:35+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/resolve","time":"2022-01-05T18:06:35+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/js-yaml","time":"2022-01-05T18:06:35+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/sander/node_modules/.bin/rimraf","time":"2022-01-05T18:06:35+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/rimraf","time":"2022-01-05T18:06:35+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/esparse","time":"2022-01-05T18:06:35+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/nanoid","time":"2022-01-05T18:06:35+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/mkdirp","time":"2022-01-05T18:06:35+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/node-which","time":"2022-01-05T18:06:35+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/eslint","time":"2022-01-05T18:06:35+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/esvalidate","time":"2022-01-05T18:06:35+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/rollup","time":"2022-01-05T18:06:35+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/svelte-kit","time":"2022-01-05T18:06:35+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/sorcery","time":"2022-01-05T18:06:35+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/esbuild","time":"2022-01-05T18:06:35+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/acorn","time":"2022-01-05T18:06:35+10:30"}
+{"level":"info","msg":"[0:sync] Downstream - Initial sync completed","time":"2022-01-05T18:06:35+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Handling 82 removes","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/nodes/2.js'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/pages/todos'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/chunks'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/chunks'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/nodes/4.js'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/pages/todos'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/internal/singletons.js'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove 'node_modules/esbuild-linux-64'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/app/navigation.js'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/app'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/generated/manifest.js'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/manifest.json'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/chunks/vendor-92f01141.js'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/error.svelte-b65a9f21.js'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/app.js'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/pages/__layout.svelte.js'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/app/paths.js'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/components/error.svelte'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/pages'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/pages/error.svelte.js'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/fira-mono-all-400-normal-0d19eb5d.woff'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/endpoints'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove 'node_modules/esbuild-linux-64/bin/esbuild'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/fira-mono-greek-ext-400-normal-8659ae46.woff2'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/internal'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/nodes'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/chunks/_api-e66b1c82.js'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/pages/index.svelte-c63fe1c6.css'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/chunks/utils.js'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/chunks'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/pages/about.svelte.js'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/pages'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/generated'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/pages/index.svelte-f4f814c9.js'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/pages/about.svelte-2d51dc8e.js'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/endpoints/todos/_uid_.json.ts.js'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/components'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/chunks/index-22591d9c.js'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/pages/__layout.svelte-a7861b78.css'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/manifest.json'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/env.js'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/kit.js'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/pages/__layout.svelte-cb26f3b2.js'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/pages/todos'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/pages/todos/index.svelte.js'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/fira-mono-cyrillic-400-normal-046b609f.woff2'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove 'node_modules/esbuild-linux-64/README.md'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/components/layout.svelte'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove 'node_modules/esbuild-linux-64/package.json'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/start-61d1577b.css'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/pages/index.svelte.js'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/endpoints/todos/index.json.ts.js'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/nodes/3.js'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/pages'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/svelte-logo-87df40b8.svg'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/fira-mono-greek-400-normal-1f8b3a07.woff2'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/generated/root.svelte'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/manifest.js'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/pages/about.svelte-bf4528fa.css'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/internal/start.js'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/nodes/1.js'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/pages/todos/index.svelte-9e9775cc.js'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/app/stores.js'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/nodes/0.js'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/app.js'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/fira-mono-latin-ext-400-normal-b6331a25.woff2'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove 'node_modules/esbuild-linux-64/bin'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/fira-mono-cyrillic-ext-400-normal-b3140dd3.woff2'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/app/env.js'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/fira-mono-latin-400-normal-a2f9dbe8.woff2'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/pages/todos/index.svelte-784042c1.css'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/paths.js'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/start-cad90ddf.js'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/endpoints/todos'","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Successfully processed 82 change(s)","time":"2022-01-05T18:06:36+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Initial sync completed","time":"2022-01-05T18:06:38+10:30"}
+{"level":"info","msg":"[0:sync] Trying to download devspacehelper into pod albert/frontend-deployment-albert-7b59b6cdff-vrzjg","time":"2022-01-05T18:28:15+10:30"}
+{"level":"info","msg":"[0:sync] Warning: Couldn't download devspacehelper in container, error: stdout, stderr: \n sh: curl: not found\n: command terminated with exit code 127","time":"2022-01-05T18:28:16+10:30"}
+{"level":"info","msg":"[0:sync] Trying to inject devspacehelper from local machine","time":"2022-01-05T18:28:16+10:30"}
+{"level":"info","msg":"[0:sync] Start syncing","time":"2022-01-05T18:28:20+10:30"}
+{"level":"info","msg":"[0:sync] Helper - Use inotify as watching method in container","time":"2022-01-05T18:28:20+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/resolve","time":"2022-01-05T18:28:22+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/node-which","time":"2022-01-05T18:28:22+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/sorcery","time":"2022-01-05T18:28:22+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/js-yaml","time":"2022-01-05T18:28:22+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/acorn","time":"2022-01-05T18:28:22+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/rimraf","time":"2022-01-05T18:28:22+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/rollup","time":"2022-01-05T18:28:22+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/sander/node_modules/.bin/rimraf","time":"2022-01-05T18:28:22+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/tsserver","time":"2022-01-05T18:28:22+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/semver","time":"2022-01-05T18:28:22+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/mkdirp","time":"2022-01-05T18:28:22+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/vite","time":"2022-01-05T18:28:22+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/svelte-check","time":"2022-01-05T18:28:22+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/esparse","time":"2022-01-05T18:28:22+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/esvalidate","time":"2022-01-05T18:28:22+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/nanoid","time":"2022-01-05T18:28:22+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/eslint","time":"2022-01-05T18:28:22+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/tsc","time":"2022-01-05T18:28:22+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/esbuild","time":"2022-01-05T18:28:22+10:30"}
+{"level":"info","msg":"[0:sync] Symlink found at /Users/albert/repos/lumina/frontend/node_modules/.bin/svelte-kit","time":"2022-01-05T18:28:22+10:30"}
+{"level":"info","msg":"[0:sync] Downstream - Initial sync completed","time":"2022-01-05T18:28:22+10:30"}
+{"level":"info","msg":"[0:sync] Downstream - Download 21 file(s) (Uncompressed: ~217.18 KB)","time":"2022-01-05T18:28:23+10:30"}
+{"level":"info","msg":"[0:sync] Downstream - Successfully processed 21 change(s)","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Handling 82 removes","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/chunks'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/nodes/3.js'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/pages/index.svelte-c63fe1c6.css'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/pages/todos'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/pages/todos'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/fira-mono-latin-400-normal-a2f9dbe8.woff2'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/app/env.js'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/pages/about.svelte.js'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/pages'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/nodes/0.js'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/chunks/vendor-92f01141.js'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/fira-mono-all-400-normal-0d19eb5d.woff'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/generated/root.svelte'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/nodes/1.js'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/pages/todos/index.svelte-9e9775cc.js'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/chunks'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/app.js'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/pages/__layout.svelte-cb26f3b2.js'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/pages/todos/index.svelte-784042c1.css'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/generated'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/nodes'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/components'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/endpoints/todos'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/pages/todos/index.svelte.js'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove 'node_modules/esbuild-linux-64/bin'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/nodes/2.js'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/chunks/utils.js'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/endpoints'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/internal/start.js'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/pages/index.svelte.js'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/pages/__layout.svelte.js'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/chunks/index-22591d9c.js'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/start-61d1577b.css'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/endpoints/todos/_uid_.json.ts.js'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/fira-mono-greek-400-normal-1f8b3a07.woff2'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove 'node_modules/esbuild-linux-64'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/svelte-logo-87df40b8.svg'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove 'node_modules/esbuild-linux-64/package.json'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/fira-mono-cyrillic-400-normal-046b609f.woff2'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/pages/index.svelte-f4f814c9.js'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/internal'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/pages/about.svelte-2d51dc8e.js'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/start-cad90ddf.js'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/components/layout.svelte'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/pages/todos'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/internal/singletons.js'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/app/paths.js'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/manifest.json'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/kit.js'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/pages/__layout.svelte-a7861b78.css'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/app/navigation.js'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/app/stores.js'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/chunks/_api-e66b1c82.js'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/chunks'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/fira-mono-latin-ext-400-normal-b6331a25.woff2'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove 'node_modules/esbuild-linux-64/README.md'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/pages/error.svelte.js'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/fira-mono-cyrillic-ext-400-normal-b3140dd3.woff2'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/manifest.js'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/app'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/error.svelte-b65a9f21.js'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/fira-mono-greek-ext-400-normal-8659ae46.woff2'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/components/error.svelte'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/generated/manifest.js'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/pages'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/assets/pages/about.svelte-bf4528fa.css'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/manifest.json'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/env.js'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/build/runtime/paths.js'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries/endpoints/todos/index.json.ts.js'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/entries'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/client/_app/pages'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove 'node_modules/esbuild-linux-64/bin/esbuild'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/app.js'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Remove '.svelte-kit/output/server/nodes/4.js'","time":"2022-01-05T18:28:24+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Upload 26 create change(s) (Uncompressed ~24303.45 KB)","time":"2022-01-05T18:28:34+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Successfully processed 108 change(s)","time":"2022-01-05T18:28:38+10:30"}
+{"level":"info","msg":"[0:sync] Upstream - Initial sync completed","time":"2022-01-05T18:28:39+10:30"}
