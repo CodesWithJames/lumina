@@ -17,8 +17,18 @@ Authenticate with your github account as necessary.
 ## Setup
 
 ### Install devspace globally
+
+**Note:** You will need to install the Node.JS for this command to work
+
 ```
 sudo npm i -g devspace
+```
+
+Or on MacOS:
+
+```
+curl -s -L "https://github.com/loft-sh/devspace/releases/latest" | sed -nE 's!.*"([^"]*devspace-darwin-arm64)".*!https://github.com\1!p' | xargs -n 1 curl -L -o devspace && chmod +x devspace;
+sudo install devspace /usr/local/bin;
 ```
 
 ### Finish setup
