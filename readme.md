@@ -49,15 +49,12 @@ kubectl version --client
 https://awscli.amazonaws.com/AWSCLIV2.pkg
 
 
-### Run AWS Congiure
-Run `aws configure sso`
-
-
 ### AWS Configure Default settings
 ```
 mkdir ~/.aws
 nano ~/.aws/credentials
 ```
+Write the following text into the nano text editor, and when finished, press control + x to save the file. (after this, press Y to save, then overwrite the file in the same path)
 ```
 [default]
 sso_start_url = https://framework-app.awsapps.com/start
