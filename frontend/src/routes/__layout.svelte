@@ -1,45 +1,37 @@
-<script lang="ts">
-	import Header from '$lib/header/Header.svelte';
-	import '../app.css';
-</script>
+<svelte:head>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+        defer
+    />
+</svelte:head>
 
-<Header />
-
+<header></header>
 <main>
-	<slot />
+    <slot />
 </main>
+<footer></footer>
 
-<footer>
-	<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-</footer>
+<style lang="stylus">
 
-<style>
-	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 1024px;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
+:global
+    @import 'normalise'
+    @import 'variables'
 
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 40px;
-	}
+    html, body, #svelte
+        display flex
+        flex-direction row
+        min-height 100%
+        flex 1
+        color $dark
+        font-family 'Prompt'
 
-	footer a {
-		font-weight: bold;
-	}
+    h1, h2, h3, h4, h5, h6
+        font-weight 500
 
-	@media (min-width: 480px) {
-		footer {
-			padding: 40px 0;
-		}
-	}
+    html, body
+        overflow-x hidden
+
+    main
+        width 100%
 </style>

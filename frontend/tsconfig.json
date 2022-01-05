@@ -24,7 +24,14 @@
 		"checkJs": true,
 		"paths": {
 			"$lib": ["src/lib"],
-			"$lib/*": ["src/lib/*"]
+			"$lib/*": ["src/lib/*"],
+			"@lib/*": ["src/lib/*"],
+			"@components/*": ["src/components/*"],
+			"@includes/*": ["src/includes/*"],
+			"@layouts/*": ["src/layouts/*"],
+			"@utils/*": ["src/utils/*"],
+			"@icons/*": ["node_modules/svelte-material-icons/*"],
+			"@stores/*": ["src/stores/*"],
 		}
 	},
 	"include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.ts", "src/**/*.svelte"]

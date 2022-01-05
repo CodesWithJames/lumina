@@ -82,3 +82,10 @@
 {"level":"info","msg":"Successfully deployed framework with kubectl","time":"2022-01-05T18:28:12+10:30"}
 {"level":"info","msg":"DevSpace UI available at: \u001b[1;37mhttp://localhost:8090\u001b[0m","time":"2022-01-05T18:28:12+10:30"}
 {"level":"info","msg":"Starting log streaming","time":"2022-01-05T18:28:39+10:30"}
+{"level":"info","msg":"Using namespace '\u001b[1;37malbert\u001b[0m'","time":"2022-01-05T20:39:29+10:30"}
+{"level":"info","msg":"Using kube context '\u001b[1;37marn:aws:eks:ap-southeast-2:319923562419:cluster/lumina-cluster\u001b[0m'","time":"2022-01-05T20:39:29+10:30"}
+{"level":"info","msg":"Execute hook '\u001b[1;37maws sso login\u001b[0m' at \u001b[1;37mdevCommand:before:execute\u001b[0m","time":"2022-01-05T20:39:30+10:30"}
+{"level":"info","msg":"Execute hook '\u001b[1;37maws ecr get-login-password | docker login --username AWS --password-stdin 319923562419.dkr.ecr.ap-southeast-2.amazonaws.com\u001b[0m' at \u001b[1;37mdevCommand:before:execute\u001b[0m","time":"2022-01-05T20:39:35+10:30"}
+{"level":"info","msg":"Rebuild image 319923562419.dkr.ecr.ap-southeast-2.amazonaws.com/lumina-images/frontend because build context has changed","time":"2022-01-05T20:39:37+10:30"}
+{"level":"info","msg":"Building image '319923562419.dkr.ecr.ap-southeast-2.amazonaws.com/lumina-images/frontend:RpGwYOK' with engine 'buildkit'","time":"2022-01-05T20:39:37+10:30"}
+{"level":"info","msg":"Execute BuildKit command with: docker buildx build --tag 319923562419.dkr.ecr.ap-southeast-2.amazonaws.com/lumina-images/frontend:RpGwYOK --push --file Dockerfile --builder devspace-albert -","time":"2022-01-05T20:39:39+10:30"}
