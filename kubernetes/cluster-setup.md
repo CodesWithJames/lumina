@@ -26,9 +26,9 @@ output = json
 
 ```
 eksctl create cluster \
-    --name lumina-main \
+    --name lumina-cluster \
     --region ap-southeast-2 \
-    --nodegroup-name lumina-nodes \
+    --nodegroup-name lumina-node-group \
     --node-type t2.large \
     --nodes 1
 ```
