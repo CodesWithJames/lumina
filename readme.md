@@ -72,7 +72,7 @@ Install docker
 
 ### Connect to kubectl to EKS cluster
 ```
-aws eks --region ap-southeast-2 update-kubeconfig --name lumina-main
+aws eks --region ap-southeast-2 update-kubeconfig --name lumina-cluster
 ```
 
 ### Set devspace namespace

@@ -36,7 +36,7 @@ eksctl create cluster \
 ### Setting up kubectl to use cluster (not usually required)
 ```
 kubectl config get-contexts
-kubectl config use-context albert@insanemarketing.com.au@lumina-main.ap-southeast-2.eksctl.io
+kubectl config use-context albert@insanemarketing.com.au@lumina-cluster.ap-southeast-2.eksctl.io
 ```
 
 ## Configure AWS ECR image repository
