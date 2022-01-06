@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-deployment-production
+spec:
+  selector:
+    matchLabels:
+      app: frontend-container-production
+  template:
+    metadata:
+      labels:
+        app: frontend-container-production
+    spec:
+      containers:
+      - name: frontend-container-production
+        image: 319923562419.dkr.ecr.ap-southeast-2.amazonaws.com/lumina-images/frontend:$CIRCLE_SHA1
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "0.2"
+        ports:
+        - containerPort: 80
