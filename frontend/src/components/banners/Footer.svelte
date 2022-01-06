@@ -71,7 +71,7 @@ import ChevronRight from "svelte-material-icons/ChevronRight.svelte";
                 <MainButton 
                     right_icon={ChevronRight} 
                     inline={true}
-                    branded={true}>
+                    gradient={true}>
                     Get involved
                 </MainButton>
             </div>
