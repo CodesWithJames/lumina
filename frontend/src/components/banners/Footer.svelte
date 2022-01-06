@@ -164,8 +164,8 @@ a
 .links-wrapper
     display grid
     grid-template-columns 1fr 1fr
-    gap 7px 36px
-    margin-top 7px
+    grid-gap 8px 40px
+    margin-top 8px
 
 .link
     color $dark
@@ -174,8 +174,8 @@ a
 
 .citizen-description
     font-weight 500
-    margin 7px 0
-    max-width 237px
+    margin 8px 0
+    max-width 238px
 
 .container.bottom
     background-color #E5E5E5
@@ -199,6 +199,6 @@ a
 .social-media-icon
     color $dark
     margin-right 15px
-    font-size 36px
+    font-size 28px
 </style>
 
