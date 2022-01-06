@@ -34,20 +34,6 @@ import Shop from '@icons/'
                     </div>
                 </a>
             </nav>
-                <div class="icon">
-                    <Hub/>
-                </div>
-                <div class="brand2">
-                    Hub
-                </div>
-                <div class="icon">
-                    <shop/>
-                </div>
-                <div class="brand2">
-                    Shop
-                </div>
-            </a>
-
         </div>
         <div class="right">
                 Login Start
@@ -68,7 +54,7 @@ import Shop from '@icons/'
     width: 1200px;
     height: 80px;
     margin 0 auto;
-    
+
 
 .left
     display: flex;
