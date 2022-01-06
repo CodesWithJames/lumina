@@ -20,7 +20,7 @@ import ChevronRight from "svelte-material-icons/ChevronRight.svelte";
                 <div class="inner-call-to-action-two">
                     and help shape our future.
                 </div>
-                <a href="" class="cta-link">
+                <a href="/call-to-action" class="cta-link">
                     <div class="cta-anchor-text">
                         Get involved.
                     </div>
@@ -53,12 +53,12 @@ import ChevronRight from "svelte-material-icons/ChevronRight.svelte";
                     Quick Links
                 </div>
                 <div class="links-wrapper">
-                    <a href="" class="link">Home</a>
-                    <a href="" class="link">Hub</a>
-                    <a href="" class="link">myLumina</a>
-                    <a href="" class="link">Knowledge Center</a>
-                    <a href="" class="link">Discord</a>
-                    <a href="" class="link">Media</a>
+                    <a href="/" class="link">Home</a>
+                    <a href="/hub" class="link">Hub</a>
+                    <a href="/my-lumina" class="link">myLumina</a>
+                    <a href="knowledge-center" class="link">Knowledge Center</a>
+                    <a href="discord" class="link">Discord</a>
+                    <a href="media" class="link">Media</a>
                 </div>
             </div>
             <div class="become-citizen">
@@ -83,10 +83,10 @@ import ChevronRight from "svelte-material-icons/ChevronRight.svelte";
                 Authorised by the lumina government
             </div>
             <div class="social-media-icons">
-                <a href="" class="social-media-icon"><Youtube/></a>
-                <a href="" class="social-media-icon"><Twitter/></a>
-                <a href="" class="social-media-icon"><Discord/></a>
-                <a href="" class="social-media-icon"><Facebook/></a>
+                <a href="https://www.youtube.com/" class="social-media-icon"><Youtube/></a>
+                <a href="https://www.twitter.com/" class="social-media-icon"><Twitter/></a>
+                <a href="https://www.discord.com/" class="social-media-icon"><Discord/></a>
+                <a href="https://www.facebook.com/" class="social-media-icon"><Facebook/></a>
             </div>
         </div>
     </div>
@@ -171,6 +171,7 @@ a
     color $dark
     text-decoration none
     font-weight 600
+    display inline-block
 
 .citizen-description
     font-weight 500
