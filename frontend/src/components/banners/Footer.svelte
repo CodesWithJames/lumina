@@ -107,6 +107,7 @@ footer
 
 .cta-anchor-text
     margin-right 5px
+    font-weight 1000
 
 .divider
     background-color $dark
