@@ -1,7 +1,7 @@
 <script lang="ts">
 import Lumina from "@components/custom-icons/lumina-edge.svelte"
 import Hub from '@components/custom-icons/hub.svelte'
-import Shop from '@icons/'
+import Shop from '@icons/TagOutline.svelte'
 </script>
 
 <header>
@@ -72,17 +72,13 @@ import Shop from '@icons/'
     gap 14px
     text-decoration none
     color $dark
+
 .symbol
     font-size 40px
     display inline-flex
+
 .brand
-    font Prompt
     font-size 22px
     font-weight 600
-.brand2
-    font Prompt
-    font-size 18px
-    font-weight 600
-
 
 </style>
