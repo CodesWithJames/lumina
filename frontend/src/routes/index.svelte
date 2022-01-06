@@ -22,25 +22,25 @@ let stats: Stat[] = [
         icon: AccountGroup,
         name: "Citizens registered",
         value: "2251",
-        color: "#2BE0CB"
+        color: "#5D35D5"
     },
     {
         icon: Domain,
         name: "Government Ministries",
         value: "15",
-        color: "#32B5ED"
+        color: "#4F63CE"
     },
     {
         icon: AccountOutline,
         name: "Government Staff",
         value: "36",
-        color: "#1E96F4"
+        color: "#4488C9"
     },
     {
         icon: Flash,
         name: "Renewable",
         value: "100%",
-        color: "#026AFF"
+        color: "#34BFC1"
     }
 ]
 
@@ -134,7 +134,7 @@ let stats: Stat[] = [
         flex 1 // take up all available space
 
 .gradient-text
-    background linear-gradient(90deg, #0066FF 0%, #2BE0CA 100%);
+    background linear-gradient(90deg, #5c32d4, #32c0c0);
     -webkit-background-clip text
     -webkit-text-fill-color transparent
 
