@@ -1,6 +1,7 @@
 
 <script>
 import Header from '@components/banners/Header.svelte'
+import Footer from '@components/banners/Footer.svelte'
 </script>
 
 <svelte:head>
@@ -15,8 +16,8 @@ import Header from '@components/banners/Header.svelte'
 <main>
     <Header/>
     <slot />
+    <Footer/>
 </main>
-<footer></footer>
 
 <style lang="stylus">
 
