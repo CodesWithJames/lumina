@@ -23,7 +23,6 @@ import Header from '@components/banners/Header.svelte'
 :global
     @import 'normalise'
     @import 'variables'
-
     html, body, #svelte
         display flex
         flex-direction row
