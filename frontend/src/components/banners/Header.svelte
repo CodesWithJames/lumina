@@ -17,12 +17,9 @@
     justify-content: space-between;
     align-items: center;
     padding: 0px 20px;
-
     width: 1200px;
     height: 80px;
     margin 0 auto;
-    git config --global user.email "romeo@framework.tools"
-  git config --global user.name "Romeo"
     
 
 .left
