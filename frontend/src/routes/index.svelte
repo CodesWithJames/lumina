@@ -45,57 +45,59 @@ let stats: Stat[] = [
 ]
 
 </script>
-
-<div class="inner-hero main-hero-layout">
-    <div>
-        <h3 class="subtitle">Start a new city</h3>
-        <h1>
-            <div>
-                city of the
-            </div>
-            <div>
-                <span class="gradient-text">future</span>
-            </div>
-        </h1>
-        <p>
-            Welcome to Lumina, a social experiment with the goals of setting up a new innovative and environmentally sustainable city.
-        </p>
-        <p>
-            Lumina proposes to set up a Autonomous Zone, which is a city with it's own government, laws, and currency.
-        </p>
+<div class="hero-wrapper">
+    <div class="inner-hero main-hero-layout">
         <div>
-            <MainButton
-                href="/onboarding"
-                right_icon={ChevronRight}
-                inline={true}
-                gradient={true}>
-                Become a citizen
-            </MainButton>
-        </div>
-
-    </div>
-    <div class="hero-image-wrapper">
-        <img class="hero-image" src="/images/hero-image.svg" alt="a city skyline">
-    </div>
-</div>
-<div class="inner-hero">
-    <div class="stats">
-        {#each stats as stat}
-            <div class="stat">
-                <div class="stat-icon" style="color: {stat.color};">
-                    <svelte:component this={stat.icon} />
+            <h3 class="subtitle">Start a new city</h3>
+            <h1>
+                <div>
+                    city of the
                 </div>
-                <div class="stat-value">
-                    <span>{stat.value}</span>
+                <div>
+                    <span class="gradient-text">future</span>
                 </div>
-                <div class="stat-name">
-                    <span>{stat.name}</span>
-                </div>
+            </h1>
+            <p>
+                Welcome to Lumina, a social experiment with the goals of setting up a new innovative and environmentally sustainable city.
+            </p>
+            <p>
+                Lumina proposes to set up a Autonomous Zone, which is a city with it's own government, laws, and currency.
+            </p>
+            <div>
+                <MainButton
+                    href="/onboarding"
+                    right_icon={ChevronRight}
+                    inline={true}
+                    gradient={true}>
+                    Become a citizen
+                </MainButton>
             </div>
-        {/each}
+
+        </div>
+        <div class="hero-image-wrapper">
+            <img class="hero-image" src="/images/hero-image.svg" alt="a city skyline">
+        </div>
     </div>
+    <div class="inner-hero">
+        <div class="stats">
+            {#each stats as stat}
+                <div class="stat">
+                    <div class="stat-icon" style="color: {stat.color};">
+                        <svelte:component this={stat.icon} />
+                    </div>
+                    <div class="stat-value">
+                        <span>{stat.value}</span>
+                    </div>
+                    <div class="stat-name">
+                        <span>{stat.name}</span>
+                    </div>
+                </div>
+            {/each}
+        </div>
+    </div>
+
+    <DiscordBanner/>
 </div>
-<DiscordBanner/>
 
 <style lang="stylus">
 
@@ -121,6 +123,15 @@ let stats: Stat[] = [
     opacity 0.5
 
 // HERO MAIN
+
+.hero-wrapper
+    // min height instead of height because some devices have a smaller height
+    // header is 80px, so we need to subtract that from the height
+    min-height calc(100vh \- 80px)
+    display flex
+    flex-direction column
+    .main-hero-layout
+        flex 1 // take up all available space
 
 .gradient-text
     background linear-gradient(90deg, #5c32d4, #32c0c0);
