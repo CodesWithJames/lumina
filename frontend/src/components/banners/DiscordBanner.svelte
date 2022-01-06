@@ -3,6 +3,7 @@ import Discord from "@icons/Discord.svelte"
 import MainButton from '@components/inputs/MainButton.svelte'
 import RightChevron from '@icons/ChevronRight.svelte'
 </script>
+
 <div class="banner">
     <div class="banner-inner">
         <div class="left">

@@ -6,6 +6,9 @@ import Domain from '@icons/Domain.svelte'
 import AccountOutline from '@icons/AccountOutline.svelte'
 import Flash from '@icons/Flash.svelte'
 import DiscordBanner from '@components/banners/DiscordBanner.svelte'
+import MainButton from '@components/inputs/MainButton.svelte';
+import ChevronRight from 'svelte-material-icons/ChevronRight.svelte';
+
 
 type Stat = {
     value: string,
@@ -60,6 +63,16 @@ let stats: Stat[] = [
         <p>
             Lumina proposes to set up a Autonomous Zone, which is a city with it's own government, laws, and currency.
         </p>
+        <div>
+            <MainButton
+                href="/onboarding"
+                right_icon={ChevronRight}
+                branded={true}
+                inline={true}>
+                Become a citizen
+            </MainButton>
+        </div>
+
     </div>
     <div class="hero-image-wrapper">
         <img class="hero-image" src="/images/hero-image.svg" alt="a city skyline">
