@@ -82,7 +82,7 @@ workflows:
     build-and-deploy:
         jobs:
             - build-frontend
-            - push-frontend-image:
+            - push-frontend-image-to-aws-ecr:
                 context:
                     - AWS Context
                 requires:
