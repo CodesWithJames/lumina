@@ -33,7 +33,7 @@ import RightChevron from '@icons/ChevronRight.svelte'
 <style lang="stylus">
 
 .banner
-    background #384192
+    background linear-gradient(90deg, #5c32d4, #32c0c0)
     padding 40px 20px
     color #fff
 
