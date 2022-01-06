@@ -1,6 +1,6 @@
 <script lang="ts">
 import ArrowRight from "@icons/ArrowRight.svelte"
-import Lumina from "@components/custom-icons/lumina-edge.svelte"
+import Lumina from "@components/custom-icons/LuminaEdge.svelte"
 import MainButton from "@components/inputs/MainButton.svelte"
 import Youtube from "@icons/Youtube.svelte"
 import Twitter from "@icons/Twitter.svelte"
