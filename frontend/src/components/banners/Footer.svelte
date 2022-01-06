@@ -123,6 +123,7 @@ a
 
 .cta-anchor-text
     margin-right 5px
+    font-weight 1000
 
 .inner-call-to-action-two
     text-align center
