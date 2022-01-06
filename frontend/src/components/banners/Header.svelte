@@ -1,7 +1,10 @@
 <script lang="ts">
-import Lumina from "@components/custom-icons/lumina-edge.svelte"
-import Hub from '@components/custom-icons/hub.svelte'
+import Lumina from "@components/custom-icons/LuminaEdge.svelte"
+import Hub from '@components/custom-icons/Hub.svelte'
 import Shop from '@icons/TagOutline.svelte'
+import ShieldLock from '@icons/ShieldLock.svelte'
+import MainButton from "@components/inputs/MainButton.svelte"
+import ChevronRight from "svelte-material-icons/ChevronRight.svelte"
 </script>
 
 <header>
@@ -16,7 +19,7 @@ import Shop from '@icons/TagOutline.svelte'
                 </div>
             </a>
             <nav>
-                <a href="/">
+                <a href="/" class="link">
                     <div class="icon">
                         <Hub/>
                     </div>
@@ -25,18 +28,34 @@ import Shop from '@icons/TagOutline.svelte'
                     </div>
                 </a>
 
-                <a href="/shop">
+                <a href="/shop" class="link">
                     <div class="icon">
-
+                        <Shop/>
                     </div>
                     <div class="name">
-
+                        Shop
                     </div>
                 </a>
             </nav>
         </div>
         <div class="right">
-                Login Start
+            <nav>
+                <a href="/login" class="link">
+                    <div class="icon">
+                        <ShieldLock/>
+                    </div>
+                    <div class="name">
+                        Log In
+                    </div>
+                </a>
+                <MainButton
+                    href="/onboarding"
+                    branded={true}
+                    right_icon={ChevronRight}
+                >
+                    Start
+                </MainButton>
+            </nav>
         </div>
     </div>
 </header>
@@ -55,17 +74,17 @@ import Shop from '@icons/TagOutline.svelte'
     height: 80px;
     margin 0 auto;
 
-
 .left
     display: flex;
     flex-direction: row;
     align-items: center;
-
+    gap 40px
 
 .right
     display: flex;
     flex-direction: row;
     align-items: center;
+
 .logo
     display: flex;
     align-items: center;
@@ -73,6 +92,13 @@ import Shop from '@icons/TagOutline.svelte'
     text-decoration none
     color $dark
 
+.link
+    display: flex;
+    align-items: center;
+    gap 8px
+    text-decoration none
+    color $dark
+    
 .symbol
     font-size 40px
     display inline-flex
@@ -81,4 +107,16 @@ import Shop from '@icons/TagOutline.svelte'
     font-size 22px
     font-weight 600
 
+.icon
+    font-size 24px
+    display inline-flex
+
+.name
+    font-size 18px
+    font-weight 600
+
+nav
+    display: flex;
+    align-items: center;
+    gap 15px
 </style>

@@ -10,12 +10,14 @@ export let right_icon: any = undefined
 export let href: string = undefined
 export let branded = false
 export let dark = false
+export let inline = false
 </script>
 
 <a
     class="button"
     class:branded
     class:dark
+    class:inline
 
     on:click={event => dispatch('click', event)}
     {href}>
@@ -49,6 +51,9 @@ export let dark = false
     color $dark
     background $titanium
     line-height 24px
+    text-decoration none
+    &.inline
+        display inline-flex
     &:hover
         background mix($dark, $titanium, 5%)
     &.branded
