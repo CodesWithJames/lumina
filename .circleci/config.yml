@@ -1,0 +1,94 @@
+version: 2.1
+
+orbs:
+    aws-cli: circleci/aws-cli@1.3.0
+
+jobs:
+    build-frontend:
+        working_directory: /workspace
+        docker:
+            - image: frameworktools/ci:latest
+        steps:
+            - checkout
+            - setup_remote_docker
+            - restore_cache:
+                keys:
+                    - v1-{{ .Branch }}
+            - run:
+                name: Load docker image layer cache
+                command: |
+                    set +o pipefail
+                    if [ -f /caches/frontend.tar.gz ]; then gunzip -c /caches/backend.tar.gz | docker load; docker images; fi
+            - run:
+                name: Build frontend docker image
+                command: docker build -t frontend ./frontend
+            - run:
+                name: Save frontend docker image across circleci workspaces
+                command: docker save -o /workspace/frontend.tar frontend
+            - persist_to_workspace:
+                root: /workspace
+                paths:
+                    - backend.tar
+            - run:
+                name: Save Docker image layer cache
+                command: |
+                    mkdir -p /caches
+                    docker build --tag frontend ./frontend | grep '\-\-\->' | grep -v 'Using cache' | sed -e 's/[ >-]//g' > /tmp/layers.txt
+                    docker save $(cat /tmp/layers.txt) | gzip > /caches/frontend.tar.gz
+            - save_cache:
+                key: v1-{{ .Branch }}-frontend
+                paths:
+                - /caches/
+    push-frontend-image-to-aws-ecr:
+        executor: aws-cli/default
+        steps:
+            - aws-cli/setup
+            - setup_remote_docker
+            - attach_workspace:
+                at: /tmp/workspace
+            - run:
+                name: Load frontend image
+                command: |
+                    docker load -i /tmp/workspace/frontend.tar
+            - run:
+                name: Push application Docker image
+                command: |
+                    aws ecr get-login-password --region ap-southeast-2 | docker login --username AWS --password-stdin ${ECR_ENDPOINT}
+
+                    docker tag frontend:latest "${ECR_ENDPOINT}/lumina-images/frontend:${CIRCLE_SHA1}"
+                    docker push "${ECR_ENDPOINT}/framework/frontend:${CIRCLE_SHA1}"
+    deploy:
+        working_directory: /workspace
+        docker:
+            - image: frameworktools/ci:latest
+        steps:
+            - checkout
+            - run:
+                name: Install Dependencies
+                command: |
+                    curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+                    install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+                    apk add gettext
+            - run:
+                name: Connect to cluster
+                command: |
+                    aws eks --region ap-southeast-2 update-kubeconfig --name lumina-cluster
+            - run:
+                name: Deploy
+                command: |
+                    envsubst < ./kubernetes/production/frontend-deployment.yml | kubectl apply -f -
+
+workflows:
+    build-and-deploy:
+        jobs:
+            - build-frontend
+            - push-frontend-image:
+                context:
+                    - AWS Context
+                requires:
+                    - build-frontend
+            - deploy:
+                context:
+                    - AWS Context
+                requires:
+                    - push-frontend-image-to-aws-ecr
