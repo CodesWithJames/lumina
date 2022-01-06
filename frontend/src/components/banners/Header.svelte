@@ -98,7 +98,7 @@ import ChevronRight from "svelte-material-icons/ChevronRight.svelte"
     gap 8px
     text-decoration none
     color $dark
-    
+
 .symbol
     font-size 40px
     display inline-flex
