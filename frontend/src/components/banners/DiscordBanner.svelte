@@ -3,7 +3,6 @@ import Discord from "@icons/Discord.svelte"
 import MainButton from '@components/inputs/MainButton.svelte'
 import RightChevron from '@icons/ChevronRight.svelte'
 </script>
-
 <div class="banner">
     <div class="banner-inner">
         <div class="left">
@@ -39,7 +38,7 @@ import RightChevron from '@icons/ChevronRight.svelte'
 
 .banner-inner
     max-width 800px
-    width 100%
+    width 100
     margin 0 auto
     display flex
     justify-content space-between

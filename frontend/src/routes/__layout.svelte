@@ -1,3 +1,8 @@
+
+<script>
+import Header from '@components/banners/Header.svelte'
+</script>
+
 <svelte:head>
     <link
         href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap"
@@ -6,8 +11,9 @@
     />
 </svelte:head>
 
-<header></header>
+
 <main>
+    <Header/>
     <slot />
 </main>
 <footer></footer>
