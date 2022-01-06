@@ -67,8 +67,8 @@ let stats: Stat[] = [
             <MainButton
                 href="/onboarding"
                 right_icon={ChevronRight}
-                branded={true}
-                inline={true}>
+                inline={true}
+                gradient={true}>
                 Become a citizen
             </MainButton>
         </div>

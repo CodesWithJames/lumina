@@ -50,7 +50,7 @@ import ChevronRight from "svelte-material-icons/ChevronRight.svelte"
                 </a>
                 <MainButton
                     href="/onboarding"
-                    branded={true}
+                    gradient={true}
                     right_icon={ChevronRight}
                 >
                     Start

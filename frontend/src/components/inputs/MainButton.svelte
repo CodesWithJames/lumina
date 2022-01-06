@@ -11,6 +11,7 @@ export let href: string = undefined
 export let branded = false
 export let dark = false
 export let inline = false
+export let gradient = false
 </script>
 
 <a
@@ -18,7 +19,7 @@ export let inline = false
     class:branded
     class:dark
     class:inline
-
+    class:gradient
     on:click={event => dispatch('click', event)}
     {href}>
     {#if left_icon}
@@ -52,6 +53,11 @@ export let inline = false
     background $titanium
     line-height 24px
     text-decoration none
+    &.gradient
+        main-gradient(0%)
+        color white
+        &:hover
+            main-gradient(15%)
     &.inline
         display inline-flex
     &:hover
