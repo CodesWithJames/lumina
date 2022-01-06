@@ -8,7 +8,7 @@ import Flash from '@icons/Flash.svelte'
 import DiscordBanner from '@components/banners/DiscordBanner.svelte'
 import MainButton from '@components/inputs/MainButton.svelte';
 import ChevronRight from 'svelte-material-icons/ChevronRight.svelte';
-
+import Job from "@components/jobs/Job.svelte"
 
 type Stat = {
     value: string,
@@ -99,6 +99,23 @@ let stats: Stat[] = [
     <DiscordBanner/>
 </div>
 
+<div class="job-positions">
+    <div class="job-info">
+        <h2 class="job-heading">
+            Open positions
+        </h2>
+        <p class="job-description">
+            We are a technology driven society comprised of principled and disciplined people bonded by deeply held mission: to create a modern solution to governance.
+        </p>
+    </div>
+    <Job job={
+        {
+            
+        }
+    }/>
+</div>
+
+
 <style lang="stylus">
 
 
@@ -174,4 +191,25 @@ h1
     position absolute
     left 0
 
+.job-positions
+    padding 80px 256px
+    display flex
+
+.job-info
+    display flex
+    flex-direction column
+    align-items center
+    max-width 600px
+    margin 0 auto
+
+.job-heading
+    font-size 40px
+    font-weight 600
+    margin 0
+    padding 0
+
+.job-description
+    opacity 0.6
+    text-align center
+    line-height 28px
 </style>
