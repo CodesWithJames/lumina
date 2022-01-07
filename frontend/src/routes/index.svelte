@@ -354,7 +354,7 @@ let jobFields: JobField[] = [
         <div class="hub-icon">
             <svelte:component this={Hub} />
         </div>
-        <h2 class="heading hub">
+        <h2 class="hub-heading">
             Lumina Hub
         </h2>
     </div>
