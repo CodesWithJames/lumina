@@ -1,14 +1,17 @@
 <script lang="ts">
-import type { SvelteComponentDev } from 'svelte/internal';
+import type { SvelteComponentDev } from "svelte/internal"
+import JobField from "@components/jobs/JobField.svelte"
 
-import AccountGroup from '@icons/AccountGroup.svelte'
-import Domain from '@icons/Domain.svelte'
-import AccountOutline from '@icons/AccountOutline.svelte'
-import Flash from '@icons/Flash.svelte'
-import DiscordBanner from '@components/banners/DiscordBanner.svelte'
-import MainButton from '@components/inputs/MainButton.svelte';
-import ChevronRight from 'svelte-material-icons/ChevronRight.svelte';
-import Job from "@components/jobs/Job.svelte"
+import AccountGroup from "@icons/AccountGroup.svelte"
+import Domain from "@icons/Domain.svelte"
+import AccountOutline from "@icons/AccountOutline.svelte"
+import Flash from "@icons/Flash.svelte"
+import DiscordBanner from "@components/banners/DiscordBanner.svelte"
+import MainButton from "@components/inputs/MainButton.svelte"
+import ChevronRight from "@icons/ChevronRight.svelte"
+import CodeBraces from "@icons/CodeBraces.svelte"
+import Clock from "@icons/Clock.svelte"
+import Wifi from "@icons/Wifi.svelte"
 
 type Stat = {
     value: string,
@@ -44,6 +47,43 @@ let stats: Stat[] = [
     }
 ]
 
+type Job = {
+    title: string,
+    icon: any,
+    attributes: {
+        icon: any,
+        text: string,
+        color: string,
+    }[]
+}
+
+type JobField = {
+    heading: string,
+    jobs: Job[]
+}
+
+let jobFields: JobField[] = [
+    {
+        heading: "Software",
+        jobs: [
+            title: "Backend Engineer",
+            icon: CodeBraces,
+            attributes: [
+                {
+                    icon: Clock,
+                    text: "Volunteer",
+                    color: "#492C9C"
+                },
+                {
+                    icon: Wifi,
+                    text: "Remote",
+                    color: "#492C9C"
+                }
+            ]
+        ]
+    }
+]
+
 </script>
 <div class="hero-wrapper">
     <div class="inner-hero main-hero-layout">
@@ -58,17 +98,20 @@ let stats: Stat[] = [
                 </div>
             </h1>
             <p>
-                Welcome to Lumina, a social experiment with the goals of setting up a new innovative and environmentally sustainable city.
+                Welcome to Lumina, a social experiment with the goals of setting up 
+                a new innovative and environmentally sustainable city.
             </p>
             <p>
-                Lumina proposes to set up a Autonomous Zone, which is a city with it's own government, laws, and currency.
+                Lumina proposes to set up a Autonomous Zone, 
+                which is a city with it's own government, laws, and currency.
             </p>
             <div>
                 <MainButton
                     href="/onboarding"
                     right_icon={ChevronRight}
                     inline={true}
-                    gradient={true}>
+                    gradient={true}
+                >
                     Become a citizen
                 </MainButton>
             </div>
@@ -95,7 +138,6 @@ let stats: Stat[] = [
             {/each}
         </div>
     </div>
-
     <DiscordBanner/>
 </div>
 
@@ -107,14 +149,16 @@ let stats: Stat[] = [
         <p class="job-description">
             We are a technology driven society comprised of principled and disciplined people bonded by deeply held mission: to create a modern solution to governance.
         </p>
+        <div class="jobs-wrapper">
+            {#each jobFields as field}
+                <JobField
+                    heading={field.heading}
+                    jobs={field.jobs}
+                />
+            {/each}
+        </div>
     </div>
-    <Job job={
-        {
-            
-        }
-    }/>
 </div>
-
 
 <style lang="stylus">
 

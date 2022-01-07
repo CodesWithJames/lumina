@@ -103,7 +103,7 @@ impl LuminaServer {
 }
 
 async fn handle_stream(stream: TcpStream) -> Result<(), BackendError> {
-    stream.write()
+    stream.write();
     Ok(())
 }
 
