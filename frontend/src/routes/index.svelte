@@ -47,43 +47,6 @@ let stats: Stat[] = [
     }
 ]
 
-type Job = {
-    title: string,
-    icon: any,
-    attributes: {
-        icon: any,
-        text: string,
-        color: string,
-    }[]
-}
-
-type JobField = {
-    heading: string,
-    jobs: Job[]
-}
-
-let jobFields: JobField[] = [
-    {
-        heading: "Software",
-        jobs: [
-            title: "Backend Engineer",
-            icon: CodeBraces,
-            attributes: [
-                {
-                    icon: Clock,
-                    text: "Volunteer",
-                    color: "#492C9C"
-                },
-                {
-                    icon: Wifi,
-                    text: "Remote",
-                    color: "#492C9C"
-                }
-            ]
-        ]
-    }
-]
-
 </script>
 <div class="hero-wrapper">
     <div class="inner-hero main-hero-layout">
@@ -150,12 +113,7 @@ let jobFields: JobField[] = [
             We are a technology driven society comprised of principled and disciplined people bonded by deeply held mission: to create a modern solution to governance.
         </p>
         <div class="jobs-wrapper">
-            {#each jobFields as field}
-                <JobField
-                    heading={field.heading}
-                    jobs={field.jobs}
-                />
-            {/each}
+            
         </div>
     </div>
 </div>
