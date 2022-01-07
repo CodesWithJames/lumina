@@ -16,7 +16,8 @@ import Wifi from "@icons/Wifi.svelte"
 import Brush from "@icons/Brush.svelte"
 import Text from "@icons/Text.svelte"
 import Hammer from "@icons/Hammer.svelte"
-import Settlement from "@components/custom-icons/settlement.svelte";
+import Settlement from "@components/custom-icons/settlement.svelte"
+import Hub from "@components/custom-icons/Hub.svelte"
 
 type Stat = {
     value: string,
@@ -348,6 +349,25 @@ let jobFields: JobField[] = [
     <DiscordBanner/>
 </div>
 
+<div class="inner-hero">
+    <div class="title hub">
+        <div class="hub-icon">
+            <svelte:component this={Hub} />
+        </div>
+        <h2 class="heading hub">
+            Lumina Hub
+        </h2>
+    </div>
+    <div class="hub-cards-wrapper">
+        <div class="hub-cards-two-wide-wrapper">
+
+        </div>
+        <div class="hub-cards-three-wide-wrapper">
+
+        </div>
+    </div>
+</div>
+
 <div class="inner-hero jobs-hero">
     <div class="job-info">
         <h2 class="job-heading">
@@ -469,4 +489,9 @@ h1
     gap 40px
     padding-top 40px
 
+.title.hub
+    display flex
+    margin-bottom 40px
+
+.
 </style>
