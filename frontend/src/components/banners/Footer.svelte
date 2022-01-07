@@ -116,9 +116,8 @@ footer
     width 100%
 
 .inner-wrapper.second
-    display grid
-    grid-auto-columns 1fr
-    grid-auto-flow column
+    display flex
+    justify-content space-between
 
 .lumina-heading
     display flex
