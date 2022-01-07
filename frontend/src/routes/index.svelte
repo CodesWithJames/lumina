@@ -1,7 +1,8 @@
 <script lang="ts">
-import type { SvelteComponentDev } from "svelte/internal"
+import type { bind, SvelteComponentDev } from "svelte/internal"
 import JobSection from "@components/jobs/JobSection.svelte"
 import type { JobField } from "@components/jobs/jobs_types"
+import HubCard from "@components/hub/HubCard.svelte"
 
 import AccountGroup from "@icons/AccountGroup.svelte"
 import Domain from "@icons/Domain.svelte"
@@ -18,6 +19,11 @@ import Text from "@icons/Text.svelte"
 import Hammer from "@icons/Hammer.svelte"
 import Settlement from "@components/custom-icons/settlement.svelte"
 import Hub from "@components/custom-icons/Hub.svelte"
+import ScaleBalance from "@icons/ScaleBalance.svelte"
+import PassportBiometric from "@icons/PassportBiometric.svelte"
+import Pillar from "@icons/Pillar.svelte"
+import Telescope from "@icons/Telescope.svelte"
+import BadgeAccountHorizontal from "@icons/AccountBadgeHorizontal.svelte"
 
 type Stat = {
     value: string,
@@ -290,6 +296,80 @@ let jobFields: JobField[] = [
     }
 ]
 
+let twoWideHubCards = [
+    {
+        tag: {
+            text: "Info",
+            color: "#2570B6",
+            
+        },
+        title: {
+            icon: ScaleBalance,
+            text: "Rights & Duties",
+        },
+        description: "Learn about your rights and duties required for our society to function."
+    },
+    {
+        tag: {
+            text: "Info",
+            color: "#2570B6",
+            
+        },
+        title: {
+            icon: Pillar,
+            text: "Principles & Values",
+        },
+        description: "Our mission, principles and values define the emotional, moral, and spiritual core of our society."
+    },
+    {
+        tag: {
+            text: "Service",
+            color: "#492C9C",
+            
+        },
+        title: {
+            icon: PassportBiometric,
+            text: "Citizenship",
+        },
+        description: "Find out the benefits of becoming a citizen in Lumina. Get involved, along with thousands others today."
+    },
+    {
+        tag: {
+            text: "Service",
+            color: "#492C9C",
+            
+        },
+        title: {
+            icon: AccountOutline,
+            text: "myLumina",
+        },
+        description: "Lumina's cloud government portal that lets citizens access government services."
+    },
+    {
+        tag: {
+            text: "Info",
+            color: "#2570B6",
+            
+        },
+        title: {
+            icon: Telescope,
+            text: "Our Vision",
+        },
+        description: "Learn about your rights and duties required for our society to function."
+    },
+    {
+        tag: {
+            text: "Service",
+            color: "#2570B6",
+            
+        },
+        title: {
+            icon: BadgeAccountHorizontal,
+            text: "Media & Press",
+        },
+        description: "Are you a member of the press looking to speak to a Luminar representative? Contact us here."
+    }
+]
 
 
 </script>
@@ -360,7 +440,9 @@ let jobFields: JobField[] = [
     </div>
     <div class="hub-cards-wrapper">
         <div class="hub-cards-two-wide-wrapper">
-
+            {#each twoWideHubCards as info}
+                <HubCard bind:info/>
+            {/each}
         </div>
         <div class="hub-cards-three-wide-wrapper">
 
