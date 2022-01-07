@@ -491,7 +491,15 @@ h1
 
 .title.hub
     display flex
-    margin-bottom 40px
+    margin-bottom 20px
 
-.
+.hub-icon
+    font-size 46px
+    margin-right 10px
+
+.hub-heading
+    margin 0
+    padding 0
+    font-size 40px
+    margin auto 0
 </style>
