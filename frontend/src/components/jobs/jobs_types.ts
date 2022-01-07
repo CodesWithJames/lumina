@@ -1,18 +1,18 @@
-export type InfoCard = {
+export type InfoCardType = {
     icon: any,
     text: string,
     color: string,
     opacity: string,
 }
 
-export type Job = {
+export type JobType = {
         title: string,
         icon: any,
-        attributes: InfoCard[]
+        attributes: InfoCardType[]
 }
 
 export type JobField = {
     title: string,
-    jobs: Job[],
+    jobs: JobType[],
 
 }

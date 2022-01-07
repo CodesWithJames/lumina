@@ -1,6 +1,7 @@
 <script lang="ts">
 import type { SvelteComponentDev } from "svelte/internal"
-import JobField from "@components/jobs/JobField.svelte"
+import JobSection from "@components/jobs/JobSection.svelte"
+import type { JobField } from "@components/jobs/jobs_types"
 
 import AccountGroup from "@icons/AccountGroup.svelte"
 import Domain from "@icons/Domain.svelte"
@@ -9,9 +10,13 @@ import Flash from "@icons/Flash.svelte"
 import DiscordBanner from "@components/banners/DiscordBanner.svelte"
 import MainButton from "@components/inputs/MainButton.svelte"
 import ChevronRight from "@icons/ChevronRight.svelte"
-import CodeBraces from "@icons/CodeBraces.svelte"
+import CodeTags from "@icons/CodeTags.svelte"
 import Clock from "@icons/Clock.svelte"
 import Wifi from "@icons/Wifi.svelte"
+import Brush from "@icons/Brush.svelte"
+import Text from "@icons/Text.svelte"
+import Hammer from "@icons/Hammer.svelte"
+import Settlement from "@components/custom-icons/settlement.svelte";
 
 type Stat = {
     value: string,
@@ -46,6 +51,245 @@ let stats: Stat[] = [
         color: "#34BFC1"
     }
 ]
+
+
+let jobFields: JobField[] = [
+    {
+        title: "Software",
+        jobs: [
+            {
+                title: "Backend Engineer",
+                icon: CodeTags,
+                attributes: [
+                    {
+                        icon: Clock,
+                        text: "Volunteer",
+                        color: "#492C9C",
+                        opacity: "1",
+                    },
+                    {
+                        icon: Wifi,
+                        text: "Remote",
+                        color: "#492C9C",
+                        opacity: "1",
+                    }
+                ]
+            },
+            {
+                title: "Frontend Engineer",
+                icon: CodeTags,
+                attributes: [
+                    {
+                        icon: Clock,
+                        text: "Volunteer",
+                        color: "#492C9C",
+                        opacity: "1",
+                    },
+                    {
+                        icon: Wifi,
+                        text: "Remote",
+                        color: "#492C9C",
+                        opacity: "1",
+                    }
+                ]
+            },
+            {
+                title: "Deployment Engineer",
+                icon: CodeTags,
+                attributes: [
+                    {
+                        icon: Clock,
+                        text: "Volunteer",
+                        color: "#492C9C",
+                        opacity: "1",
+                    },
+                    {
+                        icon: Wifi,
+                        text: "Remote",
+                        color: "#492C9C",
+                        opacity: "1",
+                    }
+                ]
+            },
+            
+        ]
+    },
+    {
+        title: "Design",
+        jobs: [
+            {
+                title: "UX Design",
+                icon: Brush,
+                attributes: [
+                    {
+                        icon: Clock,
+                        text: "Volunteer",
+                        color: "#492C9C",
+                        opacity: "1",
+                    },
+                    {
+                        icon: Wifi,
+                        text: "Remote",
+                        color: "#492C9C",
+                        opacity: "1",
+                    }
+                ]
+            },
+            {
+                title: "Video Editor",
+                icon: Brush,
+                attributes: [
+                    {
+                        icon: Clock,
+                        text: "Volunteer",
+                        color: "#492C9C",
+                        opacity: "1",
+                    },
+                    {
+                        icon: Wifi,
+                        text: "Remote",
+                        color: "#492C9C",
+                        opacity: "1",
+                    }
+                ]
+            },
+            {
+                title: "Content Writer",
+                icon: Text,
+                attributes: [
+                    {
+                        icon: Clock,
+                        text: "Volunteer",
+                        color: "#492C9C",
+                        opacity: "1",
+                    },
+                    {
+                        icon: Wifi,
+                        text: "Remote",
+                        color: "#492C9C",
+                        opacity: "1",
+                    }
+                ]
+            }
+            
+        ]
+    },
+    {
+        title: "Settlement",
+        jobs: [
+            {
+                title: "Welder",
+                icon: Hammer,
+                attributes: [
+                    {
+                        icon: Clock,
+                        text: "Future",
+                        color: "#000000",
+                        opacity: "0.3",
+                    },
+                    {
+                        icon: Settlement,
+                        text: "Settlement",
+                        color: "#492C9C",
+                        opacity: "1",
+                    }
+                ]
+            },
+            {
+                title: "Plumber",
+                icon: Hammer,
+                attributes: [
+                    {
+                        icon: Clock,
+                        text: "Future",
+                        color: "#000000",
+                        opacity: "0.3",
+                    },
+                    {
+                        icon: Settlement,
+                        text: "Settlement",
+                        color: "#492C9C",
+                        opacity: "1",
+                    }
+                ]
+            }, 
+            {
+                title: "Concreter",
+                icon: Hammer,
+                attributes: [
+                    {
+                        icon: Clock,
+                        text: "Future",
+                        color: "#000000",
+                        opacity: "0.3",
+                    },
+                    {
+                        icon: Settlement,
+                        text: "Settlement",
+                        color: "#492C9C",
+                        opacity: "1",
+                    }
+                ]
+            },
+            {
+                title: "Power Engineer",
+                icon: Hammer,
+                attributes: [
+                    {
+                        icon: Clock,
+                        text: "Future",
+                        color: "#000000",
+                        opacity: "0.3",
+                    },
+                    {
+                        icon: Settlement,
+                        text: "Settlement",
+                        color: "#492C9C",
+                        opacity: "1",
+                    }
+                ]
+            },
+            {
+                title: "Civil Engineer",
+                icon: Hammer,
+                attributes: [
+                    {
+                        icon: Clock,
+                        text: "Future",
+                        color: "#000000",
+                        opacity: "0.3",
+                    },
+                    {
+                        icon: Settlement,
+                        text: "Settlement",
+                        color: "#492C9C",
+                        opacity: "1",
+                    }
+                ]
+            },
+            {
+                title: "Electrical Engineer",
+                icon: Hammer,
+                attributes: [
+                    {
+                        icon: Clock,
+                        text: "Future",
+                        color: "#000000",
+                        opacity: "0.3",
+                    },
+                    {
+                        icon: Settlement,
+                        text: "Settlement",
+                        color: "#492C9C",
+                        opacity: "1",
+                    }
+                ]
+            }
+        ]
+    }
+]
+
+
 
 </script>
 <div class="hero-wrapper">
@@ -104,7 +348,7 @@ let stats: Stat[] = [
     <DiscordBanner/>
 </div>
 
-<div class="job-positions">
+<div class="inner-hero jobs-hero">
     <div class="job-info">
         <h2 class="job-heading">
             Open positions
@@ -112,9 +356,13 @@ let stats: Stat[] = [
         <p class="job-description">
             We are a technology driven society comprised of principled and disciplined people bonded by deeply held mission: to create a modern solution to governance.
         </p>
-        <div class="jobs-wrapper">
-            
-        </div>
+    </div>
+    <div class="jobs-wrapper">
+        {#each jobFields as jobField}
+            <JobSection
+                bind:jobField
+            />
+        {/each}
     </div>
 </div>
 
@@ -193,10 +441,6 @@ h1
     position absolute
     left 0
 
-.job-positions
-    padding 80px 256px
-    display flex
-
 .job-info
     display flex
     flex-direction column
@@ -214,4 +458,15 @@ h1
     opacity 0.6
     text-align center
     line-height 28px
+
+.jobs-hero
+    padding-top 80px
+    padding-bottom 80px
+
+.jobs-wrapper
+    display flex
+    flex-direction column
+    gap 40px
+    padding-top 40px
+
 </style>
