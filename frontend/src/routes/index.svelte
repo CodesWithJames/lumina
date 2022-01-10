@@ -1,14 +1,31 @@
 <script lang="ts">
-import type { SvelteComponentDev } from 'svelte/internal';
+import type { bind, SvelteComponentDev } from "svelte/internal"
+import JobSection from "@components/jobs/JobSection.svelte"
+import type { JobField } from "@components/jobs/jobs_types"
+import HubCard from "@components/hub/HubCard.svelte"
+import UpcomingEvents from "@components/events/UpcomingEvents.svelte"
 
-import AccountGroup from '@icons/AccountGroup.svelte'
-import Domain from '@icons/Domain.svelte'
-import AccountOutline from '@icons/AccountOutline.svelte'
-import Flash from '@icons/Flash.svelte'
-import DiscordBanner from '@components/banners/DiscordBanner.svelte'
-import MainButton from '@components/inputs/MainButton.svelte';
-import ChevronRight from 'svelte-material-icons/ChevronRight.svelte';
-import Job from "@components/jobs/Job.svelte"
+import AccountGroup from "@icons/AccountGroup.svelte"
+import Domain from "@icons/Domain.svelte"
+import AccountOutline from "@icons/AccountOutline.svelte"
+import Flash from "@icons/Flash.svelte"
+import DiscordBanner from "@components/banners/DiscordBanner.svelte"
+import MainButton from "@components/inputs/MainButton.svelte"
+import ChevronRight from "@icons/ChevronRight.svelte"
+import CodeTags from "@icons/CodeTags.svelte"
+import Clock from "@icons/Clock.svelte"
+import Wifi from "@icons/Wifi.svelte"
+import Brush from "@icons/Brush.svelte"
+import Text from "@icons/Text.svelte"
+import Hammer from "@icons/Hammer.svelte"
+import Settlement from "@components/custom-icons/settlement.svelte"
+import Hub from "@components/custom-icons/Hub.svelte"
+import ScaleBalance from "@icons/ScaleBalance.svelte"
+import PassportBiometric from "@icons/PassportBiometric.svelte"
+import Pillar from "@icons/Pillar.svelte"
+import Telescope from "@icons/Telescope.svelte"
+import BadgeAccountHorizontal from "@icons/AccountBadgeHorizontal.svelte"
+import KnowledgeHubCard from "@components/hubs/HubsCard.svelte";
 
 type Stat = {
     value: string,
@@ -44,6 +61,481 @@ let stats: Stat[] = [
     }
 ]
 
+
+let jobFields: JobField[] = [
+    {
+        title: "Software",
+        jobs: [
+            {
+                title: "Backend Engineer",
+                icon: CodeTags,
+                attributes: [
+                    {
+                        icon: Clock,
+                        text: "Volunteer",
+                        color: "#492C9C",
+                        opacity: "1",
+                    },
+                    {
+                        icon: Wifi,
+                        text: "Remote",
+                        color: "#492C9C",
+                        opacity: "1",
+                    }
+                ]
+            },
+            {
+                title: "Frontend Engineer",
+                icon: CodeTags,
+                attributes: [
+                    {
+                        icon: Clock,
+                        text: "Volunteer",
+                        color: "#492C9C",
+                        opacity: "1",
+                    },
+                    {
+                        icon: Wifi,
+                        text: "Remote",
+                        color: "#492C9C",
+                        opacity: "1",
+                    }
+                ]
+            },
+            {
+                title: "Deployment Engineer",
+                icon: CodeTags,
+                attributes: [
+                    {
+                        icon: Clock,
+                        text: "Volunteer",
+                        color: "#492C9C",
+                        opacity: "1",
+                    },
+                    {
+                        icon: Wifi,
+                        text: "Remote",
+                        color: "#492C9C",
+                        opacity: "1",
+                    }
+                ]
+            },
+            
+        ]
+    },
+    {
+        title: "Design",
+        jobs: [
+            {
+                title: "UX Design",
+                icon: Brush,
+                attributes: [
+                    {
+                        icon: Clock,
+                        text: "Volunteer",
+                        color: "#492C9C",
+                        opacity: "1",
+                    },
+                    {
+                        icon: Wifi,
+                        text: "Remote",
+                        color: "#492C9C",
+                        opacity: "1",
+                    }
+                ]
+            },
+            {
+                title: "Video Editor",
+                icon: Brush,
+                attributes: [
+                    {
+                        icon: Clock,
+                        text: "Volunteer",
+                        color: "#492C9C",
+                        opacity: "1",
+                    },
+                    {
+                        icon: Wifi,
+                        text: "Remote",
+                        color: "#492C9C",
+                        opacity: "1",
+                    }
+                ]
+            },
+            {
+                title: "Content Writer",
+                icon: Text,
+                attributes: [
+                    {
+                        icon: Clock,
+                        text: "Volunteer",
+                        color: "#492C9C",
+                        opacity: "1",
+                    },
+                    {
+                        icon: Wifi,
+                        text: "Remote",
+                        color: "#492C9C",
+                        opacity: "1",
+                    }
+                ]
+            }
+            
+        ]
+    },
+    {
+        title: "Settlement",
+        jobs: [
+            {
+                title: "Welder",
+                icon: Hammer,
+                attributes: [
+                    {
+                        icon: Clock,
+                        text: "Future",
+                        color: "#000000",
+                        opacity: "0.3",
+                    },
+                    {
+                        icon: Settlement,
+                        text: "Settlement",
+                        color: "#492C9C",
+                        opacity: "1",
+                    }
+                ]
+            },
+            {
+                title: "Plumber",
+                icon: Hammer,
+                attributes: [
+                    {
+                        icon: Clock,
+                        text: "Future",
+                        color: "#000000",
+                        opacity: "0.3",
+                    },
+                    {
+                        icon: Settlement,
+                        text: "Settlement",
+                        color: "#492C9C",
+                        opacity: "1",
+                    }
+                ]
+            }, 
+            {
+                title: "Concreter",
+                icon: Hammer,
+                attributes: [
+                    {
+                        icon: Clock,
+                        text: "Future",
+                        color: "#000000",
+                        opacity: "0.3",
+                    },
+                    {
+                        icon: Settlement,
+                        text: "Settlement",
+                        color: "#492C9C",
+                        opacity: "1",
+                    }
+                ]
+            },
+            {
+                title: "Power Engineer",
+                icon: Hammer,
+                attributes: [
+                    {
+                        icon: Clock,
+                        text: "Future",
+                        color: "#000000",
+                        opacity: "0.3",
+                    },
+                    {
+                        icon: Settlement,
+                        text: "Settlement",
+                        color: "#492C9C",
+                        opacity: "1",
+                    }
+                ]
+            },
+            {
+                title: "Civil Engineer",
+                icon: Hammer,
+                attributes: [
+                    {
+                        icon: Clock,
+                        text: "Future",
+                        color: "#000000",
+                        opacity: "0.3",
+                    },
+                    {
+                        icon: Settlement,
+                        text: "Settlement",
+                        color: "#492C9C",
+                        opacity: "1",
+                    }
+                ]
+            },
+            {
+                title: "Electrical Engineer",
+                icon: Hammer,
+                attributes: [
+                    {
+                        icon: Clock,
+                        text: "Future",
+                        color: "#000000",
+                        opacity: "0.3",
+                    },
+                    {
+                        icon: Settlement,
+                        text: "Settlement",
+                        color: "#492C9C",
+                        opacity: "1",
+                    }
+                ]
+            }
+        ]
+    }
+]
+
+let twoWideHubCards = [
+    {
+        tag: {
+            text: "Info",
+            color: "#2570B6",
+            
+        },
+        title: {
+            icon: ScaleBalance,
+            text: "Rights & Duties",
+        },
+        description: "Learn about your rights and duties required for our society to function.",
+        greyedOut: false
+    },
+    {
+        tag: {
+            text: "Info",
+            color: "#2570B6",
+            
+        },
+        title: {
+            icon: Pillar,
+            text: "Principles & Values",
+        },
+        description: "Our mission, principles and values define the emotional, moral, and spiritual core of our society.",
+        greyedOut: false
+    },
+    {
+        tag: {
+            text: "Service",
+            color: "#492C9C",
+            
+        },
+        title: {
+            icon: PassportBiometric,
+            text: "Citizenship",
+        },
+        description: "Find out the benefits of becoming a citizen in Lumina. Get involved, along with thousands others today.",
+        greyedOut: false
+    },
+    {
+        tag: {
+            text: "Service",
+            color: "#492C9C",
+            
+        },
+        title: {
+            icon: AccountOutline,
+            text: "myLumina",
+        },
+        description: "Lumina's cloud government portal that lets citizens access government services.",
+        greyedOut: false
+    },
+    {
+        tag: {
+            text: "Info",
+            color: "#2570B6",
+            
+        },
+        title: {
+            icon: Telescope,
+            text: "Our Vision",
+        },
+        description: "Learn about your rights and duties required for our society to function.",
+        greyedOut: false
+    },
+    {
+        tag: {
+            text: "Service",
+            color: "#2570B6",
+            
+        },
+        title: {
+            icon: BadgeAccountHorizontal,
+            text: "Media & Press",
+        },
+        description: "Are you a member of the press looking to speak to a Luminar representative? Contact us here.",
+        greyedOut: false
+    }
+]
+
+let threeWideHubCards = [
+    {
+        tag: {
+            text: "Coming Soon",
+            color: "#B4B4B4",
+            
+        },
+        title: {
+            icon: ScaleBalance,
+            text: "Legislation",
+        },
+        description: "Learn about your rights and duties required for our society to function.",
+        greyedOut: true
+    },
+    {
+        tag: {
+            text: "Coming Soon",
+            color: "#B4B4B4",
+            
+        },
+        title: {
+            icon: ScaleBalance,
+            text: "Legislation",
+        },
+        description: "Learn about your rights and duties required for our society to function.",
+        greyedOut: true
+    },
+    {
+        tag: {
+            text: "Coming Soon",
+            color: "#B4B4B4",
+            
+        },
+        title: {
+            icon: ScaleBalance,
+            text: "Legislation",
+        },
+        description: "Learn about your rights and duties required for our society to function.",
+        greyedOut: true
+    },
+    {
+        tag: {
+            text: "Coming Soon",
+            color: "#B4B4B4",
+            
+        },
+        title: {
+            icon: ScaleBalance,
+            text: "Legislation",
+        },
+        description: "Learn about your rights and duties required for our society to function.",
+        greyedOut: true
+    },
+    {
+        tag: {
+            text: "Coming Soon",
+            color: "#B4B4B4",
+            
+        },
+        title: {
+            icon: ScaleBalance,
+            text: "Legislation",
+        },
+        description: "Learn about your rights and duties required for our society to function.",
+        greyedOut: true
+    },
+    {
+        tag: {
+            text: "Coming Soon",
+            color: "#B4B4B4",
+            
+        },
+        title: {
+            icon: ScaleBalance,
+            text: "Legislation",
+        },
+        description: "Learn about your rights and duties required for our society to function.",
+        greyedOut: true
+    },
+    {
+        tag: {
+            text: "Coming Soon",
+            color: "#B4B4B4",
+            
+        },
+        title: {
+            icon: ScaleBalance,
+            text: "Legislation",
+        },
+        description: "Learn about your rights and duties required for our society to function.",
+        greyedOut: true
+    },
+    {
+        tag: {
+            text: "Coming Soon",
+            color: "#B4B4B4",
+            
+        },
+        title: {
+            icon: ScaleBalance,
+            text: "Legislation",
+        },
+        description: "Learn about your rights and duties required for our society to function.",
+        greyedOut: true
+    },
+    {
+        tag: {
+            text: "Coming Soon",
+            color: "#B4B4B4",
+            
+        },
+        title: {
+            icon: ScaleBalance,
+            text: "Legislation",
+        },
+        description: "Learn about your rights and duties required for our society to function.",
+        greyedOut: true
+    },
+]
+
+let events = [
+    {
+        link: "/",
+        date: {
+            time: {
+                hour: "00",
+                minutes: "00",
+                pm: false
+            },
+            day: 31,
+            month: "Aug",
+            year: 2022
+        },
+        title: "Lumina Day",
+        type: "Holiday",
+        img: "static/images/lumina_flag.png",
+        location: "Lumina"
+    },
+    {
+        link: "/",
+        date: {
+            time: {
+                hour: "00",
+                minutes: "00",
+                pm: false
+            },
+            day: 31,
+            month: "Aug",
+            year: 2022
+        },
+        title: "Lumina Day",
+        type: "Holiday",
+        img: "static/images/lumina_flag.png",
+        location: "Lumina"
+    },
+]
+
 </script>
 <div class="hero-wrapper">
     <div class="inner-hero main-hero-layout">
@@ -58,17 +550,20 @@ let stats: Stat[] = [
                 </div>
             </h1>
             <p>
-                Welcome to Lumina, a social experiment with the goals of setting up a new innovative and environmentally sustainable city.
+                Welcome to Lumina, a social experiment with the goals of setting up 
+                a new innovative and environmentally sustainable city.
             </p>
             <p>
-                Lumina proposes to set up a Autonomous Zone, which is a city with it's own government, laws, and currency.
+                Lumina proposes to set up a Autonomous Zone, 
+                which is a city with it's own government, laws, and currency.
             </p>
             <div>
                 <MainButton
                     href="/onboarding"
                     right_icon={ChevronRight}
                     inline={true}
-                    gradient={true}>
+                    gradient={true}
+                >
                     Become a citizen
                 </MainButton>
             </div>
@@ -95,11 +590,36 @@ let stats: Stat[] = [
             {/each}
         </div>
     </div>
-
     <DiscordBanner/>
 </div>
 
-<div class="job-positions">
+<div class="hub-wrapper">
+    <div class="hub-inner-wrapper">
+        <div class="title hub">
+            <div class="hub-icon">
+                <svelte:component this={Hub} />
+            </div>
+            <h2 class="hub-heading">
+                Lumina Hub
+            </h2>
+        </div>
+        <div class="hub-cards-wrapper">
+            <div class="hub-cards-two-wide-wrapper">
+                {#each twoWideHubCards as info}
+                    <HubCard bind:info/>
+                {/each}
+            </div>
+            <div class="hub-cards-three-wide-wrapper">
+                {#each threeWideHubCards as info}
+                    <HubCard bind:info/>
+                {/each}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="inner-hero jobs-hero">
     <div class="job-info">
         <h2 class="job-heading">
             Open positions
@@ -108,13 +628,19 @@ let stats: Stat[] = [
             We are a technology driven society comprised of principled and disciplined people bonded by deeply held mission: to create a modern solution to governance.
         </p>
     </div>
-    <Job job={
-        {
-            
-        }
-    }/>
+    <div class="jobs-wrapper">
+        {#each jobFields as jobField}
+            <JobSection bind:jobField />
+        {/each}
+    </div>
 </div>
 
+<div class="extra-info-wrapper">
+    <UpcomingEvents bind:events />
+    <div class="knowledge-hub-wrapper">
+        <KnowledgeHubCard />
+    </div>
+</div>
 
 <style lang="stylus">
 
@@ -149,6 +675,10 @@ let stats: Stat[] = [
     flex-direction column
     .main-hero-layout
         flex 1 // take up all available space
+    .hub
+        background-color #F3F3F2
+        width 100vw
+
 
 .gradient-text
     background linear-gradient(90deg, #5c32d4, #32c0c0);
@@ -191,9 +721,41 @@ h1
     position absolute
     left 0
 
-.job-positions
-    padding 80px 256px
+.hub-wrapper 
+    background-color #F3F3F2
+    padding 60px 0
+
+.hub-inner-wrapper
+    max-width 1000px
+    margin 0 auto
+
+.title.hub
     display flex
+    margin-bottom 20px
+
+.hub-icon
+    font-size 46px
+    margin-right 10px
+    height 46px
+    width 46px
+
+.hub-heading
+    margin 0
+    padding 0
+    font-size 40px
+    margin auto 0
+
+.hub-cards-two-wide-wrapper
+    display grid
+    grid-template-columns 1fr 1fr
+    grid-gap 20px
+    margin-bottom 20px
+
+.hub-cards-three-wide-wrapper
+    display grid
+    grid-template-columns 1fr 1fr 1fr
+    grid-gap 20px
+    margin-bottom 20px
 
 .job-info
     display flex
@@ -212,4 +774,25 @@ h1
     opacity 0.6
     text-align center
     line-height 28px
+
+.jobs-hero
+    padding-top 80px
+    padding-bottom 80px
+
+.jobs-wrapper
+    display flex
+    flex-direction column
+    gap 40px
+    padding-top 40px
+
+.extra-info-wrapper
+    display grid
+    grid-template-columns 1.2fr 1fr
+    width: 100vw
+
+.knowledge-hub-wrapper
+    padding 40px
+    background-color #EBEBEA
+    padding-right 160px
+
 </style>
