@@ -39,35 +39,8 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: api-ingresse-albert
+  name: api-ingress-albert
   namespace: albert
-  annotations:
-    kubernetes.io/ingress.class: "nginx"
-    nginx.ingress.kubernetes.io/configuration-snippet: |
-          if ($http_origin ~* "^https?://((?:www\.lumina\.earth)|(?:.*\.lumina\.earth))$") {
-            set $cors "true";
-          }
-          if ($request_method = 'OPTIONS') {
-            set $cors "${cors}options";
-          }
-
-          if ($cors = "true") {
-            add_header 'Access-Control-Allow-Origin' "$http_origin" always;
-            add_header 'Access-Control-Allow-Methods' 'GET, PUT, POST, DELETE, PATCH, OPTIONS' always;
-            add_header 'Access-Control-Allow-Headers' '*' always; # changed this
-            add_header 'Access-Control-Expose-Headers' 'Content-Length,Content-Range' always;
-          }
-
-          if ($cors = "trueoptions") {
-            add_header 'Access-Control-Allow-Origin' "$http_origin";
-            add_header 'Access-Control-Allow-Methods' 'GET, PUT, POST, DELETE, PATCH, OPTIONS';
-            add_header 'Access-Control-Allow-Headers' 'DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,token';
-            add_header 'Access-Control-Expose-Headers' '*'; # changed this
-            add_header 'Access-Control-Max-Age' 1728000;
-            add_header 'Content-Type' 'text/plain charset=UTF-8';
-            add_header 'Content-Length' 0;
-            return 204;
-          }
 spec:
   rules:
   - host: albert.lumina.earth
@@ -90,36 +63,43 @@ spec:
               name: backend-service-albert
               port:
                 number: 80
-
-# Ingress that will open api for framework services
-# apiVersion: networking.k8s.io/v1
-# kind: Ingress
-# metadata:
-#   name: framework-ingress
-#   clusterName: framework
-#   annotations:
-#       kubernetes.io/ingress.class: alb
-#       alb.ingress.kubernetes.io/scheme: internet-facing
-#       alb.ingress.kubernetes.io/target-type: ip
-# spec:
-#   rules:
-#   - host: app.lumina.earth # frontend component
-#     http:
-#       paths:
-#       - path: /
-#         pathType: Prefix
-#         backend:
-#           service:
-#             name: frontend-service
-#             port:
-#               number: 80
-#   - host: api.lumina.earth # backend component
-#     http:
-#       paths:
-#       - path: /
-#         pathType: Prefix
-#         backend:
-#           service:
-#             name: backend-service
-#             port:
-#               number: 80
+---
+# Custom Ingress Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: drawbridge-ingress-service
+spec:
+  selector:
+    app: drawbridge-ingress-service
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+  - protocol: TCP
+    port: 443
+    targetPort: 443
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: drawbridge-ingress-service
+spec:
+  selector:
+    matchLabels:
+      app: drawbridge-ingress-service
+  template:
+    metadata:
+      labels:
+        app: drawbridge-ingress-service
+    spec:
+      containers:
+      - name: drawbridge-ingress-service
+        image: albertmashy/drawbridge-ingress:0.1
+        resources:
+          limits:
+            memory: "30Mi"
+            cpu: "0.2"
+        ports:
+        - containerPort: 80
+        - containerPort: 443
