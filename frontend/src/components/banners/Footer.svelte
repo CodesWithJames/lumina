@@ -105,8 +105,10 @@ footer
     color $brand
 
 .cta-anchor-text
-    margin-right 5px
     font-weight 1000
+
+.cta-anchor-icon
+    margin-left 5px
 
 .divider
     background-color $dark
@@ -115,11 +117,13 @@ footer
     width 100%
 
 .inner-wrapper.second
-
-.lumina
-    margin 0 auto
     display flex
     justify-content space-between
+    margin 0 auto
+
+.lumina
+    display flex
+    flex-direction column
 
 .lumina-heading
     display flex
