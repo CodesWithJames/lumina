@@ -642,6 +642,8 @@ let events = [
     </div>
 </div>
 
+<NewsHero />
+
 <style lang="stylus">
 
 
