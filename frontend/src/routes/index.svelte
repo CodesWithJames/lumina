@@ -3,6 +3,7 @@ import type { bind, SvelteComponentDev } from "svelte/internal"
 import JobSection from "@components/jobs/JobSection.svelte"
 import type { JobField } from "@components/jobs/jobs_types"
 import HubCard from "@components/hub/HubCard.svelte"
+import UpcomingEvents from "@components/events/UpcomingEvents.svelte"
 
 import AccountGroup from "@icons/AccountGroup.svelte"
 import Domain from "@icons/Domain.svelte"
@@ -24,6 +25,7 @@ import PassportBiometric from "@icons/PassportBiometric.svelte"
 import Pillar from "@icons/Pillar.svelte"
 import Telescope from "@icons/Telescope.svelte"
 import BadgeAccountHorizontal from "@icons/AccountBadgeHorizontal.svelte"
+import KnowledgeHubCard from "@components/hubs/HubsCard.svelte";
 
 type Stat = {
     value: string,
@@ -307,7 +309,8 @@ let twoWideHubCards = [
             icon: ScaleBalance,
             text: "Rights & Duties",
         },
-        description: "Learn about your rights and duties required for our society to function."
+        description: "Learn about your rights and duties required for our society to function.",
+        greyedOut: false
     },
     {
         tag: {
@@ -319,7 +322,8 @@ let twoWideHubCards = [
             icon: Pillar,
             text: "Principles & Values",
         },
-        description: "Our mission, principles and values define the emotional, moral, and spiritual core of our society."
+        description: "Our mission, principles and values define the emotional, moral, and spiritual core of our society.",
+        greyedOut: false
     },
     {
         tag: {
@@ -331,7 +335,8 @@ let twoWideHubCards = [
             icon: PassportBiometric,
             text: "Citizenship",
         },
-        description: "Find out the benefits of becoming a citizen in Lumina. Get involved, along with thousands others today."
+        description: "Find out the benefits of becoming a citizen in Lumina. Get involved, along with thousands others today.",
+        greyedOut: false
     },
     {
         tag: {
@@ -343,7 +348,8 @@ let twoWideHubCards = [
             icon: AccountOutline,
             text: "myLumina",
         },
-        description: "Lumina's cloud government portal that lets citizens access government services."
+        description: "Lumina's cloud government portal that lets citizens access government services.",
+        greyedOut: false
     },
     {
         tag: {
@@ -355,7 +361,8 @@ let twoWideHubCards = [
             icon: Telescope,
             text: "Our Vision",
         },
-        description: "Learn about your rights and duties required for our society to function."
+        description: "Learn about your rights and duties required for our society to function.",
+        greyedOut: false
     },
     {
         tag: {
@@ -367,10 +374,167 @@ let twoWideHubCards = [
             icon: BadgeAccountHorizontal,
             text: "Media & Press",
         },
-        description: "Are you a member of the press looking to speak to a Luminar representative? Contact us here."
+        description: "Are you a member of the press looking to speak to a Luminar representative? Contact us here.",
+        greyedOut: false
     }
 ]
 
+let threeWideHubCards = [
+    {
+        tag: {
+            text: "Coming Soon",
+            color: "#B4B4B4",
+            
+        },
+        title: {
+            icon: ScaleBalance,
+            text: "Legislation",
+        },
+        description: "Learn about your rights and duties required for our society to function.",
+        greyedOut: true
+    },
+    {
+        tag: {
+            text: "Coming Soon",
+            color: "#B4B4B4",
+            
+        },
+        title: {
+            icon: ScaleBalance,
+            text: "Legislation",
+        },
+        description: "Learn about your rights and duties required for our society to function.",
+        greyedOut: true
+    },
+    {
+        tag: {
+            text: "Coming Soon",
+            color: "#B4B4B4",
+            
+        },
+        title: {
+            icon: ScaleBalance,
+            text: "Legislation",
+        },
+        description: "Learn about your rights and duties required for our society to function.",
+        greyedOut: true
+    },
+    {
+        tag: {
+            text: "Coming Soon",
+            color: "#B4B4B4",
+            
+        },
+        title: {
+            icon: ScaleBalance,
+            text: "Legislation",
+        },
+        description: "Learn about your rights and duties required for our society to function.",
+        greyedOut: true
+    },
+    {
+        tag: {
+            text: "Coming Soon",
+            color: "#B4B4B4",
+            
+        },
+        title: {
+            icon: ScaleBalance,
+            text: "Legislation",
+        },
+        description: "Learn about your rights and duties required for our society to function.",
+        greyedOut: true
+    },
+    {
+        tag: {
+            text: "Coming Soon",
+            color: "#B4B4B4",
+            
+        },
+        title: {
+            icon: ScaleBalance,
+            text: "Legislation",
+        },
+        description: "Learn about your rights and duties required for our society to function.",
+        greyedOut: true
+    },
+    {
+        tag: {
+            text: "Coming Soon",
+            color: "#B4B4B4",
+            
+        },
+        title: {
+            icon: ScaleBalance,
+            text: "Legislation",
+        },
+        description: "Learn about your rights and duties required for our society to function.",
+        greyedOut: true
+    },
+    {
+        tag: {
+            text: "Coming Soon",
+            color: "#B4B4B4",
+            
+        },
+        title: {
+            icon: ScaleBalance,
+            text: "Legislation",
+        },
+        description: "Learn about your rights and duties required for our society to function.",
+        greyedOut: true
+    },
+    {
+        tag: {
+            text: "Coming Soon",
+            color: "#B4B4B4",
+            
+        },
+        title: {
+            icon: ScaleBalance,
+            text: "Legislation",
+        },
+        description: "Learn about your rights and duties required for our society to function.",
+        greyedOut: true
+    },
+]
+
+let events = [
+    {
+        link: "/",
+        date: {
+            time: {
+                hour: "00",
+                minutes: "00",
+                pm: false
+            },
+            day: 31,
+            month: "Aug",
+            year: 2022
+        },
+        title: "Lumina Day",
+        type: "Holiday",
+        img: "static/images/lumina_flag.png",
+        location: "Lumina"
+    },
+    {
+        link: "/",
+        date: {
+            time: {
+                hour: "00",
+                minutes: "00",
+                pm: false
+            },
+            day: 31,
+            month: "Aug",
+            year: 2022
+        },
+        title: "Lumina Day",
+        type: "Holiday",
+        img: "static/images/lumina_flag.png",
+        location: "Lumina"
+    },
+]
 
 </script>
 <div class="hero-wrapper">
@@ -429,26 +593,31 @@ let twoWideHubCards = [
     <DiscordBanner/>
 </div>
 
-<div class="inner-hero">
-    <div class="title hub">
-        <div class="hub-icon">
-            <svelte:component this={Hub} />
+<div class="hub-wrapper">
+    <div class="hub-inner-wrapper">
+        <div class="title hub">
+            <div class="hub-icon">
+                <svelte:component this={Hub} />
+            </div>
+            <h2 class="hub-heading">
+                Lumina Hub
+            </h2>
         </div>
-        <h2 class="hub-heading">
-            Lumina Hub
-        </h2>
-    </div>
-    <div class="hub-cards-wrapper">
-        <div class="hub-cards-two-wide-wrapper">
-            {#each twoWideHubCards as info}
-                <HubCard bind:info/>
-            {/each}
-        </div>
-        <div class="hub-cards-three-wide-wrapper">
-
+        <div class="hub-cards-wrapper">
+            <div class="hub-cards-two-wide-wrapper">
+                {#each twoWideHubCards as info}
+                    <HubCard bind:info/>
+                {/each}
+            </div>
+            <div class="hub-cards-three-wide-wrapper">
+                {#each threeWideHubCards as info}
+                    <HubCard bind:info/>
+                {/each}
+            </div>
         </div>
     </div>
 </div>
+
 
 <div class="inner-hero jobs-hero">
     <div class="job-info">
@@ -461,10 +630,15 @@ let twoWideHubCards = [
     </div>
     <div class="jobs-wrapper">
         {#each jobFields as jobField}
-            <JobSection
-                bind:jobField
-            />
+            <JobSection bind:jobField />
         {/each}
+    </div>
+</div>
+
+<div class="extra-info-wrapper">
+    <UpcomingEvents bind:events />
+    <div class="knowledge-hub-wrapper">
+        <KnowledgeHubCard />
     </div>
 </div>
 
@@ -501,6 +675,10 @@ let twoWideHubCards = [
     flex-direction column
     .main-hero-layout
         flex 1 // take up all available space
+    .hub
+        background-color #F3F3F2
+        width 100vw
+
 
 .gradient-text
     background linear-gradient(90deg, #5c32d4, #32c0c0);
@@ -543,6 +721,42 @@ h1
     position absolute
     left 0
 
+.hub-wrapper 
+    background-color #F3F3F2
+    padding 60px 0
+
+.hub-inner-wrapper
+    max-width 1000px
+    margin 0 auto
+
+.title.hub
+    display flex
+    margin-bottom 20px
+
+.hub-icon
+    font-size 46px
+    margin-right 10px
+    height 46px
+    width 46px
+
+.hub-heading
+    margin 0
+    padding 0
+    font-size 40px
+    margin auto 0
+
+.hub-cards-two-wide-wrapper
+    display grid
+    grid-template-columns 1fr 1fr
+    grid-gap 20px
+    margin-bottom 20px
+
+.hub-cards-three-wide-wrapper
+    display grid
+    grid-template-columns 1fr 1fr 1fr
+    grid-gap 20px
+    margin-bottom 20px
+
 .job-info
     display flex
     flex-direction column
@@ -571,17 +785,14 @@ h1
     gap 40px
     padding-top 40px
 
-.title.hub
-    display flex
-    margin-bottom 20px
+.extra-info-wrapper
+    display grid
+    grid-template-columns 1.2fr 1fr
+    width: 100vw
 
-.hub-icon
-    font-size 46px
-    margin-right 10px
+.knowledge-hub-wrapper
+    padding 40px
+    background-color #EBEBEA
+    padding-right 160px
 
-.hub-heading
-    margin 0
-    padding 0
-    font-size 40px
-    margin auto 0
 </style>

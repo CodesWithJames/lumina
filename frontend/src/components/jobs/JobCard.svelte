@@ -7,36 +7,45 @@ export let job: JobType
 
 </script>
 
-<div class="main">
-    <div class="left">
-        <div class="heading">
-            <div class="icon">
-                <svelte:component this={job.icon}/>
+<a href="/">
+    <div class="main">
+        <div class="left">
+            <div class="heading">
+                <div class="icon">
+                    <svelte:component this={job.icon}/>
+                </div>
+                <div class="title">
+                    {job.title}
+                </div>
             </div>
-            <div class="title">
-                {job.title}
+            <div class="info-wrapper">
+                {#each job.attributes as info}
+                    <InfoCard bind:info />
+                {/each}
             </div>
         </div>
-        <div class="info-wrapper">
-            {#each job.attributes as info}
-                <InfoCard
-                    bind:info
-                />
-            {/each}
+        <div class="arrow">
+            <svelte:component this={ArrowRight} />
         </div>
     </div>
-    <div class="arrow">
-        <svelte:component this={ArrowRight} />
-    </div>
-</div>
+</a>
 
 <style lang="stylus">
+@import 'variables'
+
+a
+    text-decoration none
+
 .main
     display flex
     align-items center
     border 1px solid rgba(35, 36, 44, 0.1)
     border-radius: 5px
     padding 20px
+    color $dark
+
+.main:hover
+    background-color rgba(45, 55, 68, 0.05)
 
 .left
     display flex

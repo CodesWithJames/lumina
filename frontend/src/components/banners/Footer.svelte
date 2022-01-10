@@ -93,14 +93,13 @@ footer
     padding 60px 20px
     max-width 1200px
     width 100%
-    margin 0 auto
+    display flex
 
 .call-to-action
     font-size 40px
     font-weight 600
     text-align center
-    display inline-flex
-    align-items center
+    margin 0 auto
 
 .cta-link
     color $brand
@@ -116,6 +115,9 @@ footer
     width 100%
 
 .inner-wrapper.second
+
+.lumina
+    margin 0 auto
     display flex
     justify-content space-between
 
@@ -163,7 +165,7 @@ footer
     .inner-wrapper
         padding 8px 20px
         display flex
-        justify-content space-between
+        margin 0 auto
 
 .authorisation
     margin auto 0
@@ -171,10 +173,12 @@ footer
     text-transform uppercase
     font-weight 600
     font-size 16px
+    display flex
 
 .social-media-icons
     display flex
     gap 10px
+    margin-left auto
 
 .social-media-icon
     color $dark
