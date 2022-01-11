@@ -4,40 +4,7 @@ import type { NewsCardType } from "@components/news/news_types"
 import MainButton from "@components/inputs/MainButton.svelte"
 import ChevronRight from "@icons/ChevronRight.svelte"
 
-let featuredStories: NewsCardType[]  = [
-    {
-        tag: {
-            text: "Article",
-            color: "#492C9C"
-        },
-        date: {
-            dayAsNumber: 4,
-            month: "Jan",
-            year: 2020
-        },
-        title: "Lumina hits 2000 citizens",
-        author: {
-            name: "Albert",
-            img: "static/images/albert_dp.png"
-        }
-    },
-    {
-        tag: {
-            text: "Article",
-            color: "#492C9C"
-        },
-        date: {
-            dayAsNumber: 3,
-            month: "Jan",
-            year: 2020
-        },
-        title: "Lumina hits 1000 citizens",
-        author: {
-            name: "Albert",
-            img: "static/images/albert_dp.png"
-        }
-    }
-]
+export let featuredStories: NewsCardType[]
 
 </script>
 

@@ -3,42 +3,7 @@ import type { EventType } from "@components/events/event_types"
 import EventCard from "@components/events/EventCard.svelte"
 import ChevronRight from "svelte-material-icons/ChevronRight.svelte"
 
-let events: EventType[] = [
-    {
-        link: "/",
-        date: {
-            time: {
-                hour: "00",
-                minutes: "00",
-                pm: false
-            },
-            day: 31,
-            month: "Aug",
-            year: 2022
-        },
-        title: "Lumina Day",
-        type: "Holiday",
-        img: "static/images/lumina_flag.png",
-        location: "Lumina"
-    },
-    {
-        link: "/",
-        date: {
-            time: {
-                hour: "00",
-                minutes: "00",
-                pm: false
-            },
-            day: 31,
-            month: "Aug",
-            year: 2022
-        },
-        title: "Lumina Day",
-        type: "Holiday",
-        img: "static/images/lumina_flag.png",
-        location: "Lumina"
-    },
-]
+export let events: EventType[]
 
 </script>
 

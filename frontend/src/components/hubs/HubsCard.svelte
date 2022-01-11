@@ -1,22 +1,9 @@
 <script lang="ts">
 import ChevronRight from "@icons/ChevronRight.svelte"
 
-let knowledgeInfo = {
-    emoji: "📕",
-    title: "Knowledge Hub",
-    description: "Learn about how Lumina plans to become a reality. Get information on funding, planning, settlement & more."
-}
+export let knowledgeInfo
 
-let areas = [
-    {
-        emoji: "🏦",
-        title: "Banking & Monetary System"
-    },
-    {
-        emoji: "💰",
-        title: "Taxation System"
-    }
-]
+export let areas
 
 </script>
 
