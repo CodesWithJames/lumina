@@ -1,11 +1,7 @@
 export type HeroType = {
     titleExcludingLastWord: string,
     highlightedWord: string,
-    descriptionOne: string,
-    descriptionTwo?: string,
-    buttonOneText: string,
-    buttonOneLink: string,
-    buttonTwoText?: string,
-    buttonTwoLink?: string,
+    descriptionParagraphs: string[],
+    buttons: { text: string, link: string }[],
     img: string
 }

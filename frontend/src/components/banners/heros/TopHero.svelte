@@ -18,37 +18,22 @@ export let heroInfo: HeroType
         </div>
     </h1>
     <div class="hero-description">
-        <p>
-            {heroInfo.descriptionOne}
-        </p>
-        {#if heroInfo.descriptionTwo}
-            <p>
-                {heroInfo.descriptionTwo}
-            </p>
-        {/if}
+        {#each heroInfo.descriptionParagraphs as paragraph}
+            <p>{paragraph}</p>
+        {/each}
     </div>
     <div>
-        <MainButton
-            href="/onboarding"
-            right_icon={ChevronRight}
-            inline={true}
-            gradient={true}
-        >
-        {heroInfo.buttonOneText}
-        </MainButton>
-    </div>
-    {#if heroInfo.buttonTwoText}
-        <div>
+        {#each heroInfo.buttons as button}
             <MainButton
-                href={heroInfo.buttonTwoLink}
+                href={button.link}
                 right_icon={ChevronRight}
                 inline={true}
                 gradient={true}
             >
-                {heroInfo.buttonTwoText}
+            {button.text}
             </MainButton>
-        </div>
-    {/if}
+        {/each}
+    </div>
 </div>
 <div class="hero-image-wrapper">
     <img class="hero-image" src={heroInfo.img} alt="a city skyline">

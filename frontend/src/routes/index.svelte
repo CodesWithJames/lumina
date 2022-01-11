@@ -7,7 +7,7 @@ import KnowledgeHubCard from "@components/hubs/HubsCard.svelte"
 import StatsHero from "@components/stats/StatsBlock.svelte"
 import HubHero from "@components/hub/HubHero.svelte"
 import JobHero from "@components/jobs/JobHero.svelte"
-import HomePageHero from "@components/banners/heros/TopHero.svelte"
+import TopHero from "@components/banners/heros/TopHero.svelte"
 
 import AccountGroup from "@icons/AccountGroup.svelte"
 import Domain from "@icons/Domain.svelte"
@@ -29,10 +29,16 @@ import Settlement from "@components/custom-icons/settlement.svelte"
 let heroInfo = {
     titleExcludingLastWord: "city of the",
     highlightedWord: "future",
-    descriptionOne: "Welcome to Lumina, a social experiment with the goals of setting up a new innovative and environmentally sustainable city.",
-    descriptionTwo: "Lumina proposes to set up a Autonomous Zone, which is a city with it's own government, laws, and currency.",
-    buttonOneText: "Become a citizen",
-    buttonOneLink: "/onboarding",
+    descriptionParagraphs: [
+        "Welcome to Lumina, a social experiment with the goals of setting up a new innovative and environmentally sustainable city.",
+        "Lumina proposes to set up a Autonomous Zone, which is a city with it's own government, laws, and currency.",
+    ],
+    buttons: [
+        {
+            text: "Become a citizen",
+            link: "/onboarding",
+        },
+    ],
     img: "/images/hero-image.svg"
 }
 
@@ -593,7 +599,7 @@ let featuredStories = [
 
 <div class="hero-wrapper">
     <div class="inner-hero main-hero-layout">
-        <HomePageHero bind:heroInfo />
+        <TopHero bind:heroInfo />
     </div>
     <div class="inner-hero">
         <StatsHero bind:stats />
