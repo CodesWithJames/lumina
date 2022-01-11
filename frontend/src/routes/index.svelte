@@ -4,6 +4,7 @@ import JobSection from "@components/jobs/JobSection.svelte"
 import type { JobField } from "@components/jobs/jobs_types"
 import HubCard from "@components/hub/HubCard.svelte"
 import UpcomingEvents from "@components/events/UpcomingEvents.svelte"
+import NewsHero from "@components/news/NewsHero.svelte"
 
 import AccountGroup from "@icons/AccountGroup.svelte"
 import Domain from "@icons/Domain.svelte"
@@ -549,14 +550,16 @@ let events = [
                     <span class="gradient-text">future</span>
                 </div>
             </h1>
-            <p>
-                Welcome to Lumina, a social experiment with the goals of setting up 
-                a new innovative and environmentally sustainable city.
-            </p>
-            <p>
-                Lumina proposes to set up a Autonomous Zone, 
-                which is a city with it's own government, laws, and currency.
-            </p>
+            <div class="hero-description">
+                <p>
+                    Welcome to Lumina, a social experiment with the goals of setting up 
+                    a new innovative and environmentally sustainable city.
+                </p>
+                <p>
+                    Lumina proposes to set up a Autonomous Zone, 
+                    which is a city with it's own government, laws, and currency.
+                </p>
+            </div>
             <div>
                 <MainButton
                     href="/onboarding"
@@ -677,9 +680,6 @@ let events = [
     flex-direction column
     .main-hero-layout
         flex 1 // take up all available space
-    .hub
-        background-color #F3F3F2
-        width 100vw
 
 
 .gradient-text
@@ -698,6 +698,9 @@ h1
     font-size 80px
     font-weight 600
     margin 0
+
+.hero-description
+    font-size 20px
 
 .inner-hero
     max-width 1200px
