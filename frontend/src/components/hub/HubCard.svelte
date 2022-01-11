@@ -5,10 +5,11 @@ import ArrowRight from "svelte-material-icons/ArrowRight.svelte"
 export let info: HubType
 
 let greyedOut = info.greyedOut
+
 </script>
 
-<a href="/">
-    <div class="main" class:greyedOut>
+{#if !greyedOut}
+    <a href="/" class="main" class:greyedOut>
         <div class="header">
             <div class="tag" style="background-color: {info.tag.color};">
                 {info.tag.text}
@@ -28,26 +29,44 @@ let greyedOut = info.greyedOut
         <p>
             {info.description}
         </p>
+    </a>
+{:else}
+    <div class="main" class:greyedOut>
+        <div class="header">
+            <div class="tag" style="background-color: {info.tag.color};">
+                {info.tag.text}
+            </div>
+        </div>
+        <div class="title">
+            <div class="icon">
+                <svelte:component this={info.title.icon}/>
+            </div>
+            <div class="heading">
+                {info.title.text}
+            </div>
+        </div>
+        <p>
+            {info.description}
+        </p>
     </div>
-</a>
+{/if}
 
 <style lang="stylus">
 @import 'variables'
 
-a
-    text-decoration none
-    color $dark
-
 .main
     background-color white
     border-radius 5px
-    padding 20px
+    padding 17px
+    border 3px solid white
+    text-decoration none
+    color $dark
+
+.main:not(.greyedOut):hover
+    border 3px solid $brand
 
 .greyedOut
     opacity 0.5
-
-.main:hover
-    background-color rgba(255, 255, 255, 0.2)
 
 .header
     display flex

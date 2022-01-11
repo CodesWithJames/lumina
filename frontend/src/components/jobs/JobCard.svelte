@@ -39,13 +39,14 @@ a
 .main
     display flex
     align-items center
-    border 1px solid rgba(35, 36, 44, 0.1)
+    border 2px solid rgba(35, 36, 44, 0.1)
     border-radius: 5px
     padding 20px
     color $dark
 
 .main:hover
     background-color rgba(45, 55, 68, 0.05)
+    border 2px solid $brand
 
 .left
     display flex

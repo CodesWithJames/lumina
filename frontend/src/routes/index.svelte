@@ -7,13 +7,23 @@ import KnowledgeHubCard from "@components/hubs/HubsCard.svelte"
 import StatsHero from "@components/stats/StatsBlock.svelte"
 import HubHero from "@components/hub/HubHero.svelte"
 import JobHero from "@components/jobs/JobHero.svelte"
-import HomePageHero from "@components/banners/HomePageHero.svelte"
+import HomePageHero from "@components/banners/heros/TopHero.svelte"
+
+let heroInfo = {
+    titleExcludingLastWord: "city of the",
+    highlightedWord: "future",
+    descriptionOne: "Welcome to Lumina, a social experiment with the goals of setting up a new innovative and environmentally sustainable city.",
+    descriptionTwo: "Lumina proposes to set up a Autonomous Zone, which is a city with it's own government, laws, and currency.",
+    buttonOneText: "Become a citizen",
+    buttonOneLink: "/onboarding",
+    img: "/images/hero-image.svg"
+}
 
 </script>
 
 <div class="hero-wrapper">
     <div class="inner-hero main-hero-layout">
-        <HomePageHero />
+        <HomePageHero bind:heroInfo />
     </div>
     <div class="inner-hero">
         <StatsHero />

@@ -1,6 +1,9 @@
 <script lang="ts">
 import MainButton from "@components/inputs/MainButton.svelte"
 import ChevronRight from "@icons/ChevronRight.svelte"
+import type { HeroType } from "@components/banners/heros/hero_types"
+
+export let heroInfo: HeroType
 
 </script>
 
@@ -8,21 +11,21 @@ import ChevronRight from "@icons/ChevronRight.svelte"
     <h3 class="subtitle">Start a new city</h3>
     <h1>
         <div>
-            city of the
+            {heroInfo.titleExcludingLastWord}
         </div>
         <div>
-            <span class="gradient-text">future</span>
+            <span class="gradient-text">{heroInfo.highlightedWord}</span>
         </div>
     </h1>
     <div class="hero-description">
         <p>
-            Welcome to Lumina, a social experiment with the goals of setting up 
-            a new innovative and environmentally sustainable city.
+            {heroInfo.descriptionOne}
         </p>
-        <p>
-            Lumina proposes to set up a Autonomous Zone, 
-            which is a city with it's own government, laws, and currency.
-        </p>
+        {#if heroInfo.descriptionTwo}
+            <p>
+                {heroInfo.descriptionTwo}
+            </p>
+        {/if}
     </div>
     <div>
         <MainButton
@@ -31,12 +34,24 @@ import ChevronRight from "@icons/ChevronRight.svelte"
             inline={true}
             gradient={true}
         >
-            Become a citizen
+        {heroInfo.buttonOneText}
         </MainButton>
     </div>
+    {#if heroInfo.buttonTwoText}
+        <div>
+            <MainButton
+                href={heroInfo.buttonTwoLink}
+                right_icon={ChevronRight}
+                inline={true}
+                gradient={true}
+            >
+                {heroInfo.buttonTwoText}
+            </MainButton>
+        </div>
+    {/if}
 </div>
 <div class="hero-image-wrapper">
-    <img class="hero-image" src="/images/hero-image.svg" alt="a city skyline">
+    <img class="hero-image" src={heroInfo.img} alt="a city skyline">
 </div>
 
 <style lang="stylus">
