@@ -78,5 +78,7 @@ a
 
 p
     line-height 24px
+    margin 0
+    padding 0
 
 </style>
