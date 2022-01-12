@@ -75,6 +75,7 @@ let stats = [
 
 let twoWideHubCards = [
     {
+        link: "/rights-and-duties",
         tag: {
             text: "Info",
             color: "#2570B6",
@@ -88,6 +89,7 @@ let twoWideHubCards = [
         greyedOut: false
     },
     {
+        link: "/principles-and-values",
         tag: {
             text: "Info",
             color: "#2570B6",
@@ -101,6 +103,7 @@ let twoWideHubCards = [
         greyedOut: false
     },
     {
+        link: "/",
         tag: {
             text: "Service",
             color: "#492C9C",
@@ -114,6 +117,7 @@ let twoWideHubCards = [
         greyedOut: false
     },
     {
+        link: "/",
         tag: {
             text: "Service",
             color: "#492C9C",
@@ -127,6 +131,7 @@ let twoWideHubCards = [
         greyedOut: false
     },
     {
+        link: "/",
         tag: {
             text: "Info",
             color: "#2570B6",
@@ -140,6 +145,7 @@ let twoWideHubCards = [
         greyedOut: false
     },
     {
+        link: "/",
         tag: {
             text: "Service",
             color: "#2570B6",
@@ -156,6 +162,7 @@ let twoWideHubCards = [
 
 let threeWideHubCards = [
     {
+        link: "/",
         tag: {
             text: "Coming Soon",
             color: "#B4B4B4",
@@ -169,6 +176,7 @@ let threeWideHubCards = [
         greyedOut: true
     },
     {
+        link: "/",
         tag: {
             text: "Coming Soon",
             color: "#B4B4B4",
@@ -182,6 +190,7 @@ let threeWideHubCards = [
         greyedOut: true
     },
     {
+        link: "/",
         tag: {
             text: "Coming Soon",
             color: "#B4B4B4",
@@ -195,6 +204,7 @@ let threeWideHubCards = [
         greyedOut: true
     },
     {
+        link: "/",
         tag: {
             text: "Coming Soon",
             color: "#B4B4B4",
@@ -208,6 +218,7 @@ let threeWideHubCards = [
         greyedOut: true
     },
     {
+        link: "/",
         tag: {
             text: "Coming Soon",
             color: "#B4B4B4",
@@ -221,6 +232,7 @@ let threeWideHubCards = [
         greyedOut: true
     },
     {
+        link: "/",
         tag: {
             text: "Coming Soon",
             color: "#B4B4B4",
@@ -234,6 +246,7 @@ let threeWideHubCards = [
         greyedOut: true
     },
     {
+        link: "/",
         tag: {
             text: "Coming Soon",
             color: "#B4B4B4",
@@ -247,6 +260,7 @@ let threeWideHubCards = [
         greyedOut: true
     },
     {
+        link: "/",
         tag: {
             text: "Coming Soon",
             color: "#B4B4B4",
@@ -260,6 +274,7 @@ let threeWideHubCards = [
         greyedOut: true
     },
     {
+        link: "/",
         tag: {
             text: "Coming Soon",
             color: "#B4B4B4",

@@ -1,4 +1,5 @@
 export type HubType = {
+    link: string,
     tag: {
         text: string,
         color: string,

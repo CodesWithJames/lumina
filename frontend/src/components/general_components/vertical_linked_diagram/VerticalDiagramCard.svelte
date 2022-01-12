@@ -24,7 +24,7 @@ getSeperatorHeight()
         </div>
         <div 
             class="seperator" 
-            style="height: {seperatorHeight}px; {(cardInfo.passedOnScroll) ? "background-color: #492C9C;" : ""}" 
+            style="height: {seperatorHeight}px; {(cardInfo.nextSectionPassedOnScroll) ? "background-color: #492C9C;" : ""}" 
         />
     </div>
     <div class="content-wrapper">

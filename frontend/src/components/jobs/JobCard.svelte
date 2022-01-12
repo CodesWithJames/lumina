@@ -45,8 +45,7 @@ a
     color $dark
 
 .main:hover
-    background-color rgba(45, 55, 68, 0.05)
-    border 2px solid $brand
+    background-color rgba(45, 55, 68, 0.08)
 
 .left
     display flex

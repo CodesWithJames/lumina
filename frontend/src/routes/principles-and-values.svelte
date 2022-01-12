@@ -51,31 +51,36 @@ let diagramSections = [
         icon: RobotIndustrial,
         heading: "Pragmatism",
         description: "The right to free education in subjects: which do not cause division in society  and: lead to employment; or further scientific knowledge; or create technological advancement; or philosophy;",
-        passedOnScroll: false
+        passedOnScroll: false,
+        nextSectionPassedOnScroll: false
     },
     {
         icon: Bolt,
         heading: "Sustainability",
         description: "The right to free education in subjects: which do not cause division in society  and: lead to employment; or further scientific knowledge; or create technological advancement; or philosophy;",
-        passedOnScroll: false
+        passedOnScroll: false,
+        nextSectionPassedOnScroll: false
     },
     {
         icon: Sync,
         heading: "Iterate and improve",
         description: "Failure is part of the processs of iteration. Embrace and learn from failure.",
-        passedOnScroll: false
+        passedOnScroll: false,
+        nextSectionPassedOnScroll: false
     },
     {
         icon: Brain,
         heading: "Never stop learning",
         description: "The right to free education in subjects: which do not cause division in society  and: lead to employment; or further scientific knowledge; or create technological advancement; or philosophy;",
-        passedOnScroll: false
+        passedOnScroll: false,
+        nextSectionPassedOnScroll: false
     },
     {
         icon: ArmFlexOutline,
         heading: "Be bold",
         description: "The right to free education in subjects: which do not cause division in society  and: lead to employment; or further scientific knowledge; or create technological advancement; or philosophy;",
-        passedOnScroll: false
+        passedOnScroll: false,
+        nextSectionPassedOnScroll: false
     }
 ]
 
@@ -94,8 +99,8 @@ function makeDiagramSectionChangeColour(){
     let i = 0
     for (let card in diagramSections) {
         let elem = document.getElementById(`diagramCard ${i}`)
-        let bottomOfElem = elem.getBoundingClientRect().bottom
-        if (bottomOfElem < 600) {
+        let distanceFromTop = elem.getBoundingClientRect().top
+        if (distanceFromTop < 800) {
             diagramSections[i].passedOnScroll = true
         } else {
             diagramSections[i].passedOnScroll = false

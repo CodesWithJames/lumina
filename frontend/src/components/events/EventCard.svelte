@@ -52,6 +52,10 @@ export let event: EventType
 .main-link
     text-decoration none
     width 100%
+    border 4px solid rgba(0, 0, 0, 0)
+
+.main-link:hover
+    border 4px solid $brand
 
 .main
     color $dark

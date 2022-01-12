@@ -60,7 +60,7 @@ a
     display flex
 
 .knowledge:hover
-    background-color rgba(45, 55, 68, 0.05)
+    background-color rgba(45, 55, 68, 0.08)
 
 .heading
     margin 10px 0

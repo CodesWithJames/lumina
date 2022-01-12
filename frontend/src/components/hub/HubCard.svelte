@@ -9,7 +9,7 @@ let greyedOut = info.greyedOut
 </script>
 
 {#if !greyedOut}
-    <a href="/" class="main" class:greyedOut>
+    <a href="{info.link}" class="main" class:greyedOut>
         <div class="header">
             <div class="tag" style="background-color: {info.tag.color};">
                 {info.tag.text}

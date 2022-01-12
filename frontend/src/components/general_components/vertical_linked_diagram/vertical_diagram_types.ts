@@ -3,4 +3,5 @@ export type VerticalDiagramCardType = {
     heading: string,
     description: string,
     passedOnScroll: boolean,
+    nextSectionPassedOnScroll: boolean
 }

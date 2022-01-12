@@ -44,12 +44,12 @@ export let newsInfo: NewsCardType
 
 .main
     border-radius 5px
-    padding 7px
-    border 3px solid white
+    padding 10px
+    //border 3px solid white
 
 .main:hover
-    background-color rgba(45, 55, 68, 0.05)
-    border 3px solid $brand
+    background-color rgba(45, 55, 68, 0.08)
+    // border 3px solid $brand
 
 a
     color $dark
