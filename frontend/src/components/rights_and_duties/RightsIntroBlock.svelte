@@ -1,60 +1,98 @@
-<script>
-import InfoBox from "@components/small_components/InfoBox.svelte";
+<script lang="ts">
+import InfoBox from "@components/small_components/InfoBox.svelte"
+import type { RightsDutiesIntro } from "@components/rights_and_duties/rights_duties_types"
 
 import Text from "@icons/Text.svelte"
 
+export let introInfo: RightsDutiesIntro
 </script>
+
 <div class="main">
     <div class="header">
         <div class="header-icon">
             <svelte:component this={Text}/>
         </div>
         <h1>
-
+            {introInfo.heading}
         </h1>
     </div>
-    <p>
-        In Lumina, we strive to provide citizens with many rights, 
-        as well duties they need to fulfill in order to maintain order in society.
-    </p>
-    <p>
-        We strive to ensure that all rights for citizens are 
-        actually provided to citizens, as some rights require active fulfillment (eg: right to education).
-    </p>
-    <InfoBox />
+    {#each introInfo.paragraphs as paragraph}
+        <p>
+            {paragraph}
+        </p>
+    {/each}
+    <div class="info-box-wrapper">
+        <InfoBox infoBox={introInfo.infoBox} />
+    </div>
     <div class="examples-wrapper">
-        <div class="left">
+        <div class="grid-column">
             <div class="example-heading">
-                Positive right examples
+                {introInfo.positiveRightsHeading}
             </div>
             <ul>
-                <li>right to housing</li>
-                <li>right to food</li>
-                <li>right to free healthcare</li>
+                {#each introInfo.positiveRights as right}
+                    <li>
+                        {right}
+                    </li>
+                {/each}
             </ul>
-            <p>
-                These types of rights require someone to actively provide them.
+            <p class="explanation">
+                {introInfo.positiveExplanation}
             </p>
         </div>
-        <div class="right">
+        <div class="grid-column">
             <div class="example-heading">
-                Negative right examples
+                {introInfo.negativeRightsHeading}
             </div>
             <ul>
-                <li>freedom of speech</li>
-                <li>freedom from violent crime</li>
-                <li>freedom of religion</li>
+                {#each introInfo.negativeRights as right}
+                    <li>
+                        {right}
+                    </li>
+                {/each}
             </ul>
-            <p>
-                These types of rights requires others to not infringe citizens rights.
+            <p class="explanation">
+                {introInfo.negativeExplanation}
             </p>
         </div>
     </div>
 </div>
 
 <style lang="stylus">
+.header
+    display flex
+    margin-bottom 20px
+    margin 0 auto
+
+.header-icon
+    font-size 26px
+    height 26px
+    width 26px
+    margin auto 0
+    margin-right 10px
+
 h1
     margin 0
     padding 0
+    font-size 26px
+    line-height 28px
+    font-weight 700
+
+.examples-wrapper
+    display grid
+    grid-template-columns 1fr 1fr
+    grid-gap 0 20px
+
+.example-heading
+    font-weight 600
+    line-height 22px
+
+ul
+    padding 0 25px
+    margin 10px 0
+    line-height 22px
+
+.info-box-wrapper
+    margin 10px 0
 
 </style>

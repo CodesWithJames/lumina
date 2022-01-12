@@ -1,6 +1,20 @@
 <script lang="ts">
 import TopHero from "@components/banners/heros/TopHero.svelte"
 import RightsIntroBlock from "@components/rights_and_duties/RightsIntroBlock.svelte"
+import IAmAPicker from "@components/small_components/IAmAPicker.svelte"
+
+import Lumina from "@components/custom-icons/Lumina.svelte"
+import AirplaneLanding from "@icons/AirplaneLanding.svelte"
+import Home from "@icons/Home.svelte"
+import Web from "@icons/Web.svelte"
+import ScriptText from "@icons/ScriptText.svelte"
+import RightsDutiesDisplayBlock from "@components/rights_and_duties/RightsDutiesDisplayBlock.svelte"
+import AccountGroup from "svelte-material-icons/AccountGroup.svelte"
+import ShieldLock from "svelte-material-icons/ShieldLock.svelte"
+import CloseCircle from "@icons/CloseCircle.svelte"
+import Handshake from "@icons/Handshake.svelte"
+import BookOpenPageVariant from "@icons/BookOpenPageVariant.svelte"
+import Gun from "@icons/Gun.svelte"
 
 let heroInfo = {
     titleExcludingLastWord: "rights and",
@@ -25,16 +39,155 @@ let heroInfo = {
     img: "/images/tank_man.png"
 }
 
+let introInfo = {
+    heading: "How to read your rights and duties",
+    paragraphs: [
+        "In Lumina, we strive to provide citizens with many rights, as well duties they need to fulfill in order to maintain order in society.",
+        "We strive to ensure that all rights for citizens are actually provided to citizens, as some rights require active fulfillment (eg: right to education)."
+    ],
+    infoBox: {
+        heading: "Information about rights & duties",
+        paragraphs: [
+            "There are two types of rights, rights that oblige either inaction (negative rights), or action (positive rights). Some examples of both rights below."
+        ],
+    },
+    positiveRightsHeading: "Positive right examples",
+    positiveRights: [
+        "right to housing",
+        "right to food",
+        "right to free healthcare"
+    ],
+    positiveExplanation: "These types of rights require someone to actively provide them.",
+    negativeRightsHeading: "Negative right examples",
+    negativeRights: [
+        "freedom of speech",
+        "freedom from violent crime",
+        "freedom of religion"
+    ],
+    negativeExplanation: "These types of rights require someone to actively deny them.",
+}
+
+let pickerInfo = {
+    heading: "I am a",
+    choices: [
+        { icon: Lumina, text: "Citizen" },
+        { icon: AirplaneLanding, text: "Tourist" },
+        { icon: Home, text: "Resident" },
+        { icon: Web, text: "Diplomat" }
+    ]
+}
+
+let detailedInfoSections = [
+    {
+        headerInfo: {
+            heading: "Your Rights",
+            icon: ScriptText,
+            subtitle: "Read the rights of citizens, tourists, residents and more."
+        },
+        displayInfo: [
+            {
+                icon: BookOpenPageVariant,
+                type: "Right To",
+                title: "Free Education",
+                description: "The right to free education in subjects: which do not cause division in society; and: lead to employment; or further scientific knowledge; or create technological advancement; or philosophy;",
+                tags: [
+                    { question: "Applies To", answerText: "Full Citizen", answerIcon: AccountGroup, color: "#492C9C" },
+                    { question: "Enforced By", answerText: "Unenforced", answerIcon: ShieldLock, color: "#CECECE" },
+                    { question: "Status", answerText: "Not provided", answerIcon: CloseCircle, color: "#E73D3D" }
+                ]
+            },
+            {
+                icon: Gun,
+                type: "Right To",
+                title: "Bear Arms",
+                description: "After mandatory military service, background checks, citizens may have the right to bear arms.",
+                tags: [
+                    { question: "Applies To", answerText: "Full Citizen", answerIcon: AccountGroup, color: "#492C9C" },
+                    { question: "Enforced By", answerText: "Unenforced", answerIcon: ShieldLock, color: "#CECECE" },
+                    { question: "Status", answerText: "Not provided", answerIcon: CloseCircle, color: "#E73D3D" }
+                ]
+            },
+            {
+                icon: Gun,
+                type: "Right To",
+                title: "Bear Arms",
+                description: "After mandatory military service, background checks, citizens may have the right to bear arms.",
+                tags: [
+                    { question: "Applies To", answerText: "Full Citizen", answerIcon: AccountGroup, color: "#492C9C" },
+                    { question: "Enforced By", answerText: "Unenforced", answerIcon: ShieldLock, color: "#CECECE" },
+                    { question: "Status", answerText: "Not provided", answerIcon: CloseCircle, color: "#E73D3D" }
+                ]
+            }
+        ]
+    },
+    {
+        headerInfo: {
+            heading: "Your Duties",
+            icon: Handshake,
+            subtitle: "Read the duties of citizens, tourists, residents and more."
+        },
+        displayInfo: [
+            {
+                icon: BookOpenPageVariant,
+                type: "Right To",
+                title: "Free Education",
+                description: "The right to free education in subjects: which do not cause division in society; and: lead to employment; or further scientific knowledge; or create technological advancement; or philosophy;",
+                tags: [
+                    { question: "Applies To", answerText: "Full Citizen", answerIcon: AccountGroup, color: "#492C9C" },
+                    { question: "Enforced By", answerText: "Unenforced", answerIcon: ShieldLock, color: "#CECECE" },
+                    { question: "Status", answerText: "Not provided", answerIcon: CloseCircle, color: "#E73D3D" }
+                ]
+            },
+            {
+                icon: Gun,
+                type: "Right To",
+                title: "Bear Arms",
+                description: "After mandatory military service, background checks, citizens may have the right to bear arms.",
+                tags: [
+                    { question: "Applies To", answerText: "Full Citizen", answerIcon: AccountGroup, color: "#492C9C" },
+                    { question: "Enforced By", answerText: "Unenforced", answerIcon: ShieldLock, color: "#CECECE" },
+                    { question: "Status", answerText: "Not provided", answerIcon: CloseCircle, color: "#E73D3D" }
+                ]
+            },
+            {
+                icon: Gun,
+                type: "Right To",
+                title: "Bear Arms",
+                description: "After mandatory military service, background checks, citizens may have the right to bear arms.",
+                tags: [
+                    { question: "Applies To", answerText: "Full Citizen", answerIcon: AccountGroup, color: "#492C9C" },
+                    { question: "Enforced By", answerText: "Unenforced", answerIcon: ShieldLock, color: "#CECECE" },
+                    { question: "Status", answerText: "Not provided", answerIcon: CloseCircle, color: "#E73D3D" }
+                ]
+            }
+        ]
+    }
+]
+
 </script>
 
 <div class="hero-wrapper">
     <div class="inner-hero main-hero-layout">
         <TopHero bind:heroInfo />
     </div>
-    <div class="section-wrapper">
-        <RightsIntroBlock />
+</div>
+<div class="section-wrapper">
+    <div class="inner-hero general">
+        <RightsIntroBlock bind:introInfo />
     </div>
 </div>
+<div class="section-wrapper">
+    <div class="inner-hero general">
+        <IAmAPicker bind:pickerInfo />
+    </div>
+</div>
+{#each detailedInfoSections as section}
+    <div class="section-wrapper">
+        <div class="inner-hero general">
+            <RightsDutiesDisplayBlock headerInfo={section.headerInfo} displayInfo={section.displayInfo} />
+        </div>
+    </div>
+{/each}
 
 <style lang="stylus">
 .hero-wrapper
@@ -49,9 +202,10 @@ let heroInfo = {
 .inner-hero
     max-width 1200px
     width 100%
-    padding-left 20px
-    padding-right 20px
+    padding 40px 20px
     margin 0 auto
+    display flex
+    flex-direction column
 
 .main-hero-layout
     display grid
@@ -61,9 +215,11 @@ let heroInfo = {
     padding-top 60px
     padding-bottom 40px
 
+.general
+    max-width 800px
+
 .section-wrapper
     display flex
-    align-items center
     border-top 1px solid #E6E6E6
     border-bottom 1px solid #E6E6E6
 </style>
