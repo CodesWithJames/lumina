@@ -8,7 +8,7 @@ export let heroInfo: HeroType
 </script>
 
 <div>
-    <h3 class="subtitle">Start a new city</h3>
+    <h3 class="subtitle">{heroInfo.subtitle}</h3>
     <h1>
         <div>
             {heroInfo.titleExcludingLastWord}

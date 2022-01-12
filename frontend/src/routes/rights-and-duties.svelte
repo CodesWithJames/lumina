@@ -1,9 +1,11 @@
 <script lang="ts">
 import TopHero from "@components/banners/heros/TopHero.svelte"
+import RightsIntroBlock from "@components/rights_and_duties/RightsIntroBlock.svelte"
 
 let heroInfo = {
     titleExcludingLastWord: "rights and",
     highlightedWord: "duties",
+    subtitle: "A core difference",
     descriptionParagraphs: [
         "Most governments give their citizens rights, but no duties.",
         "For example, Lumina believe that all citizens should have the right to vote on laws.",
@@ -28,6 +30,9 @@ let heroInfo = {
 <div class="hero-wrapper">
     <div class="inner-hero main-hero-layout">
         <TopHero bind:heroInfo />
+    </div>
+    <div class="section-wrapper">
+        <RightsIntroBlock />
     </div>
 </div>
 
@@ -56,4 +61,9 @@ let heroInfo = {
     padding-top 60px
     padding-bottom 40px
 
+.section-wrapper
+    display flex
+    align-items center
+    border-top 1px solid #E6E6E6
+    border-bottom 1px solid #E6E6E6
 </style>

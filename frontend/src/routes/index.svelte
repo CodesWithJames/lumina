@@ -3,7 +3,7 @@ import type { bind, SvelteComponentDev } from "svelte/internal"
 import UpcomingEvents from "@components/events/UpcomingEventsHero.svelte"
 import NewsHero from "@components/news/NewsHero.svelte"
 import DiscordBanner from "@components/banners/DiscordBanner.svelte"
-import KnowledgeHubCard from "@components/hubs/HubsCard.svelte"
+import KnowledgeHubCard from "@components/hubs/HubsBlock.svelte"
 import StatsHero from "@components/stats/StatsBlock.svelte"
 import HubHero from "@components/hub/HubHero.svelte"
 import JobHero from "@components/jobs/JobHero.svelte"
@@ -29,6 +29,7 @@ import Settlement from "@components/custom-icons/settlement.svelte"
 let heroInfo = {
     titleExcludingLastWord: "city of the",
     highlightedWord: "future",
+    subtitle: "Start a new city",
     descriptionParagraphs: [
         "Welcome to Lumina, a social experiment with the goals of setting up a new innovative and environmentally sustainable city.",
         "Lumina proposes to set up a Autonomous Zone, which is a city with it's own government, laws, and currency.",
