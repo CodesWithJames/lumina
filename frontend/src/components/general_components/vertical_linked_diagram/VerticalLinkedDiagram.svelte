@@ -5,6 +5,17 @@ export let diagramSections: VerticalDiagramCardType[]
 
 </script>
 
-{#each diagramSections as cardInfo}
-    <VerticalDiagramCard bind:cardInfo  />
-{/each}
+<div class="wrapper">
+    {#each diagramSections as cardInfo, i}
+        <div id="diagramCard {i}" class="card-wrapper">
+            <VerticalDiagramCard bind:cardInfo  />
+        </div>
+    {/each}
+</div>
+
+<style lang="stylus">
+.wrapper
+    margin 0 auto
+    max-width 485px
+
+</style>

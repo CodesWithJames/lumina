@@ -11,6 +11,9 @@ import Sync from "@icons/Sync.svelte"
 import Brain from "@icons/Brain.svelte"
 import ArmFlexOutline from "@icons/ArmFlexOutline.svelte"
 
+import { tick } from "svelte"
+import { loop_guard } from "svelte/internal"
+
 let heroInfo = {
     subtitle: "A Core Difference",
     titleExcludingLastWord: "principles",
@@ -76,7 +79,34 @@ let diagramSections = [
     }
 ]
 
+
+
+let scrollCycle: number = 0
+function getScrollCycle(){
+    scrollCycle = window.scrollY
+    if (scrollCycle > 30) {
+        makeDiagramSectionChangeColour()
+        scrollCycle = 0
+    }
+}
+
+function makeDiagramSectionChangeColour(){
+    let i = 0
+    for (let card in diagramSections) {
+        let elem = document.getElementById(`diagramCard ${i}`)
+        let bottomOfElem = elem.getBoundingClientRect().bottom
+        if (bottomOfElem < 600) {
+            diagramSections[i].passedOnScroll = true
+        } else {
+            diagramSections[i].passedOnScroll = false
+        }
+        i++
+    }
+}
+
 </script>
+
+<svelte:window on:scroll={getScrollCycle} />
 
 <div class="hero-wrapper">
     <div class="inner-hero main-hero-layout">
