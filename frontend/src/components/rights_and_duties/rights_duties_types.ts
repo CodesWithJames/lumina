@@ -1,7 +1,8 @@
-import type { InfoBoxType } from '@components/small_components/small_components_types'
+import type { InfoBoxType } from '@components/general_components/general_components_types'
 
 export type RightsDutiesIntro = {
     heading: string,
+    icon: any,
     paragraphs: string[],
     positiveRightsHeading: string,
     positiveRights: string[],
@@ -10,10 +11,4 @@ export type RightsDutiesIntro = {
     negativeRights: string[],
     negativeExplanation: string,
     infoBox: InfoBoxType
-}
-
-export type HeaderInfoType = {
-    heading: string,
-    icon: any,
-    subtitle: string
 }

@@ -23,16 +23,21 @@ export let heroInfo: HeroType
         {/each}
     </div>
     <div>
-        {#each heroInfo.buttons as button}
-            <MainButton
-                href={button.link}
-                right_icon={ChevronRight}
-                inline={true}
-                gradient={true}
-            >
-            {button.text}
-            </MainButton>
-        {/each}
+        <div class="buttons-wrapper">
+            {#each heroInfo.buttons as button}
+                <div class="button">
+                    <MainButton
+                        href={button.link}
+                        right_icon={button.rightIcon}
+                        inline={true}
+                        gradient={button.gradient}
+                        branded={button.branded}
+                    >
+                    {button.text}
+                    </MainButton>
+                </div>
+            {/each}
+        </div>
     </div>
 </div>
 <div class="hero-image-wrapper">
@@ -68,4 +73,11 @@ h1
 .hero-image
     position absolute
     left 0
+
+.buttons-wrapper
+    display flex
+
+.button
+    margin auto 0
+    margin-right 20px
 </style>

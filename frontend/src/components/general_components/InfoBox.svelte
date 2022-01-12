@@ -1,5 +1,5 @@
 <script lang="ts">
-import type { InfoBoxType } from "@components/small_components/small_components_types"
+import type { InfoBoxType } from "@components/general_components/general_components_types"
 import Information from "@icons/Information.svelte"
 
 export let infoBox: InfoBoxType

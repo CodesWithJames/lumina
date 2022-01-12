@@ -1,5 +1,5 @@
 <script lang="ts">
-import InfoBox from "@components/small_components/InfoBox.svelte"
+import InfoBox from "@components/general_components/InfoBox.svelte"
 import type { RightsDutiesIntro } from "@components/rights_and_duties/rights_duties_types"
 
 import Text from "@icons/Text.svelte"

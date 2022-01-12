@@ -1,5 +1,5 @@
 <script lang="ts">
-import type { IAmAPickerType } from "@components/small_components/small_components_types"
+import type { IAmAPickerType } from "@components/general_components/general_components_types"
 
 export let pickerInfo: IAmAPickerType
 

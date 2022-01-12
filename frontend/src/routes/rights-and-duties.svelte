@@ -1,7 +1,7 @@
 <script lang="ts">
 import TopHero from "@components/banners/heros/TopHero.svelte"
 import RightsIntroBlock from "@components/rights_and_duties/RightsIntroBlock.svelte"
-import IAmAPicker from "@components/small_components/IAmAPicker.svelte"
+import IAmAPicker from "@components/general_components/IAmAPicker.svelte"
 
 import Lumina from "@components/custom-icons/Lumina.svelte"
 import AirplaneLanding from "@icons/AirplaneLanding.svelte"
@@ -14,7 +14,11 @@ import ShieldLock from "svelte-material-icons/ShieldLock.svelte"
 import CloseCircle from "@icons/CloseCircle.svelte"
 import Handshake from "@icons/Handshake.svelte"
 import BookOpenPageVariant from "@icons/BookOpenPageVariant.svelte"
-import Gun from "@icons/Gun.svelte"
+import Pistol from "@icons/Pistol.svelte"
+import Laptop from "@icons/Laptop.svelte"
+import ChevronDown from "@icons/ChevronDown.svelte"
+import ChevronRight from "svelte-material-icons/ChevronRight.svelte";
+import Text from "svelte-material-icons/Text.svelte";
 
 let heroInfo = {
     titleExcludingLastWord: "rights and",
@@ -29,17 +33,21 @@ let heroInfo = {
     buttons: [
         {
             text: "Read your rights", 
-            link: "/" 
+            link: "/",
+            branded: true,
+            rightIcon: ChevronDown
         },
         {
             text: "Become a citizen", 
-            link: "/" 
+            link: "/",
+            rightIcon: ChevronRight
         },
     ],
     img: "/images/tank_man.png"
 }
 
 let introInfo = {
+    icon: Text,
     heading: "How to read your rights and duties",
     paragraphs: [
         "In Lumina, we strive to provide citizens with many rights, as well duties they need to fulfill in order to maintain order in society.",
@@ -80,9 +88,11 @@ let pickerInfo = {
 let detailedInfoSections = [
     {
         headerInfo: {
-            heading: "Your Rights",
             icon: ScriptText,
-            subtitle: "Read the rights of citizens, tourists, residents and more."
+            heading: "Your Rights",
+            paragraphs: [
+                "Read the rights of citizens, tourists, residents and more."
+            ]
         },
         displayInfo: [
             {
@@ -97,7 +107,7 @@ let detailedInfoSections = [
                 ]
             },
             {
-                icon: Gun,
+                icon: Pistol,
                 type: "Right To",
                 title: "Bear Arms",
                 description: "After mandatory military service, background checks, citizens may have the right to bear arms.",
@@ -108,7 +118,7 @@ let detailedInfoSections = [
                 ]
             },
             {
-                icon: Gun,
+                icon: Pistol,
                 type: "Right To",
                 title: "Bear Arms",
                 description: "After mandatory military service, background checks, citizens may have the right to bear arms.",
@@ -124,7 +134,9 @@ let detailedInfoSections = [
         headerInfo: {
             heading: "Your Duties",
             icon: Handshake,
-            subtitle: "Read the duties of citizens, tourists, residents and more."
+            paragraphs: [
+                "Read the duties of citizens, tourists, residents and more."
+            ]
         },
         displayInfo: [
             {
@@ -139,7 +151,7 @@ let detailedInfoSections = [
                 ]
             },
             {
-                icon: Gun,
+                icon: Pistol,
                 type: "Right To",
                 title: "Bear Arms",
                 description: "After mandatory military service, background checks, citizens may have the right to bear arms.",
@@ -150,7 +162,7 @@ let detailedInfoSections = [
                 ]
             },
             {
-                icon: Gun,
+                icon: Pistol,
                 type: "Right To",
                 title: "Bear Arms",
                 description: "After mandatory military service, background checks, citizens may have the right to bear arms.",
@@ -183,7 +195,7 @@ let detailedInfoSections = [
 </div>
 {#each detailedInfoSections as section}
     <div class="section-wrapper">
-        <div class="inner-hero general">
+        <div class="inner-hero display-block">
             <RightsDutiesDisplayBlock headerInfo={section.headerInfo} displayInfo={section.displayInfo} />
         </div>
     </div>
@@ -215,11 +227,15 @@ let detailedInfoSections = [
     padding-top 60px
     padding-bottom 40px
 
-.general
-    max-width 800px
-
 .section-wrapper
     display flex
     border-top 1px solid #E6E6E6
     border-bottom 1px solid #E6E6E6
+
+.general
+    max-width 800px
+
+.display-block
+    max-width 900px
+
 </style>

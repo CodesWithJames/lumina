@@ -1,8 +1,16 @@
+
+
 export type HeroType = {
-    titleExcludingLastWord: string,
     subtitle: string,
+    titleExcludingLastWord: string,
     highlightedWord: string,
     descriptionParagraphs: string[],
-    buttons: { text: string, link: string }[],
+    buttons: { 
+        text: string, 
+        link: string, 
+        rightIcon?: any,
+        gradient?: boolean,
+        branded?: boolean,
+    }[],
     img: string
 }

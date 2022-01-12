@@ -15,3 +15,9 @@ export type ScrollableDisplayCardType = {
     description: string,
     tags: { question: string, answerText: string, answerIcon: any, color: string }[]
 }
+
+export type HeaderInfoType = {
+    heading: string,
+    icon: any,
+    paragraphs: string[]
+}

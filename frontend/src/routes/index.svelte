@@ -25,6 +25,7 @@ import Brush from "@icons/Brush.svelte"
 import Text from "@icons/Text.svelte"
 import Hammer from "@icons/Hammer.svelte"
 import Settlement from "@components/custom-icons/settlement.svelte"
+import ChevronRight from "svelte-material-icons/ChevronRight.svelte";
 
 let heroInfo = {
     titleExcludingLastWord: "city of the",
@@ -38,6 +39,8 @@ let heroInfo = {
         {
             text: "Become a citizen",
             link: "/onboarding",
+            gradient: true,
+            rightIcon: ChevronRight
         },
     ],
     img: "/images/hero-image.svg"
