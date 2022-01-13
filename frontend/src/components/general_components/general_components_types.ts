@@ -1,4 +1,9 @@
 export type InfoBoxType = {
+    icon: {
+        type: any,
+        color: string,
+        size: number,
+    }
     heading: string,
     paragraphs: string[],
 }

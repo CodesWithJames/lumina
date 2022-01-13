@@ -8,8 +8,8 @@ export let infoBox: InfoBoxType
 
 <div class="main">
     <div class="header">
-        <div class="icon">
-            <svelte:component this={Information} />
+        <div class="icon" style="font-size: {infoBox.icon.size}px; height: {infoBox.icon.size}px; color: {infoBox.icon.color};">
+            <svelte:component this={ infoBox.icon.type } />
         </div>
         <div class="heading">
             {infoBox.heading}
@@ -17,9 +17,7 @@ export let infoBox: InfoBoxType
     </div>
     <div class="key-information">
         {#each infoBox.paragraphs as paragraph}
-            <p>
-                {paragraph}
-            </p>
+            <p>{paragraph}</p>
         {/each}
     </div>
 </div>
@@ -36,14 +34,13 @@ export let infoBox: InfoBoxType
 
 .icon
     font-size 18px
-    height 18px
     margin auto 0
     margin-right 10px
 
 .heading
     font-size 18px
-    line-height 22px
     font-weight 600
+    margin auto 0
 
 p
     margin 0

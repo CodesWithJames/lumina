@@ -19,6 +19,7 @@ import Laptop from "@icons/Laptop.svelte"
 import ChevronDown from "@icons/ChevronDown.svelte"
 import ChevronRight from "svelte-material-icons/ChevronRight.svelte";
 import Text from "svelte-material-icons/Text.svelte";
+import Information from "svelte-material-icons/Information.svelte";
 
 let heroInfo = {
     titleExcludingLastWord: "rights and",
@@ -54,6 +55,11 @@ let introInfo = {
         "We strive to ensure that all rights for citizens are actually provided to citizens, as some rights require active fulfillment (eg: right to education)."
     ],
     infoBox: {
+        icon: {
+            type: Information,
+            size: 22,
+            color: "rgb(45, 55, 68)"
+        },
         heading: "Information about rights & duties",
         paragraphs: [
             "There are two types of rights, rights that oblige either inaction (negative rights), or action (positive rights). Some examples of both rights below."

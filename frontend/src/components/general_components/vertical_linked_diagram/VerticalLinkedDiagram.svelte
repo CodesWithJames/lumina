@@ -7,15 +7,14 @@ export let diagramSections: VerticalDiagramCardType[]
 
 <div class="wrapper">
     {#each diagramSections as cardInfo, i}
-        <div id="diagramCard {i}" class="card-wrapper">
-            <VerticalDiagramCard bind:cardInfo  />
-        </div>
+        <VerticalDiagramCard bind:cardInfo isLastCard={ (i === diagramSections.length - 1) ? true : false  }  />
     {/each}
 </div>
 
 <style lang="stylus">
 .wrapper
     margin 0 auto
-    max-width 485px
+    margin-top 60px
+    max-width 600px
 
 </style>

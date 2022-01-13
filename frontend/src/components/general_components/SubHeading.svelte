@@ -4,24 +4,32 @@ export let headerInfo: HeaderInfoType
 
 </script>
 
-<div class="header">
-    <div class="header-icon">
-        <svelte:component this={headerInfo.icon} />
+<div class="main">
+    <div class="header">
+        <div class="header-icon">
+            <svelte:component this={headerInfo.icon} />
+        </div>
+        <h2>
+            {headerInfo.heading}
+        </h2>
     </div>
-    <h2>
-        {headerInfo.heading}
-    </h2>
-</div>
-<div class="subtitle">
-    {#each headerInfo.paragraphs as paragraph}
-        <p>
-            {paragraph}
-        </p>
-    {/each}
+    <div class="subtitle">
+        {#each headerInfo.paragraphs as paragraph}
+            <p>
+                {paragraph}
+            </p>
+        {/each}
+    </div>
 </div>
 
 <style lang="stylus">
 @import "variables"
+
+.main
+    max-width 800px
+    margin 0 auto
+    display flex
+    flex-direction column
 
 .header
     display flex
@@ -40,14 +48,13 @@ h2
     padding 0
     font-size 30px
     font-weight 600
-    margin auto 0
+    margin auto
 
 .subtitle
     font-size 18px
     opacity 0.6
     margin 0 auto
     margin-top 10px
-    margin-bottom 60px
 
 p
     text-align center
