@@ -1,22 +1,9 @@
 <script lang="ts">
 import ChevronRight from "@icons/ChevronRight.svelte"
 
-let knowledgeInfo = {
-    emoji: "📕",
-    title: "Knowledge Hub",
-    description: "Learn about how Lumina plans to become a reality. Get information on funding, planning, settlement & more."
-}
+export let knowledgeInfo
 
-let areas = [
-    {
-        emoji: "🏦",
-        title: "Banking & Monetary System"
-    },
-    {
-        emoji: "💰",
-        title: "Taxation System"
-    }
-]
+export let areas
 
 </script>
 
@@ -73,7 +60,7 @@ a
     display flex
 
 .knowledge:hover
-    background-color rgba(45, 55, 68, 0.05)
+    background-color rgba(45, 55, 68, 0.08)
 
 .heading
     margin 10px 0

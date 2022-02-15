@@ -1,5 +1,5 @@
 <script lang="ts">
-import Job from "@components/jobs/JobCard.svelte"
+import JobCard from "@components/jobs/JobCard.svelte"
 import type { JobField } from "./jobs_types";
 
 export let jobField: JobField
@@ -12,9 +12,7 @@ export let jobField: JobField
     </div>
     <div class="jobs-wrapper">
         {#each jobField.jobs as job}
-            <Job 
-                bind:job
-            />
+            <JobCard bind:job />
         {/each}
     </div>
 </div>

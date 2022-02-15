@@ -1,40 +1,52 @@
 <script lang="ts">
 import type { bind, SvelteComponentDev } from "svelte/internal"
-import JobSection from "@components/jobs/JobSection.svelte"
-import type { JobField } from "@components/jobs/jobs_types"
-import HubCard from "@components/hub/HubCard.svelte"
-import UpcomingEvents from "@components/events/UpcomingEvents.svelte"
+import UpcomingEvents from "@components/events/UpcomingEventsHero.svelte"
+import NewsHero from "@components/news/NewsHero.svelte"
+import DiscordBanner from "@components/banners/DiscordBanner.svelte"
+import KnowledgeHubCard from "@components/hubs/HubsBlock.svelte"
+import StatsHero from "@components/stats/StatsBlock.svelte"
+import HubHero from "@components/hub/HubHero.svelte"
+import JobHero from "@components/jobs/JobHero.svelte"
+import TopHero from "@components/banners/heros/TopHero.svelte"
 
 import AccountGroup from "@icons/AccountGroup.svelte"
 import Domain from "@icons/Domain.svelte"
 import AccountOutline from "@icons/AccountOutline.svelte"
 import Flash from "@icons/Flash.svelte"
-import DiscordBanner from "@components/banners/DiscordBanner.svelte"
-import MainButton from "@components/inputs/MainButton.svelte"
-import ChevronRight from "@icons/ChevronRight.svelte"
+import ScaleBalance from "@icons/ScaleBalance.svelte"
+import Pillar from "@icons/Pillar.svelte"
+import PassportBiometric from "@icons/PassportBiometric.svelte"
+import Telescope from "@icons/Telescope.svelte"
+import BadgeAccountHorizontal from "@icons/AccountBadgeHorizontal.svelte"
 import CodeTags from "@icons/CodeTags.svelte"
 import Clock from "@icons/Clock.svelte"
 import Wifi from "@icons/Wifi.svelte"
 import Brush from "@icons/Brush.svelte"
 import Text from "@icons/Text.svelte"
 import Hammer from "@icons/Hammer.svelte"
-import Settlement from "@components/custom-icons/Settlement.svelte"
-import Hub from "@components/custom-icons/Hub.svelte"
-import ScaleBalance from "@icons/ScaleBalance.svelte"
-import PassportBiometric from "@icons/PassportBiometric.svelte"
-import Pillar from "@icons/Pillar.svelte"
-import Telescope from "@icons/Telescope.svelte"
-import BadgeAccountHorizontal from "@icons/AccountBadgeHorizontal.svelte"
-import KnowledgeHubCard from "@components/hubs/HubsCard.svelte";
+import Settlement from "@components/custom-icons/settlement.svelte"
+import ChevronRight from "svelte-material-icons/ChevronRight.svelte";
 
-type Stat = {
-    value: string,
-    name: string,
-    icon: typeof SvelteComponentDev,
-    color: string
+let heroInfo = {
+    titleExcludingLastWord: "city of the",
+    highlightedWord: "future",
+    subtitle: "Start a new city",
+    descriptionParagraphs: [
+        "Welcome to Lumina, a social experiment with the goals of setting up a new innovative and environmentally sustainable city.",
+        "Lumina proposes to set up a Autonomous Zone, which is a city with it's own government, laws, and currency.",
+    ],
+    buttons: [
+        {
+            text: "Become a citizen",
+            link: "/onboarding",
+            gradient: true,
+            rightIcon: ChevronRight
+        },
+    ],
+    img: "/images/hero-image.svg"
 }
 
-let stats: Stat[] = [
+let stats = [
     {
         icon: AccountGroup,
         name: "Citizens registered",
@@ -61,8 +73,223 @@ let stats: Stat[] = [
     }
 ]
 
+let twoWideHubCards = [
+    {
+        link: "/rights-and-duties",
+        tag: {
+            text: "Info",
+            color: "#2570B6",
 
-let jobFields: JobField[] = [
+        },
+        title: {
+            icon: ScaleBalance,
+            text: "Rights & Duties",
+        },
+        description: "Learn about your rights and duties required for our society to function.",
+        greyedOut: false
+    },
+    {
+        link: "/principles-and-values",
+        tag: {
+            text: "Info",
+            color: "#2570B6",
+
+        },
+        title: {
+            icon: Pillar,
+            text: "Principles & Values",
+        },
+        description: "Our mission, principles and values define the emotional, moral, and spiritual core of our society.",
+        greyedOut: false
+    },
+    {
+        link: "/",
+        tag: {
+            text: "Service",
+            color: "#492C9C",
+
+        },
+        title: {
+            icon: PassportBiometric,
+            text: "Citizenship",
+        },
+        description: "Find out the benefits of becoming a citizen in Lumina. Get involved, along with thousands others today.",
+        greyedOut: false
+    },
+    {
+        link: "/",
+        tag: {
+            text: "Service",
+            color: "#492C9C",
+
+        },
+        title: {
+            icon: AccountOutline,
+            text: "myLumina",
+        },
+        description: "Lumina's cloud government portal that lets citizens access government services.",
+        greyedOut: false
+    },
+    {
+        link: "/",
+        tag: {
+            text: "Info",
+            color: "#2570B6",
+
+        },
+        title: {
+            icon: Telescope,
+            text: "Our Vision",
+        },
+        description: "Learn about your rights and duties required for our society to function.",
+        greyedOut: false
+    },
+    {
+        link: "/",
+        tag: {
+            text: "Service",
+            color: "#2570B6",
+
+        },
+        title: {
+            icon: BadgeAccountHorizontal,
+            text: "Media & Press",
+        },
+        description: "Are you a member of the press looking to speak to a Luminar representative? Contact us here.",
+        greyedOut: false
+    }
+]
+
+let threeWideHubCards = [
+    {
+        link: "/",
+        tag: {
+            text: "Coming Soon",
+            color: "#B4B4B4",
+
+        },
+        title: {
+            icon: ScaleBalance,
+            text: "Legislation",
+        },
+        description: "Learn about your rights and duties required for our society to function.",
+        greyedOut: true
+    },
+    {
+        link: "/",
+        tag: {
+            text: "Coming Soon",
+            color: "#B4B4B4",
+
+        },
+        title: {
+            icon: ScaleBalance,
+            text: "Legislation",
+        },
+        description: "Learn about your rights and duties required for our society to function.",
+        greyedOut: true
+    },
+    {
+        link: "/",
+        tag: {
+            text: "Coming Soon",
+            color: "#B4B4B4",
+
+        },
+        title: {
+            icon: ScaleBalance,
+            text: "Legislation",
+        },
+        description: "Learn about your rights and duties required for our society to function.",
+        greyedOut: true
+    },
+    {
+        link: "/",
+        tag: {
+            text: "Coming Soon",
+            color: "#B4B4B4",
+
+        },
+        title: {
+            icon: ScaleBalance,
+            text: "Legislation",
+        },
+        description: "Learn about your rights and duties required for our society to function.",
+        greyedOut: true
+    },
+    {
+        link: "/",
+        tag: {
+            text: "Coming Soon",
+            color: "#B4B4B4",
+
+        },
+        title: {
+            icon: ScaleBalance,
+            text: "Legislation",
+        },
+        description: "Learn about your rights and duties required for our society to function.",
+        greyedOut: true
+    },
+    {
+        link: "/",
+        tag: {
+            text: "Coming Soon",
+            color: "#B4B4B4",
+
+        },
+        title: {
+            icon: ScaleBalance,
+            text: "Legislation",
+        },
+        description: "Learn about your rights and duties required for our society to function.",
+        greyedOut: true
+    },
+    {
+        link: "/",
+        tag: {
+            text: "Coming Soon",
+            color: "#B4B4B4",
+
+        },
+        title: {
+            icon: ScaleBalance,
+            text: "Legislation",
+        },
+        description: "Learn about your rights and duties required for our society to function.",
+        greyedOut: true
+    },
+    {
+        link: "/",
+        tag: {
+            text: "Coming Soon",
+            color: "#B4B4B4",
+
+        },
+        title: {
+            icon: ScaleBalance,
+            text: "Legislation",
+        },
+        description: "Learn about your rights and duties required for our society to function.",
+        greyedOut: true
+    },
+    {
+        link: "/",
+        tag: {
+            text: "Coming Soon",
+            color: "#B4B4B4",
+
+        },
+        title: {
+            icon: ScaleBalance,
+            text: "Legislation",
+        },
+        description: "Learn about your rights and duties required for our society to function.",
+        greyedOut: true
+    },
+]
+
+let jobFields = [
     {
         title: "Software",
         jobs: [
@@ -298,207 +525,6 @@ let jobFields: JobField[] = [
     }
 ]
 
-let twoWideHubCards = [
-    {
-        tag: {
-            text: "Info",
-            color: "#2570B6",
-
-        },
-        title: {
-            icon: ScaleBalance,
-            text: "Rights & Duties",
-        },
-        description: "Learn about your rights and duties required for our society to function.",
-        greyedOut: false
-    },
-    {
-        tag: {
-            text: "Info",
-            color: "#2570B6",
-
-        },
-        title: {
-            icon: Pillar,
-            text: "Principles & Values",
-        },
-        description: "Our mission, principles and values define the emotional, moral, and spiritual core of our society.",
-        greyedOut: false
-    },
-    {
-        tag: {
-            text: "Service",
-            color: "#492C9C",
-
-        },
-        title: {
-            icon: PassportBiometric,
-            text: "Citizenship",
-        },
-        description: "Find out the benefits of becoming a citizen in Lumina. Get involved, along with thousands others today.",
-        greyedOut: false
-    },
-    {
-        tag: {
-            text: "Service",
-            color: "#492C9C",
-
-        },
-        title: {
-            icon: AccountOutline,
-            text: "myLumina",
-        },
-        description: "Lumina's cloud government portal that lets citizens access government services.",
-        greyedOut: false
-    },
-    {
-        tag: {
-            text: "Info",
-            color: "#2570B6",
-
-        },
-        title: {
-            icon: Telescope,
-            text: "Our Vision",
-        },
-        description: "Learn about your rights and duties required for our society to function.",
-        greyedOut: false
-    },
-    {
-        tag: {
-            text: "Service",
-            color: "#2570B6",
-
-        },
-        title: {
-            icon: BadgeAccountHorizontal,
-            text: "Media & Press",
-        },
-        description: "Are you a member of the press looking to speak to a Luminar representative? Contact us here.",
-        greyedOut: false
-    }
-]
-
-let threeWideHubCards = [
-    {
-        tag: {
-            text: "Coming Soon",
-            color: "#B4B4B4",
-
-        },
-        title: {
-            icon: ScaleBalance,
-            text: "Legislation",
-        },
-        description: "Learn about your rights and duties required for our society to function.",
-        greyedOut: true
-    },
-    {
-        tag: {
-            text: "Coming Soon",
-            color: "#B4B4B4",
-
-        },
-        title: {
-            icon: ScaleBalance,
-            text: "Legislation",
-        },
-        description: "Learn about your rights and duties required for our society to function.",
-        greyedOut: true
-    },
-    {
-        tag: {
-            text: "Coming Soon",
-            color: "#B4B4B4",
-
-        },
-        title: {
-            icon: ScaleBalance,
-            text: "Legislation",
-        },
-        description: "Learn about your rights and duties required for our society to function.",
-        greyedOut: true
-    },
-    {
-        tag: {
-            text: "Coming Soon",
-            color: "#B4B4B4",
-
-        },
-        title: {
-            icon: ScaleBalance,
-            text: "Legislation",
-        },
-        description: "Learn about your rights and duties required for our society to function.",
-        greyedOut: true
-    },
-    {
-        tag: {
-            text: "Coming Soon",
-            color: "#B4B4B4",
-
-        },
-        title: {
-            icon: ScaleBalance,
-            text: "Legislation",
-        },
-        description: "Learn about your rights and duties required for our society to function.",
-        greyedOut: true
-    },
-    {
-        tag: {
-            text: "Coming Soon",
-            color: "#B4B4B4",
-
-        },
-        title: {
-            icon: ScaleBalance,
-            text: "Legislation",
-        },
-        description: "Learn about your rights and duties required for our society to function.",
-        greyedOut: true
-    },
-    {
-        tag: {
-            text: "Coming Soon",
-            color: "#B4B4B4",
-
-        },
-        title: {
-            icon: ScaleBalance,
-            text: "Legislation",
-        },
-        description: "Learn about your rights and duties required for our society to function.",
-        greyedOut: true
-    },
-    {
-        tag: {
-            text: "Coming Soon",
-            color: "#B4B4B4",
-
-        },
-        title: {
-            icon: ScaleBalance,
-            text: "Legislation",
-        },
-        description: "Learn about your rights and duties required for our society to function.",
-        greyedOut: true
-    },
-    {
-        tag: {
-            text: "Coming Soon",
-            color: "#B4B4B4",
-
-        },
-        title: {
-            icon: ScaleBalance,
-            text: "Legislation",
-        },
-        description: "Learn about your rights and duties required for our society to function.",
-        greyedOut: true
-    },
-]
-
 let events = [
     {
         link: "/",
@@ -536,137 +562,82 @@ let events = [
     },
 ]
 
+let knowledgeInfo = {
+    emoji: "📕",
+    title: "Knowledge Hub",
+    description: "Learn about how Lumina plans to become a reality. Get information on funding, planning, settlement & more."
+}
+
+let areas = [
+    {
+        emoji: "🏦",
+        title: "Banking & Monetary System"
+    },
+    {
+        emoji: "💰",
+        title: "Taxation System"
+    }
+]
+
+let featuredStories = [
+    {
+        tag: {
+            text: "Article",
+            color: "#492C9C"
+        },
+        date: {
+            dayAsNumber: 4,
+            month: "Jan",
+            year: 2020
+        },
+        title: "Lumina hits 2000 citizens",
+        author: {
+            name: "Albert",
+            img: "static/images/albert_dp.png"
+        }
+    },
+    {
+        tag: {
+            text: "Article",
+            color: "#492C9C"
+        },
+        date: {
+            dayAsNumber: 3,
+            month: "Jan",
+            year: 2020
+        },
+        title: "Lumina hits 1000 citizens",
+        author: {
+            name: "Albert",
+            img: "static/images/albert_dp.png"
+        }
+    }
+]
+
 </script>
+
 <div class="hero-wrapper">
     <div class="inner-hero main-hero-layout">
-        <div>
-            <h3 class="subtitle">Start a new city</h3>
-            <h1>
-                <div>
-                    city of the
-                </div>
-                <div>
-                    <span class="gradient-text">future</span>
-                </div>
-            </h1>
-            <p>
-                Welcome to Lumina, a social experiment with the goals of setting up
-                a new innovative and environmentally sustainable city.
-            </p>
-            <p>
-                Lumina proposes to set up a Autonomous Zone,
-                which is a city with it's own government, laws, and currency.
-            </p>
-            <div>
-                <MainButton
-                    href="/onboarding"
-                    right_icon={ChevronRight}
-                    inline={true}
-                    gradient={true}
-                >
-                    Become a citizen
-                </MainButton>
-            </div>
-
-        </div>
-        <div class="hero-image-wrapper">
-            <img class="hero-image" src="/images/hero-image.svg" alt="a city skyline">
-        </div>
+        <TopHero bind:heroInfo />
     </div>
     <div class="inner-hero">
-        <div class="stats">
-            {#each stats as stat}
-                <div class="stat">
-                    <div class="stat-icon" style="color: {stat.color};">
-                        <svelte:component this={stat.icon} />
-                    </div>
-                    <div class="stat-value">
-                        <span>{stat.value}</span>
-                    </div>
-                    <div class="stat-name">
-                        <span>{stat.name}</span>
-                    </div>
-                </div>
-            {/each}
-        </div>
+        <StatsHero bind:stats />
     </div>
     <DiscordBanner/>
 </div>
-
-<div class="hub-wrapper">
-    <div class="hub-inner-wrapper">
-        <div class="title hub">
-            <div class="hub-icon">
-                <svelte:component this={Hub} />
-            </div>
-            <h2 class="hub-heading">
-                Lumina Hub
-            </h2>
-        </div>
-        <div class="hub-cards-wrapper">
-            <div class="hub-cards-two-wide-wrapper">
-                {#each twoWideHubCards as info}
-                    <HubCard bind:info/>
-                {/each}
-            </div>
-            <div class="hub-cards-three-wide-wrapper">
-                {#each threeWideHubCards as info}
-                    <HubCard bind:info/>
-                {/each}
-            </div>
-        </div>
-    </div>
-</div>
-
-
+<HubHero bind:twoWideHubCards bind:threeWideHubCards />
 <div class="inner-hero jobs-hero">
-    <div class="job-info">
-        <h2 class="job-heading">
-            Open positions
-        </h2>
-        <p class="job-description">
-            We are a technology driven society comprised of principled and disciplined people bonded by deeply held mission: to create a modern solution to governance.
-        </p>
-    </div>
-    <div class="jobs-wrapper">
-        {#each jobFields as jobField}
-            <JobSection bind:jobField />
-        {/each}
-    </div>
+    <JobHero bind:jobFields />
 </div>
-
 <div class="extra-info-wrapper">
     <UpcomingEvents bind:events />
     <div class="knowledge-hub-wrapper">
-        <KnowledgeHubCard />
+        <KnowledgeHubCard bind:knowledgeInfo bind:areas />
     </div>
 </div>
+<NewsHero bind:featuredStories />
 
 <style lang="stylus">
-
-
-// STATS SECTION
-.stats
-    display grid
-    grid-auto-flow column
-    grid-auto-columns 1fr
-    grid-gap 20px
-    padding 40px 0
-.stat
-    display flex
-    flex-direction column
-    align-items center
-.stat-icon
-    font-size 48px
-.stat-value
-    font-size 36px
-    font-weight 600
-.stat-name
-    font-size 18px
-    opacity 0.5
-
-// HERO MAIN
-
 .hero-wrapper
     // min height instead of height because some devices have a smaller height
     // header is 80px, so we need to subtract that from the height
@@ -675,27 +646,6 @@ let events = [
     flex-direction column
     .main-hero-layout
         flex 1 // take up all available space
-    .hub
-        background-color #F3F3F2
-        width 100vw
-
-
-.gradient-text
-    background linear-gradient(90deg, #5c32d4, #32c0c0);
-    -webkit-background-clip text
-    -webkit-text-fill-color transparent
-
-.subtitle
-    font-size 20px
-    text-transform uppercase
-    font-weight 600
-    opacity 0.3
-    margin 0
-
-h1
-    font-size 80px
-    font-weight 600
-    margin 0
 
 .inner-hero
     max-width 1200px
@@ -707,83 +657,14 @@ h1
 .main-hero-layout
     display grid
     grid-template-columns 1fr 1fr
-    grid-gap 20px
+    grid-gap 40px
     align-items center
     padding-top 60px
     padding-bottom 40px
 
-.hero-image-wrapper
-    position relative
-    display flex
-    align-items center
-
-.hero-image
-    position absolute
-    left 0
-
-.hub-wrapper
-    background-color #F3F3F2
-    padding 60px 0
-
-.hub-inner-wrapper
-    max-width 1000px
-    margin 0 auto
-
-.title.hub
-    display flex
-    margin-bottom 20px
-
-.hub-icon
-    font-size 46px
-    margin-right 10px
-    height 46px
-    width 46px
-
-.hub-heading
-    margin 0
-    padding 0
-    font-size 40px
-    margin auto 0
-
-.hub-cards-two-wide-wrapper
-    display grid
-    grid-template-columns 1fr 1fr
-    grid-gap 20px
-    margin-bottom 20px
-
-.hub-cards-three-wide-wrapper
-    display grid
-    grid-template-columns 1fr 1fr 1fr
-    grid-gap 20px
-    margin-bottom 20px
-
-.job-info
-    display flex
-    flex-direction column
-    align-items center
-    max-width 600px
-    margin 0 auto
-
-.job-heading
-    font-size 40px
-    font-weight 600
-    margin 0
-    padding 0
-
-.job-description
-    opacity 0.6
-    text-align center
-    line-height 28px
-
 .jobs-hero
     padding-top 80px
     padding-bottom 80px
-
-.jobs-wrapper
-    display flex
-    flex-direction column
-    gap 40px
-    padding-top 40px
 
 .extra-info-wrapper
     display grid
