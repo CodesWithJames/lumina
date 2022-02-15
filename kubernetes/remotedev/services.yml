@@ -12,18 +12,18 @@ spec:
         app: frontend-container-${NAMESPACE}
     spec:
       containers:
-      - name: frontend-container-${NAMESPACE}
-        image: 319923562419.dkr.ecr.ap-southeast-2.amazonaws.com/lumina-images/frontend
-        env:
-          - name: BACKENDAPI
-            value: api.${NAMESPACE}.lumina.earth
-        resources:
-          limits:
-            memory: "500Mi"
-            cpu: "0.2"
-        ports:
-        - containerPort: 80
-        - containerPort: 33440
+        - name: frontend-container-${NAMESPACE}
+          image: 319923562419.dkr.ecr.ap-southeast-2.amazonaws.com/lumina-images/frontend
+          env:
+            - name: BACKENDAPI
+              value: api.${NAMESPACE}.lumina.earth
+          resources:
+            limits:
+              memory: "500Mi"
+              cpu: "0.2"
+          ports:
+            - containerPort: 80
+            - containerPort: 33440
 ---
 apiVersion: v1
 kind: Service
@@ -33,8 +33,9 @@ spec:
   selector:
     app: frontend-container-${NAMESPACE}
   ports:
-  - port: 80
-    targetPort: 80
+    - protocol: TCP
+      port: 80
+      targetPort: 80
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
@@ -43,63 +44,65 @@ metadata:
   namespace: ${NAMESPACE}
 spec:
   rules:
-  - host: ${NAMESPACE}.lumina.earth
-    http:
-      paths:
-        - path: /
-          pathType: Prefix
-          backend:
-            service:
-              name: frontend-service-${NAMESPACE}
-              port:
-                number: 80
-  - host: api.${NAMESPACE}.lumina.earth
-    http:
-      paths:
-        - path: /
-          pathType: Prefix
-          backend:
-            service:
-              name: backend-service-${NAMESPACE}
-              port:
-                number: 80
----
-# Custom Ingress Service
-apiVersion: v1
-kind: Service
-metadata:
-  name: drawbridge-ingress-service
-spec:
-  selector:
-    app: drawbridge-ingress-service
-  ports:
-  - protocol: TCP
-    port: 80
-    targetPort: 80
-  - protocol: TCP
-    port: 443
-    targetPort: 443
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: drawbridge-ingress-service
-spec:
-  selector:
-    matchLabels:
-      app: drawbridge-ingress-service
-  template:
-    metadata:
-      labels:
-        app: drawbridge-ingress-service
-    spec:
-      containers:
-      - name: drawbridge-ingress-service
-        image: albertmashy/drawbridge-ingress:0.1
-        resources:
-          limits:
-            memory: "30Mi"
-            cpu: "0.2"
-        ports:
-        - containerPort: 80
-        - containerPort: 443
+    - host: ${NAMESPACE}.lumina.earth
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: frontend-service-${NAMESPACE}
+                port:
+                  number: 80
+# - host: api.${NAMESPACE}.lumina.earth
+#   http:
+#     paths:
+#       - path: /
+#         pathType: Prefix
+#         backend:
+#           service:
+#             name: backend-service-${NAMESPACE}
+#             port:
+#               number: 80
+# ---
+# # Custom Ingress Service
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: drawbridge-ingress-service
+# spec:
+#   selector:
+#     app: drawbridge-ingress-service
+#   ports:
+#     - name: http
+#       protocol: TCP
+#       port: 80
+#       targetPort: 80
+#     - name: https
+#       protocol: TCP
+#       port: 443
+#       targetPort: 443
+# ---
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: drawbridge-ingress-service
+# spec:
+#   selector:
+#     matchLabels:
+#       app: drawbridge-ingress-service
+#   template:
+#     metadata:
+#       labels:
+#         app: drawbridge-ingress-service
+#     spec:
+#       containers:
+#         - name: drawbridge-ingress-service
+#           image: albertmashy/drawbridge-ingress:0.4
+#           resources:
+#             limits:
+#               memory: "30Mi"
+#               cpu: "0.2"
+#           ports:
+#             - containerPort: 80
+#             - containerPort: 443

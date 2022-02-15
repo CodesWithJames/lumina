@@ -18,7 +18,7 @@ import Wifi from "@icons/Wifi.svelte"
 import Brush from "@icons/Brush.svelte"
 import Text from "@icons/Text.svelte"
 import Hammer from "@icons/Hammer.svelte"
-import Settlement from "@components/custom-icons/settlement.svelte"
+import Settlement from "@components/custom-icons/Settlement.svelte"
 import Hub from "@components/custom-icons/Hub.svelte"
 import ScaleBalance from "@icons/ScaleBalance.svelte"
 import PassportBiometric from "@icons/PassportBiometric.svelte"
@@ -120,7 +120,7 @@ let jobFields: JobField[] = [
                     }
                 ]
             },
-            
+
         ]
     },
     {
@@ -180,7 +180,7 @@ let jobFields: JobField[] = [
                     }
                 ]
             }
-            
+
         ]
     },
     {
@@ -221,7 +221,7 @@ let jobFields: JobField[] = [
                         opacity: "1",
                     }
                 ]
-            }, 
+            },
             {
                 title: "Concreter",
                 icon: Hammer,
@@ -303,7 +303,7 @@ let twoWideHubCards = [
         tag: {
             text: "Info",
             color: "#2570B6",
-            
+
         },
         title: {
             icon: ScaleBalance,
@@ -316,7 +316,7 @@ let twoWideHubCards = [
         tag: {
             text: "Info",
             color: "#2570B6",
-            
+
         },
         title: {
             icon: Pillar,
@@ -329,7 +329,7 @@ let twoWideHubCards = [
         tag: {
             text: "Service",
             color: "#492C9C",
-            
+
         },
         title: {
             icon: PassportBiometric,
@@ -342,7 +342,7 @@ let twoWideHubCards = [
         tag: {
             text: "Service",
             color: "#492C9C",
-            
+
         },
         title: {
             icon: AccountOutline,
@@ -355,7 +355,7 @@ let twoWideHubCards = [
         tag: {
             text: "Info",
             color: "#2570B6",
-            
+
         },
         title: {
             icon: Telescope,
@@ -368,7 +368,7 @@ let twoWideHubCards = [
         tag: {
             text: "Service",
             color: "#2570B6",
-            
+
         },
         title: {
             icon: BadgeAccountHorizontal,
@@ -384,7 +384,7 @@ let threeWideHubCards = [
         tag: {
             text: "Coming Soon",
             color: "#B4B4B4",
-            
+
         },
         title: {
             icon: ScaleBalance,
@@ -397,7 +397,7 @@ let threeWideHubCards = [
         tag: {
             text: "Coming Soon",
             color: "#B4B4B4",
-            
+
         },
         title: {
             icon: ScaleBalance,
@@ -410,7 +410,7 @@ let threeWideHubCards = [
         tag: {
             text: "Coming Soon",
             color: "#B4B4B4",
-            
+
         },
         title: {
             icon: ScaleBalance,
@@ -423,7 +423,7 @@ let threeWideHubCards = [
         tag: {
             text: "Coming Soon",
             color: "#B4B4B4",
-            
+
         },
         title: {
             icon: ScaleBalance,
@@ -436,7 +436,7 @@ let threeWideHubCards = [
         tag: {
             text: "Coming Soon",
             color: "#B4B4B4",
-            
+
         },
         title: {
             icon: ScaleBalance,
@@ -449,7 +449,7 @@ let threeWideHubCards = [
         tag: {
             text: "Coming Soon",
             color: "#B4B4B4",
-            
+
         },
         title: {
             icon: ScaleBalance,
@@ -462,7 +462,7 @@ let threeWideHubCards = [
         tag: {
             text: "Coming Soon",
             color: "#B4B4B4",
-            
+
         },
         title: {
             icon: ScaleBalance,
@@ -475,7 +475,7 @@ let threeWideHubCards = [
         tag: {
             text: "Coming Soon",
             color: "#B4B4B4",
-            
+
         },
         title: {
             icon: ScaleBalance,
@@ -488,7 +488,7 @@ let threeWideHubCards = [
         tag: {
             text: "Coming Soon",
             color: "#B4B4B4",
-            
+
         },
         title: {
             icon: ScaleBalance,
@@ -514,7 +514,7 @@ let events = [
         },
         title: "Lumina Day",
         type: "Holiday",
-        img: "static/images/lumina_flag.png",
+        img: "/images/lumina_flag.png",
         location: "Lumina"
     },
     {
@@ -531,7 +531,7 @@ let events = [
         },
         title: "Lumina Day",
         type: "Holiday",
-        img: "static/images/lumina_flag.png",
+        img: "images/lumina_flag.png",
         location: "Lumina"
     },
 ]
@@ -550,11 +550,11 @@ let events = [
                 </div>
             </h1>
             <p>
-                Welcome to Lumina, a social experiment with the goals of setting up 
+                Welcome to Lumina, a social experiment with the goals of setting up
                 a new innovative and environmentally sustainable city.
             </p>
             <p>
-                Lumina proposes to set up a Autonomous Zone, 
+                Lumina proposes to set up a Autonomous Zone,
                 which is a city with it's own government, laws, and currency.
             </p>
             <div>
@@ -721,7 +721,7 @@ h1
     position absolute
     left 0
 
-.hub-wrapper 
+.hub-wrapper
     background-color #F3F3F2
     padding 60px 0
 
