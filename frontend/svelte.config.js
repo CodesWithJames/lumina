@@ -18,10 +18,14 @@ const config = {
 
     kit: {
         adapter: adapter(),
-
-        // hydrate the <div id="svelte"> element in src/app.html
-        target: '#svelte',
         vite: {
+            server: {
+                hmr: {
+                    clientPort: 443,
+                    port: 80,
+                    protocol: "wss",
+                }
+            },
             resolve: {
                 alias: {
                     '@components': resolve(__dirname, './src/components'),
@@ -37,5 +41,6 @@ const config = {
         }
     }
 };
+
 
 export default config;

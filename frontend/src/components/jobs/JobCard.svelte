@@ -7,24 +7,20 @@ export let job: JobType
 
 </script>
 
-<a href="/">
-    <div class="main">
-        <div class="left">
-            <div class="heading">
-                <div class="icon">
-                    <svelte:component this={job.icon}/>
-                </div>
-                <div class="title">
-                    {job.title}
-                </div>
-            </div>
-            <div class="info-wrapper">
-                {#each job.attributes as info}
-                    <InfoCard bind:info />
-                {/each}
-            </div>
+<a href="/" class="main">
+    <div class="heading">
+        <div class="icon">
+            <svelte:component this={job.icon}/>
         </div>
-        <div class="arrow">
+        <div class="title">
+            {job.title}
+        </div>
+    </div>
+    <div class="info-wrapper">
+        {#each job.attributes as info}
+            <InfoCard bind:info />
+        {/each}
+        <div class="arrow icon">
             <svelte:component this={ArrowRight} />
         </div>
     </div>
@@ -33,30 +29,25 @@ export let job: JobType
 <style lang="stylus">
 @import 'variables'
 
-a
-    text-decoration none
-
 .main
+    text-decoration none
     display flex
-    align-items center
-    border 2px solid rgba(35, 36, 44, 0.1)
+    flex-direction column
+    gap 10px
+    border 2px solid mix($dark, transparent, 10%)
     border-radius: 5px
     padding 20px
     color $dark
 
 .main:hover
-    background-color rgba(45, 55, 68, 0.08)
-
-.left
-    display flex
-    gap 10px
-    flex-direction column
+    background-color mix($dark, transparent, 5%)
+    border 2px solid $brand
 
 .heading
     display flex
     align-items center
     gap 10px
-    
+
 .icon
     font-size 24px
     display inline-flex
@@ -66,11 +57,10 @@ a
     font-weight 600
 .info-wrapper
     display flex
+    align-items center
 
 .arrow
-    margin auto 0
     margin-left auto
-    color #492C9C
-    font-size 24px
+    color $brand
 
 </style>

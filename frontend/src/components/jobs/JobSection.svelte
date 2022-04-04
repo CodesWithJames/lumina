@@ -26,7 +26,8 @@ export let jobField: JobField
     margin-bottom 10px
 
 .jobs-wrapper
-    display grid   
-    grid-template-columns 1fr 1fr 1fr
+    display grid
+    width 100%
+    grid-template-columns repeat(auto-fit, minmax(300px, 1fr))
     grid-gap 20px
 </style>

@@ -18,7 +18,7 @@ jobs:
                 name: Load docker image layer cache
                 command: |
                     set +o pipefail
-                    if [ -f /caches/frontend.tar.gz ]; then gunzip -c /caches/backend.tar.gz | docker load; docker images; fi
+                    if [ -f /caches/frontend.tar.gz ]; then gunzip -c /caches/frontend.tar.gz | docker load; docker images; fi
             - run:
                 name: Build frontend docker image
                 command: docker build -t frontend ./frontend
@@ -28,7 +28,7 @@ jobs:
             - persist_to_workspace:
                 root: /workspace
                 paths:
-                    - backend.tar
+                    - frontend.tar
             - run:
                 name: Save Docker image layer cache
                 command: |
@@ -56,7 +56,7 @@ jobs:
                     aws ecr get-login-password --region ap-southeast-2 | docker login --username AWS --password-stdin ${ECR_ENDPOINT}
 
                     docker tag frontend:latest "${ECR_ENDPOINT}/lumina-images/frontend:${CIRCLE_SHA1}"
-                    docker push "${ECR_ENDPOINT}/framework/frontend:${CIRCLE_SHA1}"
+                    docker push "${ECR_ENDPOINT}/lumina-images/frontend:${CIRCLE_SHA1}"
     deploy:
         working_directory: /workspace
         docker:

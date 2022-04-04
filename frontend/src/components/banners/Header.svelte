@@ -65,13 +65,12 @@ import ChevronRight from "svelte-material-icons/ChevronRight.svelte"
 
 .inner-header
     max-width 1200px
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: flex
+    flex-direction: row
+    justify-content: space-between
     align-items: center;
-    padding: 0px 20px;
-    width: 1200px;
-    height: 80px;
+    padding: 0px 20px
+    height: 80px
     margin 0 auto;
 
 .left

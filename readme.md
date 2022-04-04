@@ -1,11 +1,12 @@
 # Lumina Government Website & System
+
+## Quick Links
+- [Deployment System](/docs/deployment)
 ## First-time Setup
-### First-time setup
-- Install Docker on your operating system
 - Install VSCode
 - Install Git
 
-### Installing repository
+## Installing repository
 In the directory you would like to install the repository, enter the following command.
 
 ```

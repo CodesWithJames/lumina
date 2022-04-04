@@ -30,7 +30,7 @@ profiles:
 
 hooks:
 - command: |
-    aws sso login
+    aws sts get-caller-identity || aws sso login
   events: ["devCommand:before:execute"]
 - command: |
     aws ecr get-login-password | docker login --username AWS --password-stdin 319923562419.dkr.ecr.ap-southeast-2.amazonaws.com
