@@ -13,7 +13,19 @@ metadata:
   namespace: production
 rules:
   - apiGroups:
-    - ""
+      - networking.k8s.io/v1
+    resources:
+      - ingresses
+    verbs:
+      - get
+      - list
+      - update
+      - patch
+      - watch
+      - create
+      - delete
+  - apiGroups:
+    -
     resources:
       - services
     verbs:
@@ -28,7 +40,6 @@ rules:
     - apps
     resources:
       - pods
-      - ingresses
       - daemonsets
       - deployments
     verbs:
