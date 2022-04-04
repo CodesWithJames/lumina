@@ -73,7 +73,7 @@ jobs:
             - run:
                 name: Connect to cluster
                 command: |
-                    aws eks --region ap-southeast-2 update-kubeconfig --name lumina-cluster
+                    aws eks --region ap-southeast-2 update-kubeconfig --name lumina-gov-kc
             - run:
                 name: Deploy
                 command: |
