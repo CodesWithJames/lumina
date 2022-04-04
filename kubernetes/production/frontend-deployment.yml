@@ -1,18 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend-deployment-production
+  namespace: production
+  name: frontend-deployment
 spec:
   selector:
     matchLabels:
-      app: frontend-container-production
+      namespace: production
+      app: frontend-container
   template:
     metadata:
       labels:
-        app: frontend-container-production
+        namespace: production
+        app: frontend-container
     spec:
       containers:
-      - name: frontend-container-production
+      - name: frontend-container
         image: $ECR_ENDPOINT/lumina-images/frontend:$CIRCLE_SHA1
         resources:
           limits:

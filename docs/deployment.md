@@ -32,3 +32,15 @@ Inside `/kubernetes` you will find the `production` folder, which will define al
 TODO
 
 This backend is built with `Rust`
+
+---
+
+## Misc Setup
+
+1. To modify cluster permissions & settings
+```
+kubectl edit -n kube-system configmap/aws-auth
+```
+
+2. Create a role for our circle-ci-user to be able to access the cluster
+kubectl apply -f ./kubernetes/setup/circle-ci-role.yml

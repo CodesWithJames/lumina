@@ -1,0 +1,29 @@
+
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: production
+  labels:
+    name: production
+---
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: circle-ci-role
+  namespace: production
+rules:
+  - apiGroups:
+    - apps
+    resources:
+      - pods
+      - ingresses
+      - services
+      - daemonsets
+      - deployments
+    verbs:
+      - get
+      - list
+      - update
+      - watch
+      - create
+      - delete
