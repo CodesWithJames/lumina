@@ -1,7 +1,11 @@
+# docker build -t frameworktools/ci:latest
+# docker push frameworktools/ci:latest
+
+
 # Dockerfile for the CircleCI Image Builder
 # This is not the dockerfile for the app
 
-FROM node:14-alpine
+FROM node:17-alpine
 
 RUN apk update && apk add \
 		tar \
