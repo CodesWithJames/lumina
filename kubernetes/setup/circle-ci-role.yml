@@ -13,17 +13,29 @@ metadata:
   namespace: production
 rules:
   - apiGroups:
+    - ""
+    resources:
+      - services
+    verbs:
+      - get
+      - list
+      - update
+      - patch
+      - watch
+      - create
+      - delete
+  - apiGroups:
     - apps
     resources:
       - pods
       - ingresses
-      - services
       - daemonsets
       - deployments
     verbs:
       - get
       - list
       - update
+      - patch
       - watch
       - create
       - delete

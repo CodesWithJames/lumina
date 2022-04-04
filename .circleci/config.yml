@@ -81,6 +81,7 @@ jobs:
                 name: Deploy
                 command: |
                     envsubst < ./kubernetes/production/frontend-deployment.yml | kubectl apply -f -
+                    envsubst < ./kubernetes/production/ingress.yml | kubectl apply -f -
 
 workflows:
     build-and-deploy:
