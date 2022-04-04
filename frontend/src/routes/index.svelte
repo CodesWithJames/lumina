@@ -1,5 +1,4 @@
 <script lang="ts">
-import type { bind, SvelteComponentDev } from "svelte/internal"
 import UpcomingEvents from "@components/events/UpcomingEventsHero.svelte"
 import NewsHero from "@components/news/NewsHero.svelte"
 import DiscordBanner from "@components/banners/DiscordBanner.svelte"
@@ -24,8 +23,8 @@ import Wifi from "@icons/Wifi.svelte"
 import Brush from "@icons/Brush.svelte"
 import Text from "@icons/Text.svelte"
 import Hammer from "@icons/Hammer.svelte"
-import Settlement from "@components/custom-icons/Settlement.svelte"
 import ChevronRight from "svelte-material-icons/ChevronRight.svelte";
+import Settlement from "@components/custom-icons/a_Settlement.svelte"
 
 let heroInfo = {
     titleExcludingLastWord: "city of the",
