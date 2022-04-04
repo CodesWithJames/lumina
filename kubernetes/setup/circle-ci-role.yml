@@ -13,7 +13,7 @@ metadata:
   namespace: production
 rules:
   - apiGroups:
-      - networking.k8s.io/v1
+      - networking.k8s.io
       - ""
       - apps
     resources:

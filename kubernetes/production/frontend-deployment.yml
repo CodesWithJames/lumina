@@ -19,7 +19,7 @@ spec:
         image: $ECR_ENDPOINT/lumina-images/frontend:$CIRCLE_SHA1
         resources:
           limits:
-            memory: "128Mi"
+            memory: "400Mi"
             cpu: "0.3"
         ports:
         - containerPort: 80
