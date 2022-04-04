@@ -85,11 +85,11 @@ workflows:
             - build-frontend
             - push-frontend-image-to-aws-ecr:
                 context:
-                    - AWS Context
+                    - lumina-production
                 requires:
                     - build-frontend
             - deploy:
                 context:
-                    - AWS Context
+                    - lumina-production
                 requires:
                     - push-frontend-image-to-aws-ecr
