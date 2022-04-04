@@ -27,3 +27,17 @@ rules:
       - watch
       - create
       - delete
+---
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: circle-ci-role-binding
+  namespace: production
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: circle-ci-role
+subjects:
+  - kind: User
+    name: lumina-circle-ci
+    namespace: production
