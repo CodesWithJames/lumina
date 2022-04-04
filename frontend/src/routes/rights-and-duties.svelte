@@ -15,7 +15,6 @@ import CloseCircle from "@icons/CloseCircle.svelte"
 import Handshake from "@icons/Handshake.svelte"
 import BookOpenPageVariant from "@icons/BookOpenPageVariant.svelte"
 import Pistol from "@icons/Pistol.svelte"
-import Laptop from "@icons/Laptop.svelte"
 import ChevronDown from "@icons/ChevronDown.svelte"
 import ChevronRight from "svelte-material-icons/ChevronRight.svelte";
 import Text from "svelte-material-icons/Text.svelte";
@@ -33,13 +32,13 @@ let heroInfo = {
     ],
     buttons: [
         {
-            text: "Read your rights", 
+            text: "Read your rights",
             link: "/",
             branded: true,
             rightIcon: ChevronDown
         },
         {
-            text: "Become a citizen", 
+            text: "Become a citizen",
             link: "/",
             rightIcon: ChevronRight
         },
