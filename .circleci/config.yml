@@ -75,6 +75,9 @@ jobs:
                 command: |
                     aws eks --region ap-southeast-2 update-kubeconfig --name lumina-gov-kc
             - run:
+                name: Get current context
+                command: kubectl config current-context
+            - run:
                 name: Deploy
                 command: |
                     envsubst < ./kubernetes/production/frontend-deployment.yml | kubectl apply -f -
