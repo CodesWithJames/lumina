@@ -24,7 +24,7 @@ import Brush from "@icons/Brush.svelte"
 import Text from "@icons/Text.svelte"
 import Hammer from "@icons/Hammer.svelte"
 import ChevronRight from "svelte-material-icons/ChevronRight.svelte";
-import Settlement from "@components/custom-icons/a_Settlement.svelte"
+import Settlement from "@components/custom-icons/Settlement.svelte"
 
 let heroInfo = {
     titleExcludingLastWord: "city of the",
