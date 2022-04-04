@@ -10,7 +10,8 @@ jobs:
             - image: frameworktools/ci:latest
         steps:
             - checkout
-            - setup_remote_docker
+            - setup_remote_docker:
+                version: 20.10.11
             - restore_cache:
                 keys:
                     - v1-{{ .Branch }}
