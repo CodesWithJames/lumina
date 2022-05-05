@@ -1,24 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace: production
   name: frontend-deployment
 spec:
   selector:
     matchLabels:
-      app: frontend-container
+      app: frontend-pod
   template:
     metadata:
       labels:
-        app: frontend-container
+        app: frontend-pod
     spec:
       containers:
-      - name: frontend-container
-        image: $ECR_ENDPOINT/lumina-images/frontend:prod-$CIRCLE_SHA1
+      - name: frontend-pod
+        image: ${ECR}/frontend
         resources:
           limits:
-            memory: "500Mi"
-            cpu: "0.5"
+            memory: "400Mi"
+            cpu: "150m"
         ports:
         - containerPort: 80
 ---
@@ -26,10 +25,10 @@ apiVersion: v1
 kind: Service
 metadata:
   name: frontend-service
-  namespace: production
 spec:
   selector:
-    app: frontend-container
+    app: frontend-pod
   ports:
     - protocol: TCP
       port: 80
+      targetPort: 80

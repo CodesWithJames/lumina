@@ -56,8 +56,8 @@ jobs:
                 command: |
                     aws ecr get-login-password --region ap-southeast-2 | docker login --username AWS --password-stdin ${ECR_ENDPOINT}
 
-                    docker tag frontend:latest "${ECR_ENDPOINT}/lumina-images/frontend:${CIRCLE_SHA1}"
-                    docker push "${ECR_ENDPOINT}/lumina-images/frontend:${CIRCLE_SHA1}"
+                    docker tag frontend:latest "${ECR_ENDPOINT}/lumina-images/frontend:prod-${CIRCLE_SHA1}"
+                    docker push "${ECR_ENDPOINT}/lumina-images/frontend:prod-${CIRCLE_SHA1}"
     deploy:
         working_directory: /workspace
         docker:
@@ -65,23 +65,13 @@ jobs:
         steps:
             - checkout
             - run:
-                name: Install Dependencies
-                command: |
-                    curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
-                    install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
-                    apk add gettext
-            - run:
                 name: Connect to cluster
                 command: |
                     aws eks --region ap-southeast-2 update-kubeconfig --name lumina-gov-kc
             - run:
-                name: Get current context
-                command: kubectl config current-context
-            - run:
                 name: Deploy
                 command: |
-                    envsubst < ./kubernetes/production/frontend-deployment.yml | kubectl apply -f -
-                    envsubst < ./kubernetes/production/ingress.yml | kubectl apply -f -
+                    for f in ./kubernetes/production/*.yml; do envsubst < $f | kubectl apply -f -; done
 
 workflows:
     build-and-deploy:

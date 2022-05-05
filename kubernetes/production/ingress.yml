@@ -1,11 +1,11 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: api-ingress
+  name: app-ingress
   namespace: production
 spec:
   rules:
-    - host: lumina.earth
+    - host: app.${DOMAIN}
       http:
         paths:
           - path: /

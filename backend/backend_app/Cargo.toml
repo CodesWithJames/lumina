@@ -1,0 +1,15 @@
+[package]
+name = "backend_app"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { version = "1.17.0", features = ["rt-multi-thread", "macros"]}
+tracing = "0.1.33"
+tide = { version = "0.16.0" }
+derive_pinbox = { path = "../derive_pinbox" }
+tracing-subscriber = "0.3.11"
+serde_json = "1.0.79"
+uuid = { version = "0.8.2", features = ["v4"] }

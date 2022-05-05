@@ -1,11 +1,6 @@
+# This is used to give circle CI access to the kubernetes cluster
+# We create a Role and RoleBinding and assign it to the circle ci user created in AWS
 
-kind: Namespace
-apiVersion: v1
-metadata:
-  name: production
-  labels:
-    name: production
----
 kind: Role
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
@@ -42,5 +37,5 @@ roleRef:
   name: circle-ci-role
 subjects:
   - kind: User
-    name: lumina-circle-ci
+    name: lumina-circleci-user
     namespace: production

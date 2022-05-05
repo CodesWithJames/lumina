@@ -1,37 +1,68 @@
+
 version: v1beta11
+
 
 # `images` specifies all images that may need to be built for this project
 images:
-  frontend: # This image is called `frontend` and refers to the frontend directory which has the source code for our frontend container
+  frontend: # This image is called `frontend` and this name `frontend` is referenced multiple times in the config below
+    image: ${ECR}/frontend
     dockerfile: ./frontend/Dockerfile
-    image: 319923562419.dkr.ecr.ap-southeast-2.amazonaws.com/lumina-images/frontend
+    tags:
+      # - dev-frontend-${NAME}
+      - dev-frontend-${NAME}-######
     context: frontend/
-    build: # Build on the clusters architecture (which may not be running on ARM)
+    # Build on the clusters architecture
+    build:
       buildKit:
         inCluster: {}
 
-deployments:
-  - $(node ./kubernetes/service-prep.js NAMESPACE=${DEVSPACE_NAMESPACE})
+  # backend: # This image is called `backend` and this name `backend` is referenced multiple times in the config below
+  #   image: ${ECR}/backend
+  #   dockerfile: ./backend/Dockerfile
+  #   tags:
+  #     - dev-${devspace.git.commit}-#####
+  #   context: backend/
+  #   # Build on the clusters architecture
+  #   build:
+  #     buildKit:
+  #       inCluster: {}
 
 # `deployments` tells DevSpace how to deploy this project
+
+
+deployments:
+- name: framework
+  namespace: ${NAMESPACE}
+  kubectl:
+    # env_subst will replace the environment variables in the yml files
+    manifests: $(./kubernetes/env_subst kubernetes/development/ NAME=${NAME} NAMESPACE=${NAMESPACE} ECR=${ECR} DOMAIN=${DOMAIN})
+
 dev:
   sync:
-  - imageSelector: 319923562419.dkr.ecr.ap-southeast-2.amazonaws.com/lumina-images/frontend # Select the Pod that runs our `frontend` image
+  - imageSelector: ${ECR}/frontend # Select the Pod that runs our `frontend` image
     localSubPath: './frontend'
     excludePaths:
-      - .git/
+      - node_modules/
+  # - imageSelector: ${ECR}/backend # Select the Pod that runs our `frontend` image
+  #   localSubPath: './backend'
 
 vars:
-  - name: ENV
-    value: dev
-
-profiles:
-- name: development
+  - name: DOMAIN
+    value: lumina.earth
+  - name: ECR
+    value: 319923562419.dkr.ecr.ap-southeast-2.amazonaws.com/lumina-images
+  - name: NAME
+    question: What is your first name?
+    source: input
+  - name: NAMESPACE
+    value: ${NAME}-dev
 
 hooks:
+- command: devspace use namespace ${NAMESPACE}
+  events: ["devCommand:before:execute"]
 - command: |
     aws sts get-caller-identity || aws sso login
   events: ["devCommand:before:execute"]
 - command: |
-    aws ecr get-login-password | docker login --username AWS --password-stdin 319923562419.dkr.ecr.ap-southeast-2.amazonaws.com
+    aws ecr get-login-password | docker login --username AWS --password-stdin ${ECR}
   events: ["devCommand:before:execute"]

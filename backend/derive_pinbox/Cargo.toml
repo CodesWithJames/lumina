@@ -1,10 +1,13 @@
 [package]
-name = "backend"
+name = "derive_pinbox"
 version = "0.1.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-async-std = { version = "1.6.0", features = ["attributes"] }
-futures = "0.3.18"
+syn = { version = "1.0.91", features = ["full"] }
+quote = "1.0.17"
+
+[lib]
+proc-macro = true

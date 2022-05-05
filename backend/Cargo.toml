@@ -1,0 +1,7 @@
+[workspace]
+
+members = [
+    "secret_generator",
+    "backend_app",
+    "derive_pinbox",
+]
