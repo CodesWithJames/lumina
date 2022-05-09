@@ -1,5 +1,5 @@
 <script lang="ts">
-import type { HeaderInfoType } from "@components/general_components/general_components_types"
+import type { HeaderInfoType } from "$components/general_components/general_components_types"
 export let headerInfo: HeaderInfoType
 
 </script>

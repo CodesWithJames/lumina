@@ -1,48 +1,42 @@
 <script lang="ts">
-import Discord from "@icons/Discord.svelte"
-import MainButton from '@components/inputs/MainButton.svelte'
-import RightChevron from '@icons/ChevronRight.svelte'
+import Discord from "$icons/Discord.svelte"
+import RightChevron from '$icons/ChevronRight.svelte'
+import Button from '$lib/inputs/Button.svelte';
 </script>
-
-<div class="banner">
-    <div class="banner-inner">
-        <div class="left">
-            <div class="icon">
-                <Discord />
+<div class="banner-inner">
+    <div class="left">
+        <div class="icon">
+            <Discord />
+        </div>
+        <div class="text-wrapper">
+            <div class="title">
+                Got questions? Join the discussion
             </div>
-            <div class="text-wrapper">
-                <div class="title">
-                    Got questions? Join the discussion
-                </div>
-                <div class="subtitle">
-                    Join our Discord server.
-                </div>
+            <div class="subtitle">
+                Join our Discord server.
             </div>
         </div>
-
-        <MainButton
-            left_icon={Discord}
-            dark={true}
-            right_icon={RightChevron}>
-            Join Server
-        </MainButton>
-
     </div>
+
+    <Button
+        left_icon={Discord}
+        style="translucent"
+        right_icon={RightChevron}>
+        Join Server
+    </Button>
 </div>
 
 <style lang="stylus">
-
-.banner
-    background linear-gradient(90deg, #5c32d4, #32c0c0)
-    padding 40px 20px
-    color #fff
+@import 'variables'
 
 .banner-inner
-    max-width 800px
-    width 100
+    max-width 1000px
+    width 100%
     margin 0 auto
     display flex
+    padding 40px
     justify-content space-between
+    cardify()
 
 .left
     display flex

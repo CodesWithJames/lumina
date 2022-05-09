@@ -1,7 +1,7 @@
 <script lang="ts">
-import InfoCard from "@components/jobs/InfoCard.svelte"
+import InfoCard from "$components/jobs/InfoCard.svelte"
 import ArrowRight from "svelte-material-icons/ArrowRight.svelte"
-import type { JobType } from "@components/jobs/jobs_types"
+import type { JobType } from "$components/jobs/jobs_types"
 
 export let job: JobType
 

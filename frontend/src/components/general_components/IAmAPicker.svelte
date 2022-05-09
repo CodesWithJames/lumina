@@ -1,5 +1,5 @@
 <script lang="ts">
-import type { IAmAPickerType } from "@components/general_components/general_components_types"
+import type { IAmAPickerType } from "$components/general_components/general_components_types"
 
 export let pickerInfo: IAmAPickerType
 
@@ -44,7 +44,7 @@ let currentSelected: number = 0
 .choices-wrapper
     display flex
     justify-content space-between
-    
+
 .choice
     color white
     background-color rgba(45, 55, 68, 0.35)
@@ -54,12 +54,12 @@ let currentSelected: number = 0
     font-size 16px
     font-weight 500
     border 3px solid white
-    
+
 .choice:hover
     cursor pointer
     border 3px solid $brand
 
-.icon 
+.icon
     font-size 16px
     height 16px
     margin-right 5px

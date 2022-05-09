@@ -1,11 +1,8 @@
 <script lang="ts">
-import type { HubType } from "@components/hub/hub_type"
-import HubCard from "@components/hub/HubCard.svelte"
+import HubCard from "$components/hub/HubCard.svelte"
 
-import Hub from "@components/custom-icons/Hub.svelte"
-
-export let twoWideHubCards: HubType[]
-export let threeWideHubCards: HubType[]
+import Hub from "$components/icons/Hub.svelte"
+import { three_wide, two_wide } from './hub_data';
 </script>
 
 <div class="hub-wrapper">
@@ -20,12 +17,12 @@ export let threeWideHubCards: HubType[]
         </div>
         <div class="hub-cards-wrapper">
             <div class="hub-cards-two-wide-wrapper">
-                {#each twoWideHubCards as info}
+                {#each two_wide as info}
                     <HubCard bind:info/>
                 {/each}
             </div>
             <div class="hub-cards-three-wide-wrapper">
-                {#each threeWideHubCards as info}
+                {#each three_wide as info}
                     <HubCard bind:info/>
                 {/each}
             </div>
@@ -34,8 +31,7 @@ export let threeWideHubCards: HubType[]
 </div>
 
 <style lang="stylus">
-.hub-wrapper 
-    background-color #F3F3F2
+.hub-wrapper
     padding 60px 0
 
 .hub-inner-wrapper

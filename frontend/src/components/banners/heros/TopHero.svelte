@@ -1,7 +1,7 @@
 <script lang="ts">
-import MainButton from "@components/inputs/MainButton.svelte"
-import ChevronRight from "@icons/ChevronRight.svelte"
-import type { HeroType } from "@components/banners/heros/hero_types"
+import Button from "$lib/inputs/Button.svelte"
+import ChevronRight from "$icons/ChevronRight.svelte"
+import type { HeroType } from "$components/banners/heros/hero_types"
 
 export let heroInfo: HeroType
 
@@ -26,7 +26,7 @@ export let heroInfo: HeroType
         <div class="buttons-wrapper">
             {#each heroInfo.buttons as button}
                 <div class="button">
-                    <MainButton
+                    <Button
                         href={button.link}
                         right_icon={button.rightIcon}
                         inline={true}
@@ -34,7 +34,7 @@ export let heroInfo: HeroType
                         branded={button.branded}
                     >
                     {button.text}
-                    </MainButton>
+                    </Button>
                 </div>
             {/each}
         </div>

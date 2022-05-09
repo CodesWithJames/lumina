@@ -1,25 +1,24 @@
 <script lang="ts">
-import TopHero from "@components/banners/heros/TopHero.svelte"
-import SubHeading from "@components/general_components/SubHeading.svelte"
-import VerticalLinkedDiagram from "@components/general_components/vertical_linked_diagram/VerticalLinkedDiagram.svelte"
-import ChevronDown from "@icons/ChevronDown.svelte"
-import ChevronRight from "@icons/ChevronRight.svelte"
-import ScriptText from "@icons/ScriptText.svelte"
-import RobotIndustrial from "@icons/RobotIndustrial.svelte"
-import Bolt from "@icons/Bolt.svelte"
-import Sync from "@icons/Sync.svelte"
-import Brain from "@icons/Brain.svelte"
-import ArmFlexOutline from "@icons/ArmFlexOutline.svelte"
-import Leaf from "@icons/Leaf.svelte"
-import Shape from "@icons/Shape.svelte"
+import TopHero from "$components/banners/heros/TopHero.svelte"
+import SubHeading from "$components/general_components/SubHeading.svelte"
+import VerticalLinkedDiagram from "$components/general_components/vertical_linked_diagram/VerticalLinkedDiagram.svelte"
+import ChevronDown from "$icons/ChevronDown.svelte"
+import ChevronRight from "$icons/ChevronRight.svelte"
+import ScriptText from "$icons/ScriptText.svelte"
+import RobotIndustrial from "$icons/RobotIndustrial.svelte"
+import Bolt from "$icons/Bolt.svelte"
+import Sync from "$icons/Sync.svelte"
+import Brain from "$icons/Brain.svelte"
+import ArmFlexOutline from "$icons/ArmFlexOutline.svelte"
+import Leaf from "$icons/Leaf.svelte"
+import Shape from "$icons/Shape.svelte"
 
 import { tick } from "svelte"
-import { loop_guard } from "svelte/internal"
-import type { VerticalDiagramCardType } from "@components/general_components/vertical_linked_diagram/vertical_diagram_types";
-import InfoBox from "@components/general_components/InfoBox.svelte"
-import type { InfoBoxType } from "@components/general_components/general_components_types"
+import type { VerticalDiagramCardType } from "$components/general_components/vertical_linked_diagram/vertical_diagram_types";
+import InfoBox from "$components/general_components/InfoBox.svelte"
+import type { InfoBoxType } from "$components/general_components/general_components_types"
 import Telescope from "svelte-material-icons/Telescope.svelte"
-import RightsDutiesDisplayBlock from "@components/rights_and_duties/RightsDutiesDisplayBlock.svelte";
+import RightsDutiesDisplayBlock from "$components/pages/rights_and_duties/RightsDutiesDisplayBlock.svelte";
 
 let heroInfo = {
     subtitle: "A Core Difference",
@@ -30,13 +29,13 @@ let heroInfo = {
     ],
     buttons: [
         {
-            text: "Read your rights", 
+            text: "Read your rights",
             link: "/",
             branded: true,
             rightIcon: ChevronDown
         },
         {
-            text: "Become a citizen", 
+            text: "Become a citizen",
             link: "/",
             rightIcon: ChevronRight
         },
@@ -157,7 +156,7 @@ let values: InfoBoxType[] = [
     },
 ]
 
-import Information from "@icons/Information.svelte";
+import Information from "$icons/Information.svelte";
 let valueBoxes: InfoBoxType = {
     icon: {
         type: Information,
@@ -198,7 +197,7 @@ async function update_diagram_sections () {
                 prev_card.separatorActive = true
                 diagramSections = diagramSections
             }
-            await new Promise(resolve => setTimeout(resolve, 500)) 
+            await new Promise(resolve => setTimeout(resolve, 500))
             card.active = true
             diagramSections = diagramSections
             next_active_item_index++
@@ -221,7 +220,7 @@ async function update_diagram_sections () {
 
             card.active = false
             diagramSections = diagramSections
-            await new Promise(resolve => setTimeout(resolve, 500)) 
+            await new Promise(resolve => setTimeout(resolve, 500))
             if (next_active_item_index > 0) {
                 next_active_item_index--
                 // this item may have been passed on scroll, so check again

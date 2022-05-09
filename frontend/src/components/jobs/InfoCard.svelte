@@ -1,5 +1,5 @@
 <script lang="ts">
-import type { InfoCardType } from "@components/jobs/jobs_types";
+import type { InfoCardType } from "$components/jobs/jobs_types";
 
 export let info: InfoCardType
 

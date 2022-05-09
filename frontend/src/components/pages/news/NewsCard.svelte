@@ -1,5 +1,5 @@
 <script lang="ts">
-import type { NewsCardType } from "@components/news/news_types"
+import type { NewsCardType } from "$components/pages/news/news_types"
 import ArrowRight from "svelte-material-icons/ArrowRight.svelte"
 
 export let newsInfo: NewsCardType
@@ -15,7 +15,7 @@ export let newsInfo: NewsCardType
                         {newsInfo.tag.text}
                     </div>
                     <div class="text-with-opacity">
-                        {newsInfo.date.dayAsNumber}{#if newsInfo.date.dayAsNumber === 1}st{:else if newsInfo.date.dayAsNumber === 2}nd{:else if newsInfo.date.dayAsNumber === 3}rd{:else}th{/if} 
+                        {newsInfo.date.dayAsNumber}{#if newsInfo.date.dayAsNumber === 1}st{:else if newsInfo.date.dayAsNumber === 2}nd{:else if newsInfo.date.dayAsNumber === 3}rd{:else}th{/if}
                         {newsInfo.date.month} {newsInfo.date.year}
                     </div>
                 </div>

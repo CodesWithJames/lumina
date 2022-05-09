@@ -1,5 +1,5 @@
 <script lang="ts">
-import JobCard from "@components/jobs/JobCard.svelte"
+import JobCard from "$components/jobs/JobCard.svelte"
 import type { JobField } from "./jobs_types";
 
 export let jobField: JobField

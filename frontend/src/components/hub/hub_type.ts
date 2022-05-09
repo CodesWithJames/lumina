@@ -9,5 +9,4 @@ export type HubType = {
         text: string,
     },
     description: string,
-    greyedOut: boolean
 }

@@ -1,6 +1,6 @@
 <script lang="ts">
-import type { EventType } from "@components/events/event_types"
-import EventCard from "@components/events/EventCard.svelte"
+import type { EventType } from "$components/events/event_types"
+import EventCard from "$components/events/EventCard.svelte"
 import ChevronRight from "svelte-material-icons/ChevronRight.svelte"
 
 export let events: EventType[]

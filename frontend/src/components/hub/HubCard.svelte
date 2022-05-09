@@ -1,72 +1,52 @@
 
 <script lang="ts">
-import type {HubType} from "@components/hub/hub_type"
+import type {HubType} from "$components/hub/hub_type"
 import ArrowRight from "svelte-material-icons/ArrowRight.svelte"
+
 export let info: HubType
 
-let greyedOut = info.greyedOut
-
+$: tag = info.link ? "a" : "div"
+$: active = info.link ? "active" : ""
 </script>
 
-{#if !greyedOut}
-    <a href="{info.link}" class="main" class:greyedOut>
-        <div class="header">
-            <div class="tag" style="background-color: {info.tag.color};">
-                {info.tag.text}
-            </div>
-            <div class="arrow">
-                <svelte:component this={ArrowRight}/>
-            </div>
+<svelte:element this={tag} href="{info.link}" class="card {active}">
+    <div class="header">
+        <div class="tag" style="background-color: {info.tag.color};">
+            {info.tag.text}
         </div>
-        <div class="title">
-            <div class="icon">
-                <svelte:component this={info.title.icon}/>
-            </div>
-            <div class="heading">
-                {info.title.text}
-            </div>
+        <div class="arrow">
+            <svelte:component this={ArrowRight}/>
         </div>
-        <p>
-            {info.description}
-        </p>
-    </a>
-{:else}
-    <div class="main" class:greyedOut>
-        <div class="header">
-            <div class="tag" style="background-color: {info.tag.color};">
-                {info.tag.text}
-            </div>
-        </div>
-        <div class="title">
-            <div class="icon">
-                <svelte:component this={info.title.icon}/>
-            </div>
-            <div class="heading">
-                {info.title.text}
-            </div>
-        </div>
-        <p>
-            {info.description}
-        </p>
     </div>
-{/if}
+    <div class="title">
+        <div class="icon">
+            <svelte:component this={info.title.icon}/>
+        </div>
+        <div class="heading">
+            {info.title.text}
+        </div>
+    </div>
+    <p>
+        {info.description}
+    </p>
+</svelte:element>
 
 <style lang="stylus">
 @import 'variables'
 
-.main
-    background-color white
-    border-radius 5px
-    padding 17px
-    border 3px solid white
-    text-decoration none
-    color $dark
-
-.main:not(.greyedOut):hover
-    border 3px solid $brand
-
-.greyedOut
+.card
+    cardify()
+    padding 28px
+    display flex
+    flex-direction column
+    gap 12px
+    border 3px solid transparent
+    color white
     opacity 0.5
+    &.active
+        opacity 1
+        &:hover
+            border 3px solid $brand
 
 .header
     display flex

@@ -1,5 +1,5 @@
 <script lang="ts">
-import type { StatType } from "@components/stats/stats_types"
+import type { StatType } from "$components/stats/stats_types"
 
 export let stats: StatType[]
 

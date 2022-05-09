@@ -1,5 +1,5 @@
 <script lang="ts">
-import ChevronRight from "@icons/ChevronRight.svelte"
+import ChevronRight from "$icons/ChevronRight.svelte"
 
 export let knowledgeInfo
 

@@ -1,13 +1,13 @@
 <script lang="ts">
-import type { VerticalDiagramCardType } from "@components/general_components/vertical_linked_diagram/vertical_diagram_types"
+import type { VerticalDiagramCardType } from "$components/general_components/vertical_linked_diagram/vertical_diagram_types"
 export let cardInfo: VerticalDiagramCardType
 export let isLastCard: boolean
 </script>
 
 <div class="main" bind:this={cardInfo.el}>
     <div class="seperator-wrapper">
-        <div 
-            class="icon-wrapper" 
+        <div
+            class="icon-wrapper"
             class:active={cardInfo.active}
         >
             <svelte:component this={cardInfo.icon} />

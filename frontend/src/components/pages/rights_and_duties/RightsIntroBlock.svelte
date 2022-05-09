@@ -1,8 +1,8 @@
 <script lang="ts">
-import InfoBox from "@components/general_components/InfoBox.svelte"
-import type { RightsDutiesIntro } from "@components/rights_and_duties/rights_duties_types"
+import InfoBox from "$components/general_components/InfoBox.svelte"
+import type { RightsDutiesIntro } from "$components/pages/rights_and_duties/rights_duties_types"
 
-import Text from "@icons/Text.svelte"
+import Text from "$icons/Text.svelte"
 
 export let introInfo: RightsDutiesIntro
 </script>

@@ -1,4 +1,4 @@
-import type { InfoBoxType } from '@components/general_components/general_components_types'
+import type { InfoBoxType } from '$components/general_components/general_components_types'
 
 export type RightsDutiesIntro = {
     heading: string,

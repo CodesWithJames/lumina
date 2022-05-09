@@ -1,0 +1,19 @@
+/// <reference types="@sveltejs/kit" />
+
+import type { Message } from './types/message'
+
+// See https://kit.svelte.dev/docs/types#the-app-namespace
+// for information about these interfaces
+
+declare global {
+    namespace App {
+        // interface Locals {}
+        // interface Platform {}
+        interface Session {
+            messages: Message[];
+            auth_token?: string;
+            BACKENDAPI_HOST: string;
+        }
+        // interface Stuff {}
+    }
+}

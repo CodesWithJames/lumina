@@ -1,5 +1,5 @@
 <script lang="ts">
-import type { ScrollableDisplayCardType } from "@components/general_components/general_components_types"
+import type { ScrollableDisplayCardType } from "$components/general_components/general_components_types"
 import TagOutline from "svelte-material-icons/TagOutline.svelte"
 export let displayInfo: ScrollableDisplayCardType[]
 

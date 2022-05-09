@@ -1,6 +1,6 @@
 <script lang="ts">
-import JobSection from "@components/jobs/JobSection.svelte"
-import type { JobField } from "@components/jobs/jobs_types"
+import JobSection from "$components/jobs/JobSection.svelte"
+import type { JobField } from "$components/jobs/jobs_types"
 
 export let jobFields: JobField[]
 </script>

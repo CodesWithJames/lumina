@@ -1,8 +1,8 @@
 <script lang="ts">
-import NewsCard from "@components/news/NewsCard.svelte"
-import type { NewsCardType } from "@components/news/news_types"
-import MainButton from "@components/inputs/MainButton.svelte"
-import ChevronRight from "@icons/ChevronRight.svelte"
+import NewsCard from "$components/pages/news/NewsCard.svelte"
+import type { NewsCardType } from "$components/pages/news/news_types"
+import Button from "$lib/inputs/Button.svelte"
+import ChevronRight from "$icons/ChevronRight.svelte"
 
 export let featuredStories: NewsCardType[]
 
@@ -18,9 +18,9 @@ export let featuredStories: NewsCardType[]
                 The latest official news, updates and advice from the Lumina government.
             </div>
             <div class="button">
-                <MainButton right_icon={ChevronRight} gradient={true} >
+                <Button right_icon={ChevronRight} gradient={true} >
                     More News
-                </MainButton>
+                </Button>
             </div>
         </div>
         <div class="right">

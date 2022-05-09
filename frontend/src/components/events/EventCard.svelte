@@ -1,7 +1,7 @@
 <script lang="ts">
-import type { EventType } from "@components/events/event_types"
-import MapMarker from "@icons/MapMarker.svelte"
-import Clock from "@icons/Clock.svelte"
+import type { EventType } from "$components/events/event_types"
+import MapMarker from "$icons/MapMarker.svelte"
+import Clock from "$icons/Clock.svelte"
 
 export let event: EventType
 

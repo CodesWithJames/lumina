@@ -1,13 +1,13 @@
 <script lang="ts">
-import ArrowRight from "@icons/ArrowRight.svelte"
-import Lumina from "@components/custom-icons/LuminaEdge.svelte"
-import MainButton from "@components/inputs/MainButton.svelte"
-import Youtube from "@icons/Youtube.svelte"
-import Twitter from "@icons/Twitter.svelte"
-import Discord from "@icons/Discord.svelte"
-import Facebook from "@icons/Facebook.svelte"
+import ArrowRight from "$icons/ArrowRight.svelte"
+import Lumina from "$components/icons/LuminaEdge.svelte"
+import Button from "$lib/inputs/Button.svelte"
+import Youtube from "$icons/Youtube.svelte"
+import Twitter from "$icons/Twitter.svelte"
+import Discord from "$icons/Discord.svelte"
+import Facebook from "$icons/Facebook.svelte"
 import ChevronRight from "svelte-material-icons/ChevronRight.svelte";
-import TikTok from '@components/custom-icons/TikTok.svelte';
+import TikTok from '$components/icons/TikTok.svelte';
 
 </script>
 
@@ -60,12 +60,12 @@ import TikTok from '@components/custom-icons/TikTok.svelte';
             <div class="citizen-description">
                 Become a citizen of Lumina today!
             </div>
-            <MainButton
+            <Button
                 right_icon={ChevronRight}
                 inline={true}
                 gradient={true}>
                 Get involved
-            </MainButton>
+            </Button>
         </div>
     </div>
     <div class="bottom">

@@ -1,60 +1,32 @@
 <script lang="ts">
-import Lumina from "@components/custom-icons/LuminaEdge.svelte"
-import Hub from '@components/custom-icons/Hub.svelte'
-import Shop from '@icons/TagOutline.svelte'
-import ShieldLock from '@icons/ShieldLock.svelte'
-import MainButton from "@components/inputs/MainButton.svelte"
+import Hub from '$components/icons/Hub.svelte'
+import Shop from '$icons/TagOutline.svelte'
+import ShieldLock from '$icons/ShieldLock.svelte'
 import ChevronRight from "svelte-material-icons/ChevronRight.svelte"
+import Button from '$lib/inputs/Button.svelte';
+import Logo from '$components/icons/Logo.svelte'
 </script>
 
 <header>
     <div class="inner-header">
         <div class="left">
-            <a href="/" class="logo">
-                <div class="symbol">
-                    <Lumina/>
-                </div>
-                <div class="brand">
-                    Lumina
-                </div>
-            </a>
+            <Logo/>
             <nav>
-                <a href="/" class="link">
-                    <div class="icon">
-                        <Hub/>
-                    </div>
-                    <div class="name">
-                        Hub
-                    </div>
-                </a>
-
-                <a href="/shop" class="link">
-                    <div class="icon">
-                        <Shop/>
-                    </div>
-                    <div class="name">
-                        Shop
-                    </div>
-                </a>
-            </nav>
+                <Button style="transparent" href="/" right_icon={Hub}>
+                    Hub
+                </Button>
+                <Button style="transparent" href="/shop" right_icon={Shop}>
+                    Shop
+                </Button>
         </div>
         <div class="right">
             <nav>
-                <a href="/login" class="link">
-                    <div class="icon">
-                        <ShieldLock/>
-                    </div>
-                    <div class="name">
-                        Log In
-                    </div>
-                </a>
-                <MainButton
-                    href="/onboarding"
-                    gradient={true}
-                    right_icon={ChevronRight}
-                >
+                <Button style="transparent" href="/login" right_icon={ShieldLock}>
+                    Log In
+                </Button>
+                <Button href="/onboarding" right_icon={ChevronRight}>
                     Start
-                </MainButton>
+                </Button>
             </nav>
         </div>
     </div>
@@ -65,13 +37,14 @@ import ChevronRight from "svelte-material-icons/ChevronRight.svelte"
 
 .inner-header
     max-width 1200px
-    display: flex
-    flex-direction: row
-    justify-content: space-between
-    align-items: center;
+    width 100%
+    display flex
+    flex-direction row
+    justify-content space-between
+    align-items center
     padding: 0px 20px
-    height: 80px
-    margin 0 auto;
+    height 64px
+    margin 0 auto
 
 .left
     display: flex;
@@ -84,38 +57,8 @@ import ChevronRight from "svelte-material-icons/ChevronRight.svelte"
     flex-direction: row;
     align-items: center;
 
-.logo
-    display: flex;
-    align-items: center;
-    gap 14px
-    text-decoration none
-    color $dark
-
-.link
-    display: flex;
-    align-items: center;
-    gap 8px
-    text-decoration none
-    color $dark
-
-.symbol
-    font-size 40px
-    display inline-flex
-
-.brand
-    font-size 22px
-    font-weight 600
-
-.icon
-    font-size 24px
-    display inline-flex
-
-.name
-    font-size 18px
-    font-weight 600
-
 nav
     display: flex;
     align-items: center;
-    gap 15px
+    gap 12px
 </style>
