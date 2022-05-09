@@ -1,5 +1,5 @@
 <script>
-import Footer from '$components/banners/Footer.svelte';
+import Footer from '$main/Footer.svelte';
 import Header from '$components/banners/Header.svelte';
 import Global from '$templates/Global.svelte';
 
