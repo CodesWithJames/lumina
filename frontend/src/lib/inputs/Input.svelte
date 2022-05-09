@@ -23,7 +23,7 @@ function right_icon_click(event) {
                 <svelte:component this={left_icon}/>
             </div>
         {/if}
-        <input bind:this={input} {placeholder} {type} on:input={event => value = event.target.value} {value}>
+        <input bind:this={input} {placeholder} {type} on:input={event => value = event.currentTarget.value} {value}>
         {#if right_icon}
             <div class="icon" class:clickable={!!right_icon_fn} on:click={right_icon_click}>
                 <svelte:component this={right_icon}/>

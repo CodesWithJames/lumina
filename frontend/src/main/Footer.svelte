@@ -62,7 +62,6 @@ import TikTok from '$components/icons/TikTok.svelte';
             </div>
             <Button
                 right_icon={ChevronRight}
-                inline={true}
                 gradient={true}>
                 Get involved
             </Button>
