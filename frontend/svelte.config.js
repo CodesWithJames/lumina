@@ -22,9 +22,9 @@ const config = {
         vite: {
             server: {
                 hmr: {
-                    // clientPort: 443,
-                    // port: 80,
-                    // protocol: "wss",
+                    clientPort: 443,
+                    port: 80,
+                    protocol: "wss",
                 }
             },
             resolve: {
