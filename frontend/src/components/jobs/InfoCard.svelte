@@ -6,18 +6,21 @@ export let info: InfoCardType
 </script>
 
 <div class="main">
-    <div class="icon" style="color: {info.color}; opacity: {info.opacity};">
+    <div class="icon">
         <svelte:component this={info.icon}/>
     </div>
-    <div class="text" style="color: {info.color}; opacity: {info.opacity};">
+    <div class="text">
         {info.text}
     </div>
 </div>
 
 <style lang="stylus">
+@import 'variables'
+
 .main
     display flex
     margin-right 10px
+    color white
 .text
     font-size: 14px
     font-weight 500

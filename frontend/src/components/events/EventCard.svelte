@@ -8,39 +8,37 @@ export let event: EventType
 </script>
 
 <a class="main-link" href="{event.link}">
-    <div class="main">
-        <div class="img" style="background-image:url('{event.img}')" alt="event">
-            <div class="date-banner">
-                <div class="day">
-                    {event.date.day}
-                </div>
-                <div class="month-year">
-                    {event.date.month} {event.date.year}
-                </div>
+    <div class="img" style="background-image:url('{event.img}')" alt="event">
+        <div class="date-banner">
+            <div class="day">
+                {event.date.day}
+            </div>
+            <div class="month-year">
+                {event.date.month} {event.date.year}
             </div>
         </div>
-        <div class="info-wrapper">
-            <div class="event-type">
-                {event.type}
+    </div>
+    <div class="info-wrapper">
+        <div class="event-type">
+            {event.type}
+        </div>
+        <div class="event-title">
+            {event.title}
+        </div>
+        <div class="info-block">
+            <div class="icon">
+                <svelte:component this={MapMarker} />
             </div>
-            <div class="event-title">
-                {event.title}
+            <div class="info">
+                {event.location}
             </div>
-            <div class="info-block">
-                <div class="icon">
-                    <svelte:component this={MapMarker} />
-                </div>
-                <div class="info">
-                    {event.location}
-                </div>
+        </div>
+        <div class="info-block">
+            <div class="icon">
+                <svelte:component this={Clock} />
             </div>
-            <div class="info-block">
-                <div class="icon">
-                    <svelte:component this={Clock} />
-                </div>
-                <div class="info">
-                    {event.date.day} {event.date.month} {event.date.time.hour}:{event.date.time.minutes} {#if !event.date.time.pm} AM{:else} PM{/if}
-                </div>
+            <div class="info">
+                {event.date.day} {event.date.month} {event.date.time.hour}:{event.date.time.minutes} {#if !event.date.time.pm} AM{:else} PM{/if}
             </div>
         </div>
     </div>
@@ -50,15 +48,13 @@ export let event: EventType
 @import "variables"
 
 .main-link
-    text-decoration none
     width 100%
-    border 4px solid rgba(0, 0, 0, 0)
+    color white
+    cardify()
+    overflow hidden
 
-.main-link:hover
-    border 4px solid $brand
-
-.main
-    color $dark
+    &:hover
+        background transparify(white, 8%)
 
 .img
     width 100%
@@ -72,7 +68,7 @@ export let event: EventType
     position absolute
 
 .day
-    background-color #49C7EF
+    background-color $brand
     color white
     font-size 22px
     font-weight 700
@@ -88,8 +84,7 @@ export let event: EventType
     margin auto 0
 
 .info-wrapper
-    background-color white
-    padding 20px
+    padding 24px
 
 .event-type
     font-weight 600

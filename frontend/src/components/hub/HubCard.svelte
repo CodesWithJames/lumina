@@ -1,6 +1,7 @@
 
 <script lang="ts">
 import type {HubType} from "$components/hub/hub_type"
+import Tag from '$lib/display/Tag.svelte'
 import ArrowRight from "svelte-material-icons/ArrowRight.svelte"
 
 export let info: HubType
@@ -11,9 +12,7 @@ $: active = info.link ? "active" : ""
 
 <svelte:element this={tag} href="{info.link}" class="card {active}">
     <div class="header">
-        <div class="tag" style="background-color: {info.tag.color};">
-            {info.tag.text}
-        </div>
+        <Tag color={info.tag.color}>{info.tag.text}</Tag>
         <div class="arrow">
             <svelte:component this={ArrowRight}/>
         </div>
@@ -40,17 +39,16 @@ $: active = info.link ? "active" : ""
     display flex
     flex-direction column
     gap 12px
-    border 3px solid transparent
     color white
     opacity 0.5
     &.active
         opacity 1
         &:hover
-            border 3px solid $brand
+            background transparify(white, 8%)
 
 .header
     display flex
-    margin-bottom 10px
+    justify-content space-between
 
 .tag
     padding 4px 6px
@@ -60,6 +58,7 @@ $: active = info.link ? "active" : ""
 .arrow
     margin-left auto
     font-size 24px
+    display inline-flex
 
 .title
     display flex

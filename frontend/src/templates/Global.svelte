@@ -16,9 +16,9 @@
 
     a
         text-decoration none
-        color $brand_light
+        color $brand
         &:hover
-            color lighten($brand_light, 10%)
+            color lighten($brand, 10%)
 
     body
         background $dark_app

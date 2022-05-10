@@ -1,10 +1,10 @@
 <script lang="ts">
-import Hub from '$components/icons/Hub.svelte'
+import Hub from '$lib/icons/Hub.svelte'
 import Shop from '$icons/TagOutline.svelte'
 import ShieldLock from '$icons/ShieldLock.svelte'
 import ChevronRight from "svelte-material-icons/ChevronRight.svelte"
 import Button from '$lib/inputs/Button.svelte';
-import Logo from '$components/icons/Logo.svelte'
+import Logo from '$lib/icons/Logo.svelte'
 </script>
 
 <header>

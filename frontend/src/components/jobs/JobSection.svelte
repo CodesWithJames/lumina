@@ -10,7 +10,7 @@ export let jobField: JobField
     <div class="heading">
         {jobField.title}
     </div>
-    <div class="jobs-wrapper">
+    <div class="jobs-inner-wrapper">
         {#each jobField.jobs as job}
             <JobCard bind:job />
         {/each}
@@ -25,9 +25,9 @@ export let jobField: JobField
     font-weight 600
     margin-bottom 10px
 
-.jobs-wrapper
+.jobs-inner-wrapper
     display grid
     width 100%
     grid-template-columns repeat(auto-fit, minmax(300px, 1fr))
-    grid-gap 20px
+    gap 20px
 </style>

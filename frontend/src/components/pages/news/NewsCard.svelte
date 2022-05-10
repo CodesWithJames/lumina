@@ -5,58 +5,48 @@ import ArrowRight from "svelte-material-icons/ArrowRight.svelte"
 export let newsInfo: NewsCardType
 
 </script>
-
-<div class="main">
-    <a href="/">
-        <div class="inner-wrapper">
-            <div class="left">
-                <div class="header">
-                    <div class="tag" style="background-color: {newsInfo.tag.color}">
-                        {newsInfo.tag.text}
-                    </div>
-                    <div class="text-with-opacity">
-                        {newsInfo.date.dayAsNumber}{#if newsInfo.date.dayAsNumber === 1}st{:else if newsInfo.date.dayAsNumber === 2}nd{:else if newsInfo.date.dayAsNumber === 3}rd{:else}th{/if}
-                        {newsInfo.date.month} {newsInfo.date.year}
-                    </div>
-                </div>
-                <div class="title">
-                    {newsInfo.title}
-                </div>
-                <div class="author">
-                    <div class="text-with-opacity">
-                        By
-                    </div>
-                    <img class="author-img" src={newsInfo.author.img} alt="Author's DP">
-                    <div class="text-with-opacity">
-                        {newsInfo.author.name}
-                    </div>
-                </div>
+<a href="/">
+    <div class="left">
+        <div class="header">
+            <div class="tag" style="background-color: {newsInfo.tag.color}">
+                {newsInfo.tag.text}
             </div>
-            <div class="arrow-right">
-                <svelte:component this={ArrowRight} />
+            <div class="text-with-opacity">
+                {newsInfo.date.dayAsNumber}{#if newsInfo.date.dayAsNumber === 1}st{:else if newsInfo.date.dayAsNumber === 2}nd{:else if newsInfo.date.dayAsNumber === 3}rd{:else}th{/if}
+                {newsInfo.date.month} {newsInfo.date.year}
             </div>
         </div>
-    </a>
-</div>
+        <div class="title">
+            {newsInfo.title}
+        </div>
+        <div class="author">
+            <div class="text-with-opacity">
+                By
+            </div>
+            <img class="author-img" src={newsInfo.author.img} alt="Photo of {newsInfo.author.name}">
+            <div class="text-with-opacity">
+                {newsInfo.author.name}
+            </div>
+        </div>
+    </div>
+    <div class="arrow-right">
+        <svelte:component this={ArrowRight} />
+    </div>
+</a>
 
 <style lang="stylus">
 @import "variables"
 
-.main
-    border-radius 5px
-    padding 10px
-    //border 3px solid white
-
-.main:hover
-    background-color rgba(45, 55, 68, 0.08)
-    // border 3px solid $brand
-
 a
-    color $dark
+    color white
     text-decoration none
-
-.inner-wrapper
+    border-radius 5px
+    padding 24px
     display flex
+    cardify()
+    &:hover
+        color white
+        background transparify(white, 8%)
 
 .header
     display flex
@@ -69,7 +59,6 @@ a
     margin-right 15px
 
 .text-with-opacity
-    color $dark
     opacity 0.3
     margin auto 0
     font-weight 500

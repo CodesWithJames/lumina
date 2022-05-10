@@ -1,5 +1,5 @@
 <script lang="ts">
-    import Lumina from "$components/icons/LuminaEdge.svelte"
+    import Lumina from "$lib/icons/LuminaEdge.svelte"
 </script>
 <a href="/" class="logo">
     <div class="symbol">
@@ -22,7 +22,7 @@
 .symbol
     font-size 40px
     display inline-flex
-    color $brand_light
+    color $brand
 
 .brand
     font-size 22px

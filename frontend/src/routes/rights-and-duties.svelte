@@ -3,7 +3,7 @@ import TopHero from "$components/banners/heros/TopHero.svelte"
 import RightsIntroBlock from "$components/pages/rights_and_duties/RightsIntroBlock.svelte"
 import IAmAPicker from "$components/general_components/IAmAPicker.svelte"
 
-import Lumina from "$components/icons/Lumina.svelte"
+import Lumina from "$lib/icons/Lumina.svelte"
 import AirplaneLanding from "$icons/AirplaneLanding.svelte"
 import Home from "$icons/Home.svelte"
 import Web from "$icons/Web.svelte"

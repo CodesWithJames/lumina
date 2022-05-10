@@ -6,7 +6,7 @@
     export let href: string = undefined;
     export let left_icon: any = undefined;
     export let right_icon: any = undefined;
-    export let style: string = "";
+    export let style: 'translucent' | 'transparent' | '' = '';
 
     $: tag = href ? 'a' : 'div';
 </script>
@@ -37,7 +37,7 @@
 
 .button
     padding 10px 16px
-    background: $brand_light
+    background: $brand
     color white
     display: inline-flex
     align-items: center
@@ -59,7 +59,7 @@
         padding-left: 10px
         padding-bottom: 10px
     &:hover
-        background: lighten($brand_light, 12%)
+        background: lighten($brand, 12%)
     &.translucent
         background transparify(white, 8%)
         &:hover

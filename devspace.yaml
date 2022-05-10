@@ -8,7 +8,6 @@ images:
     image: ${ECR}/frontend
     dockerfile: ./frontend/Dockerfile
     tags:
-      # - dev-frontend-${NAME}
       - dev-frontend-${NAME}-######
     context: frontend/
     # Build on the clusters architecture

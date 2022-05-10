@@ -20,6 +20,7 @@ import Button from '$lib/inputs/Button.svelte';
 
     <Button
         left_icon={Discord}
+        href="https://discord.com/invite/r4vNcUKktT"
         style="translucent"
         right_icon={RightChevron}>
         Join Server

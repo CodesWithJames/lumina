@@ -53,5 +53,6 @@ export let jobFields: JobField[]
     flex-direction column
     gap 40px
     padding-top 40px
+    width 100%
 
 </style>

@@ -1,5 +1,5 @@
 <script lang="ts">
-import Logo from '$components/icons/Logo.svelte'
+import Logo from '$lib/icons/Logo.svelte'
 import AccountCreate from '$components/pages/onboarding/AccountCreate.svelte';
 import AccountType from '$components/pages/onboarding/AccountType.svelte'
 import ProgressBar from '$lib/display/ProgressBar.svelte';
@@ -21,7 +21,7 @@ $: width = percentages[page]
         <div class="top-part">
             <Logo/>
             <ProgressBar bind:width/>
-            <Tag color="theme">Onboarding</Tag>
+            <Tag color="brand">Onboarding</Tag>
         </div>
         {#if page == "account-type"}
             <AccountType on:next={() => page = "create-account"}/>

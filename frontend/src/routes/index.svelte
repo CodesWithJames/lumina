@@ -17,7 +17,7 @@ import Brush from "$icons/Brush.svelte"
 import Text from "$icons/Text.svelte"
 import Hammer from "$icons/Hammer.svelte"
 import ChevronRight from "svelte-material-icons/ChevronRight.svelte";
-import Settlement from "$components/icons/Settlement.svelte"
+import Settlement from "$lib/icons/Settlement.svelte"
 import Site from '$templates/Site.svelte'
 import Hero20 from '$components/heros/Hero20.svelte';
 import Hero48 from '$components/heros/Hero48.svelte'
@@ -25,6 +25,7 @@ import Button from '$lib/inputs/Button.svelte'
 import Inner from '$components/heros/Inner.svelte'
 import Split from '$layouts/Split.svelte'
 import HubArea from '$components/hub/HubArea.svelte';
+import Coloured from '$lib/display/Coloured.svelte'
 
 let heroInfo = {
     titleExcludingLastWord: "city of the",
@@ -83,14 +84,10 @@ let jobFields = [
                     {
                         icon: Clock,
                         text: "Volunteer",
-                        color: "#492C9C",
-                        opacity: "1",
                     },
                     {
                         icon: Wifi,
                         text: "Remote",
-                        color: "#492C9C",
-                        opacity: "1",
                     }
                 ]
             },
@@ -101,14 +98,10 @@ let jobFields = [
                     {
                         icon: Clock,
                         text: "Volunteer",
-                        color: "#492C9C",
-                        opacity: "1",
                     },
                     {
                         icon: Wifi,
                         text: "Remote",
-                        color: "#492C9C",
-                        opacity: "1",
                     }
                 ]
             },
@@ -119,14 +112,10 @@ let jobFields = [
                     {
                         icon: Clock,
                         text: "Volunteer",
-                        color: "#492C9C",
-                        opacity: "1",
                     },
                     {
                         icon: Wifi,
                         text: "Remote",
-                        color: "#492C9C",
-                        opacity: "1",
                     }
                 ]
             },
@@ -143,14 +132,10 @@ let jobFields = [
                     {
                         icon: Clock,
                         text: "Volunteer",
-                        color: "#492C9C",
-                        opacity: "1",
                     },
                     {
                         icon: Wifi,
                         text: "Remote",
-                        color: "#492C9C",
-                        opacity: "1",
                     }
                 ]
             },
@@ -161,14 +146,10 @@ let jobFields = [
                     {
                         icon: Clock,
                         text: "Volunteer",
-                        color: "#492C9C",
-                        opacity: "1",
                     },
                     {
                         icon: Wifi,
                         text: "Remote",
-                        color: "#492C9C",
-                        opacity: "1",
                     }
                 ]
             },
@@ -179,14 +160,10 @@ let jobFields = [
                     {
                         icon: Clock,
                         text: "Volunteer",
-                        color: "#492C9C",
-                        opacity: "1",
                     },
                     {
                         icon: Wifi,
                         text: "Remote",
-                        color: "#492C9C",
-                        opacity: "1",
                     }
                 ]
             }
@@ -203,14 +180,10 @@ let jobFields = [
                     {
                         icon: Clock,
                         text: "Future",
-                        color: "#000000",
-                        opacity: "0.3",
                     },
                     {
                         icon: Settlement,
                         text: "Settlement",
-                        color: "#492C9C",
-                        opacity: "1",
                     }
                 ]
             },
@@ -221,14 +194,10 @@ let jobFields = [
                     {
                         icon: Clock,
                         text: "Future",
-                        color: "#000000",
-                        opacity: "0.3",
                     },
                     {
                         icon: Settlement,
                         text: "Settlement",
-                        color: "#492C9C",
-                        opacity: "1",
                     }
                 ]
             },
@@ -239,14 +208,10 @@ let jobFields = [
                     {
                         icon: Clock,
                         text: "Future",
-                        color: "#000000",
-                        opacity: "0.3",
                     },
                     {
                         icon: Settlement,
                         text: "Settlement",
-                        color: "#492C9C",
-                        opacity: "1",
                     }
                 ]
             },
@@ -257,14 +222,10 @@ let jobFields = [
                     {
                         icon: Clock,
                         text: "Future",
-                        color: "#000000",
-                        opacity: "0.3",
                     },
                     {
                         icon: Settlement,
                         text: "Settlement",
-                        color: "#492C9C",
-                        opacity: "1",
                     }
                 ]
             },
@@ -275,14 +236,10 @@ let jobFields = [
                     {
                         icon: Clock,
                         text: "Future",
-                        color: "#000000",
-                        opacity: "0.3",
                     },
                     {
                         icon: Settlement,
                         text: "Settlement",
-                        color: "#492C9C",
-                        opacity: "1",
                     }
                 ]
             },
@@ -293,14 +250,10 @@ let jobFields = [
                     {
                         icon: Clock,
                         text: "Future",
-                        color: "#000000",
-                        opacity: "0.3",
                     },
                     {
                         icon: Settlement,
                         text: "Settlement",
-                        color: "#492C9C",
-                        opacity: "1",
                     }
                 ]
             }
@@ -376,7 +329,7 @@ let featuredStories = [
         title: "Lumina hits 2000 citizens",
         author: {
             name: "Albert",
-            img: "static/images/albert_dp.png"
+            img: "/images/albert_dp.png"
         }
     },
     {
@@ -392,7 +345,7 @@ let featuredStories = [
         title: "Lumina hits 1000 citizens",
         author: {
             name: "Albert",
-            img: "static/images/albert_dp.png"
+            img: "/images/albert_dp.png"
         }
     }
 ]
@@ -403,12 +356,12 @@ let featuredStories = [
         <Inner>
             <Split>
                 <div>
-                    <h1>city of the future</h1>
+                    <h1>city of the <Coloured>future</Coloured></h1>
                     <p>
-                        Welcome to Lumina, a social experiment with the goals of setting up a new innovative and environmentally sustainable city.
+                        Welcome to <Coloured>Lumina</Coloured>, a social experiment with the goals of setting up a new innovative and environmentally sustainable city.
                     </p>
                     <p>
-                        Lumina proposes to set up a Autonomous Zone, which is a city with it's own government, laws, and currency.
+                        Lumina proposes to set up a <Coloured>Autonomous Zone</Coloured>, which is a city with it's own government, laws, and currency.
                     </p>
                     <Button href="onboarding" right_icon={Settlement}>
                         Become a citizen
@@ -424,8 +377,8 @@ let featuredStories = [
     <Hero20>
         <DiscordBanner/>
     </Hero20>
-    <Hero48>
-        <Inner>
+    <Hero48 translucent={true}>
+        <Inner max_width={1000}>
             <HubArea/>
         </Inner>
     </Hero48>
@@ -448,6 +401,8 @@ let featuredStories = [
 </svelte:head>
 
 <style lang="stylus">
+@import 'variables'
+
 h1
     font-size 80px
     font-weight 600
@@ -465,11 +420,12 @@ h1
 .extra-info-wrapper
     display grid
     grid-template-columns 1.2fr 1fr
+    background transparify(white, 4%)
     width: 100vw
 
 .knowledge-hub-wrapper
     padding 40px
-    background-color #EBEBEA
+    background transparify(white, 4%)
     padding-right 160px
 
 </style>

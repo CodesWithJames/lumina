@@ -18,7 +18,7 @@ export let featuredStories: NewsCardType[]
                 The latest official news, updates and advice from the Lumina government.
             </div>
             <div class="button">
-                <Button right_icon={ChevronRight} gradient={true} >
+                <Button right_icon={ChevronRight} style="translucent">
                     More News
                 </Button>
             </div>
@@ -26,9 +26,6 @@ export let featuredStories: NewsCardType[]
         <div class="right">
             {#each featuredStories as newsInfo, i}
                 <NewsCard bind:newsInfo />
-                {#if i !== featuredStories.length - 1}
-                    <div class="divider" />
-                {/if}
             {/each}
         </div>
     </div>
@@ -71,10 +68,9 @@ export let featuredStories: NewsCardType[]
 .right
     max-width 580px
     width 100%
+    gap 16px
+    display flex
+    flex-direction column
 
-.divider
-    margin 20px 0
-    height 0px
-    border-top 1px solid rgba(45, 55, 68, 0.1)
 
 </style>

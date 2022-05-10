@@ -16,14 +16,14 @@ import Brush from "$icons/Brush.svelte"
 import Text from "$icons/Text.svelte"
 import Hammer from "$icons/Hammer.svelte"
 import ChevronRight from "$icons/ChevronRight.svelte"
-import Settlement from "$components/icons/Settlement.svelte"
+import Settlement from "$lib/icons/Settlement.svelte"
 
 export let two_wide: HubType[] = [
     {
         link: "/rights-and-duties",
         tag: {
             text: "Info",
-            color: "#2570B6",
+            color: "blue",
         },
         title: {
             icon: ScaleBalance,
@@ -35,7 +35,7 @@ export let two_wide: HubType[] = [
         link: "/principles-and-values",
         tag: {
             text: "Info",
-            color: "#2570B6",
+            color: "blue",
         },
         title: {
             icon: Pillar,
@@ -47,7 +47,7 @@ export let two_wide: HubType[] = [
         link: "/onboarding",
         tag: {
             text: "Services",
-            color: "#492C9C",
+            color: "brand",
         },
         title: {
             icon: PassportBiometric,
@@ -59,7 +59,7 @@ export let two_wide: HubType[] = [
         link: "/login",
         tag: {
             text: "Service",
-            color: "#492C9C",
+            color: "brand",
         },
         title: {
             icon: AccountOutline,
@@ -71,7 +71,7 @@ export let two_wide: HubType[] = [
         link: "",
         tag: {
             text: "Info",
-            color: "#2570B6",
+            color: "blue",
         },
         title: {
             icon: Telescope,
@@ -82,8 +82,8 @@ export let two_wide: HubType[] = [
     {
         link: "",
         tag: {
-            text: "Service",
-            color: "#2570B6",
+            text: "Info",
+            color: "blue",
         },
         title: {
             icon: BadgeAccountHorizontal,
@@ -98,7 +98,7 @@ export let three_wide: HubType[] = [
         link: "",
         tag: {
             text: "Coming Soon",
-            color: "#B4B4B4",
+            color: "",
         },
         title: {
             icon: ScaleBalance,
@@ -110,7 +110,7 @@ export let three_wide: HubType[] = [
         link: "",
         tag: {
             text: "Coming Soon",
-            color: "#B4B4B4",
+            color: "",
         },
         title: {
             icon: ScaleBalance,
@@ -122,7 +122,7 @@ export let three_wide: HubType[] = [
         link: "",
         tag: {
             text: "Coming Soon",
-            color: "#B4B4B4",
+            color: "",
         },
         title: {
             icon: ScaleBalance,
@@ -134,7 +134,7 @@ export let three_wide: HubType[] = [
         link: "",
         tag: {
             text: "Coming Soon",
-            color: "#B4B4B4",
+            color: "",
         },
         title: {
             icon: ScaleBalance,
@@ -146,7 +146,7 @@ export let three_wide: HubType[] = [
         link: "",
         tag: {
             text: "Coming Soon",
-            color: "#B4B4B4",
+            color: "",
         },
         title: {
             icon: ScaleBalance,
@@ -158,7 +158,7 @@ export let three_wide: HubType[] = [
         link: "",
         tag: {
             text: "Coming Soon",
-            color: "#B4B4B4",
+            color: "",
         },
         title: {
             icon: ScaleBalance,
@@ -170,7 +170,7 @@ export let three_wide: HubType[] = [
         link: "",
         tag: {
             text: "Coming Soon",
-            color: "#B4B4B4",
+            color: "",
         },
         title: {
             icon: ScaleBalance,
@@ -182,7 +182,7 @@ export let three_wide: HubType[] = [
         link: "",
         tag: {
             text: "Coming Soon",
-            color: "#B4B4B4",
+            color: "",
         },
         title: {
             icon: ScaleBalance,
@@ -194,7 +194,7 @@ export let three_wide: HubType[] = [
         link: "",
         tag: {
             text: "Coming Soon",
-            color: "#B4B4B4",
+            color: "",
         },
         title: {
             icon: ScaleBalance,

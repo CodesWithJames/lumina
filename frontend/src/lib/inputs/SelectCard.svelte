@@ -31,7 +31,7 @@ function click() {
     <p>{info.description}</p>
     {#if info.tag}
         <div>
-            <Tag color="info">COMING SOON</Tag>
+            <Tag>COMING SOON</Tag>
         </div>
     {/if}
 </div>
@@ -57,10 +57,10 @@ function click() {
         background rgba(255, 255, 255, 0.08)
 
     &.selected
-        border 2px solid $brand_light
+        border 2px solid $brand
 
     .icon
-        color $brand_light
+        color $brand
         font-size: 32px
         display: inline-flex
 

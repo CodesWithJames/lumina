@@ -2,7 +2,7 @@ export type HubType = {
     link: string,
     tag: {
         text: string,
-        color: string,
+        color: 'red' | 'brand' | '' | 'blue',
     },
     title: {
         icon: any,

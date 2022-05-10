@@ -7,7 +7,7 @@ export let job: JobType
 
 </script>
 
-<a href="/" class="main">
+<a href="{job.link}" class="main">
     <div class="heading">
         <div class="icon">
             <svelte:component this={job.icon}/>
@@ -31,36 +31,35 @@ export let job: JobType
 
 .main
     text-decoration none
+    cardify()
     display flex
+    color white
+    cursor pointer
     flex-direction column
     gap 10px
-    border 2px solid mix($dark, transparent, 10%)
-    border-radius: 5px
-    padding 20px
-    color $dark
+    border-radius 5px
+    padding 16px
+    border 2px solid transparent
+    &:hover
+        background transparify(white, 8%)
 
-.main:hover
-    background-color mix($dark, transparent, 5%)
-    border 2px solid $brand
+    .heading
+        display flex
+        align-items center
+        gap 10px
 
-.heading
-    display flex
-    align-items center
-    gap 10px
+    .icon
+        font-size 24px
+        display inline-flex
+        color $brand
 
-.icon
-    font-size 24px
-    display inline-flex
-
-.title
-    font-size 18px
-    font-weight 600
-.info-wrapper
-    display flex
-    align-items center
-
-.arrow
-    margin-left auto
-    color $brand
+    .title
+        font-size 18px
+        font-weight 600
+    .info-wrapper
+        display flex
+        align-items center
+    .arrow
+        margin-left auto
 
 </style>

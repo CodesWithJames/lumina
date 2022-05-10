@@ -1,13 +1,14 @@
 <script lang="ts">
 import ArrowRight from "$icons/ArrowRight.svelte"
-import Lumina from "$components/icons/LuminaEdge.svelte"
+import Lumina from "$lib/icons/LuminaEdge.svelte"
 import Button from "$lib/inputs/Button.svelte"
 import Youtube from "$icons/Youtube.svelte"
 import Twitter from "$icons/Twitter.svelte"
 import Discord from "$icons/Discord.svelte"
 import Facebook from "$icons/Facebook.svelte"
 import ChevronRight from "svelte-material-icons/ChevronRight.svelte";
-import TikTok from '$components/icons/TikTok.svelte';
+import TikTok from '$lib/icons/TikTok.svelte';
+import Logo from '$lib/icons/Logo.svelte'
 
 </script>
 
@@ -27,49 +28,41 @@ import TikTok from '$components/icons/TikTok.svelte';
     </div>
     <div class="divider" />
     <div class="inner-wrapper second">
-        <div class="lumina">
-            <div class="lumina-heading">
-                <div class="lumina-icon">
-                    <Lumina />
-                </div>
-                <div class="lumina-text">
-                    Lumina
-                </div>
-            </div>
+        <div class="group">
+            <Logo/>
             <div class="block-heading">
                 The modern solution to governance
             </div>
         </div>
-        <div class="links">
+        <div class="group">
             <div class="block-heading">
                 Quick Links
             </div>
-            <div class="links-wrapper">
+            <nav class="links-wrapper">
                 <a href="/" class="link">Home</a>
                 <a href="/hub" class="link">Hub</a>
                 <a href="/my-lumina" class="link">myLumina</a>
                 <a href="knowledge-center" class="link">Knowledge Center</a>
                 <a href="discord" class="link">Discord</a>
                 <a href="media" class="link">Media</a>
-            </div>
+            </nav>
         </div>
-        <div class="become-citizen">
+        <div class="group">
             <div class="block-heading">
                 Become a citizen
             </div>
-            <div class="citizen-description">
+            <div>
                 Become a citizen of Lumina today!
             </div>
             <Button
-                right_icon={ChevronRight}
-                gradient={true}>
+                right_icon={ChevronRight}>
                 Get involved
             </Button>
         </div>
     </div>
     <div class="bottom">
         <div class="inner-wrapper">
-            <div class="authorisation">
+            <div class="block-heading">
                 Authorised by the Lumina Autonomous Zone
             </div>
             <nav class="social-media-icons">
@@ -86,13 +79,14 @@ import TikTok from '$components/icons/TikTok.svelte';
 @import "variables"
 
 footer
-    background-color #EDEDEC
+    background transparify(white, 4%)
 
 .inner-wrapper
     padding 60px 20px
     max-width 1200px
     width 100%
     display flex
+    margin 0 auto
 
 .call-to-action
     font-size 40px
@@ -102,16 +96,18 @@ footer
 
 .cta-link
     color $brand
+    display inline-flex
+    align-items center
+    gap 12px
 
 .cta-anchor-text
     font-weight 1000
 
 .cta-anchor-icon
-    margin-left 5px
+    display inline-flex
 
 .divider
-    background-color $dark
-    opacity 0.15
+    background transparify(white, 4%)
     height 1px
     width 100%
 
@@ -120,27 +116,7 @@ footer
     justify-content space-between
     margin 0 auto
 
-.lumina
-    display flex
-    flex-direction column
-
-.lumina-heading
-    display flex
-    margin-bottom 16px
-
-.lumina-icon
-    font-size 48px
-    height 48px
-    margin auto 0
-
-.lumina-text
-    font-size 22px
-    font-weight 600
-    margin auto 0
-    margin-left 18px
-
 .block-heading
-    max-width 225px
     text-transform uppercase
     font-weight 600
     opacity 0.35
@@ -152,31 +128,17 @@ footer
     margin-top 8px
 
 .link
-    color $dark
+    color white
     text-decoration none
     font-weight 600
     display inline-block
 
-.citizen-description
-    font-weight 500
-    margin 8px 0
-    max-width 238px
-
 .bottom
-    background-color #E5E5E5
+    background transparify(white, 4%)
     padding 20px
     .inner-wrapper
         padding 8px 20px
-        display flex
-        margin 0 auto
-
-.authorisation
-    margin auto 0
-    opacity 0.3
-    text-transform uppercase
-    font-weight 600
-    font-size 16px
-    display flex
+        align-items center
 
 .social-media-icons
     display flex
@@ -184,10 +146,15 @@ footer
     margin-left auto
 
 .social-media-icon
-    color $dark
+    color white
     padding 4px
     font-size 28px
     &:hover
         color $brand
+
+.group
+    display flex
+    gap 16px
+    flex-direction column
 </style>
 

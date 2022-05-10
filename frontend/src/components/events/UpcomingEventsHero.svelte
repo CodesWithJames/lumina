@@ -37,7 +37,6 @@ export let events: EventType[]
 
 .main
     padding 40px
-    background-color #F3F3F2
     display flex
 
 .inner-wrapper
