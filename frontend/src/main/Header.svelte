@@ -3,7 +3,7 @@ import Hub from '$lib/icons/Hub.svelte'
 import Shop from '$icons/TagOutline.svelte'
 import ShieldLock from '$icons/ShieldLock.svelte'
 import ChevronRight from "svelte-material-icons/ChevronRight.svelte"
-import Button from '$lib/inputs/Button.svelte';
+import Button from '$lib/buttons/Button.svelte';
 import Logo from '$lib/icons/Logo.svelte'
 </script>
 
@@ -19,16 +19,14 @@ import Logo from '$lib/icons/Logo.svelte'
                     Shop
                 </Button>
         </div>
-        <div class="right">
-            <nav>
-                <Button style="transparent" href="/login" right_icon={ShieldLock}>
-                    Log In
-                </Button>
-                <Button href="/onboarding" right_icon={ChevronRight}>
-                    Start
-                </Button>
-            </nav>
-        </div>
+        <nav class="right">
+            <Button style="transparent" href="/signin" right_icon={ShieldLock}>
+                Log In
+            </Button>
+            <Button href="/onboarding" right_icon={ChevronRight}>
+                Start
+            </Button>
+        </nav>
     </div>
 </header>
 
@@ -51,11 +49,6 @@ import Logo from '$lib/icons/Logo.svelte'
     flex-direction: row;
     align-items: center;
     gap 40px
-
-.right
-    display: flex;
-    flex-direction: row;
-    align-items: center;
 
 nav
     display: flex;

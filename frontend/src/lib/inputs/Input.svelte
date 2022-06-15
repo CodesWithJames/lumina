@@ -38,6 +38,7 @@ function right_icon_click(event) {
     grid-auto-flow row
     grid-gap 5px
     color white
+    width 100%
 
 .clickable
     cursor pointer

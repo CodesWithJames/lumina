@@ -1,24 +1,24 @@
-<script>
-    // import Sidebar from "$includes/Sidebar.svelte"
-    // import Header from "$includes/Header.svelte"
-    import Global from "$templates/Global.svelte"
-    // import AppSidebar from "$main/app/AppSidebar.svelte"
+<script lang="ts">
+import Sidebar from '$main/app/Sidebar.svelte';
+import Global from "$templates/Global.svelte"
 </script>
 <Global>
-    <!-- <div class="framework-app">
-        <Sidebar />
-        <Header />
+    <div class="app">
+        <Sidebar/>
         <div class="content">
             <slot/>
         </div>
-    </div> -->
+    </div>
 </Global>
 <style lang="stylus">
-// .app
-//     display grid
-//     grid-template-columns 280px 1fr
-//     grid-template-rows 40px 1fr
-//     flex 1
-//     background #F5F7F8
+.app
+    display flex
+    height 100%
+
+.content
+    flex 1
+    overflow-y scroll
+    height 100%
+    display flex
 
 </style>

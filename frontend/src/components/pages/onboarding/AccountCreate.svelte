@@ -3,7 +3,7 @@ import ShieldAccount from '$icons/ShieldAccount.svelte';
 import Email from '$icons/Email.svelte';
 import Input from '$lib/inputs/Input.svelte';
 import ProfilePicker from '$lib/inputs/ProfilePicker.svelte';
-import Button from '$lib/inputs/Button.svelte';
+import Button from '$lib/buttons/Button.svelte';
 
 let user = {
     email: '',
@@ -58,6 +58,8 @@ let user = {
 </div>
 
 <style lang="stylus">
+@import 'variables'
+
 .page
     display: flex
     flex-direction: column
@@ -96,11 +98,12 @@ h1
     display: flex
     gap 10px
     align-items center
+    font-weight 600
 
 .icon
     display inline-flex
 
 .h1-icon
-    color #7848FF
+    color $brand
 
 </style>

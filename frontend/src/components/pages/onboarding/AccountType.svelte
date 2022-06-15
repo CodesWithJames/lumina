@@ -6,7 +6,7 @@ import ChevronRight from '$icons/ChevronRight.svelte'
 
 import { createEventDispatcher } from 'svelte'
 import SelectCard from '$lib/inputs/SelectCard.svelte';
-import Button from '$lib/inputs/Button.svelte';
+import Button from '$lib/buttons/Button.svelte';
 
 let dispatch = createEventDispatcher();
 
@@ -60,6 +60,8 @@ let current = 0;
 
 
 <style lang="stylus">
+@import 'variables'
+
 .account-page
     display flex
     flex-direction column
@@ -81,10 +83,11 @@ let current = 0;
 
 
 h1
-    margin: 0;
-    display: flex
-    gap: 10px;
-    align-items: center;
+    margin 0
+    display flex
+    gap 10px
+    align-items: center
+    font-weight 600
 
 p
     opacity: 0.5
@@ -96,7 +99,7 @@ p
     display: inline-flex
 
 .h1-icon
-    color: #7848FF
+    color $brand
 
 
 .cards

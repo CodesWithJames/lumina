@@ -1,5 +1,5 @@
 <div class="action-container-wrapper">
-    {#each $session.messages as message}
+    {#each $alerts as message}
         <div
             bind:this={elements[message.id]}
             class={'action-bar ' + message.type}
@@ -20,9 +20,11 @@ import Info from '$icons/AlertCircle.svelte'
 import Close from '$icons/Close.svelte'
 import Check from '$icons/CheckCircle.svelte'
 import { onMount, tick } from 'svelte';
-import { session } from '$app/stores'
 import { browser } from '$app/env';
 import { MessageType } from '$types/message';
+import { page } from '$app/stores';
+
+let alerts = $page.stuff.alerts.store;
 
 let elements = []
 
@@ -34,22 +36,23 @@ let icons = {
 }
 
 function remove(id: string){
-    $session.messages = $session.messages.filter(val => val.id !== id)
+    $alerts = $alerts.filter(val => val.id !== id)
 }
 
 let interval = null
 
 function intervalFn () {
-    $session.messages.shift()
+    $alerts.shift()
     setBottomHeights()
+    $alerts = $alerts
 }
 
 $: {
     if(browser){
-        if($session.messages.length === 0 && interval){
+        if($alerts.length === 0 && interval){
             clearInterval(interval)
             interval = null
-        } else if($session.messages.length !== 0) {
+        } else if($alerts.length !== 0) {
             setBottomHeights()
             if(interval == null) interval = setInterval(intervalFn, 3000)
         }
@@ -60,7 +63,7 @@ onMount(setBottomHeights)
 
 async function setBottomHeights () {
     await tick()
-    let elms = $session.messages.map(message => elements[message.id])
+    let elms = $alerts.map(message => elements[message.id])
     let heights = 0
     let margin = 10
 

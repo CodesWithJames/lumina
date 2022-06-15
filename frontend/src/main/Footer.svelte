@@ -1,7 +1,7 @@
 <script lang="ts">
 import ArrowRight from "$icons/ArrowRight.svelte"
 import Lumina from "$lib/icons/LuminaEdge.svelte"
-import Button from "$lib/inputs/Button.svelte"
+import Button from "$lib/buttons/Button.svelte"
 import Youtube from "$icons/Youtube.svelte"
 import Twitter from "$icons/Twitter.svelte"
 import Discord from "$icons/Discord.svelte"

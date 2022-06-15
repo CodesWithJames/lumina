@@ -1,7 +1,7 @@
 <script lang="ts">
 import Discord from "$icons/Discord.svelte"
 import RightChevron from '$icons/ChevronRight.svelte'
-import Button from '$lib/inputs/Button.svelte';
+import Button from '$lib/buttons/Button.svelte';
 </script>
 <div class="banner-inner">
     <div class="left">
@@ -17,8 +17,8 @@ import Button from '$lib/inputs/Button.svelte';
             </div>
         </div>
     </div>
-
     <Button
+        hug={true}
         left_icon={Discord}
         href="https://discord.com/invite/r4vNcUKktT"
         style="translucent"

@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
 import TopHero from "$components/banners/heros/TopHero.svelte"
 import SubHeading from "$components/general_components/SubHeading.svelte"
 import VerticalLinkedDiagram from "$components/general_components/vertical_linked_diagram/VerticalLinkedDiagram.svelte"
@@ -295,4 +295,4 @@ async function update_diagram_sections () {
     grid-gap 20px
     align-items center
 
-</style>
+</style> -->

@@ -1,7 +1,7 @@
 <script lang="ts">
 import NewsCard from "$components/pages/news/NewsCard.svelte"
 import type { NewsCardType } from "$components/pages/news/news_types"
-import Button from "$lib/inputs/Button.svelte"
+import Button from "$lib/buttons/Button.svelte"
 import ChevronRight from "$icons/ChevronRight.svelte"
 
 export let featuredStories: NewsCardType[]

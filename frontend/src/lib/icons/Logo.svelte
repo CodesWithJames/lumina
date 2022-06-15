@@ -25,6 +25,7 @@
     color $brand
 
 .brand
-    font-size 22px
-    font-weight 600
+    font-size 24px
+    font-weight 700
+    letter-spacing 0.1em
 </style>

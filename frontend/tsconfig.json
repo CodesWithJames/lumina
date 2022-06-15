@@ -9,9 +9,9 @@
             "$layouts/*": ["src/layouts/*"],
             "$utils/*": ["src/utils/*"],
             "$icons/*": ["node_modules/svelte-material-icons/*"],
-            "$stores/*": ["src/stores/*"],
             "$main/*": ["src/main/*"],
             "$types/*": ["src/types/*"],
+            "$stores/*": ["src/stores/*"]
         }
     },
     "include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.ts", "src/**/*.svelte", "src/hooks.=jts"]

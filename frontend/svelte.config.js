@@ -22,9 +22,9 @@ const config = {
         vite: {
             server: {
                 hmr: {
-                    clientPort: 443,
-                    port: 80,
-                    protocol: "wss",
+                    // clientPort: 443,
+                    // port: 80,
+                    // protocol: "wss",
                 }
             },
             resolve: {
@@ -35,9 +35,9 @@ const config = {
                     '$layouts': resolve(__dirname, './src/layouts'),
                     "$utils": resolve(__dirname, './src/utils'),
                     "$icons": resolve(__dirname, './node_modules/svelte-material-icons'),
-                    "$stores": resolve(__dirname, './src/stores'),
                     "$main": resolve(__dirname, './src/main'),
                     "$types": resolve(__dirname, './src/types'),
+                    '$stores': resolve(__dirname, './src/stores'),
                 }
             }
         }

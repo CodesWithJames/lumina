@@ -1,5 +1,7 @@
 /// <reference types="@sveltejs/kit" />
 
+import type { AlertsStore } from '$stores/alerts'
+import type { User } from '$types/user'
 import type { Message } from './types/message'
 
 // See https://kit.svelte.dev/docs/types#the-app-namespace
@@ -10,10 +12,14 @@ declare global {
         // interface Locals {}
         // interface Platform {}
         interface Session {
+            user: User | null
             messages: Message[];
             auth_token?: string;
             BACKENDAPI_HOST: string;
         }
-        // interface Stuff {}
+        interface Stuff {
+            user: User | null;
+            alerts: AlertsStore,
+        }
     }
 }

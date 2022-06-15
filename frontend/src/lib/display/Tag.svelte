@@ -1,5 +1,5 @@
 <script lang="ts">
-    export let color: 'red' | 'brand' | '' | 'blue' = 'brand';
+    export let color: 'red' | 'brand' | '' | 'blue' | 'white' = 'brand';
 </script>
 
 <span class="tag {color}">
@@ -9,7 +9,7 @@
 @import 'variables'
 
 .tag
-    padding 4px 8px
+    padding 2px 4px
     line-height 1
     font-weight 600
     display inline-flex
@@ -23,10 +23,14 @@
         background transparify($brand, 16%)
 
     &.red
-        color $alert_red
-        background transparify($alert_red, 16%)
+        color $red
+        background transparify($red, 16%)
 
     &.blue
-        color $alert_blue
-        background transparify($alert_blue, 16%)
+        color $blue
+        background transparify($blue, 16%)
+
+    &.white
+        color white
+        background transparify(white, 16%)
 </style>

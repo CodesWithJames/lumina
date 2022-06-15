@@ -1,5 +1,5 @@
 <script lang="ts">
-import Button from "$lib/inputs/Button.svelte"
+import Button from "$lib/buttons/Button.svelte"
 import ChevronRight from "$icons/ChevronRight.svelte"
 import type { HeroType } from "$components/ban$components/heros/hero_typeseroInfo: HeroType
 

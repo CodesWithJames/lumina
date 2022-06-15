@@ -21,7 +21,7 @@ import Settlement from "$lib/icons/Settlement.svelte"
 import Site from '$templates/Site.svelte'
 import Hero20 from '$components/heros/Hero20.svelte';
 import Hero48 from '$components/heros/Hero48.svelte'
-import Button from '$lib/inputs/Button.svelte'
+import Button from '$lib/buttons/Button.svelte'
 import Inner from '$components/heros/Inner.svelte'
 import Split from '$layouts/Split.svelte'
 import HubArea from '$components/hub/HubArea.svelte';
@@ -363,7 +363,7 @@ let featuredStories = [
                     <p>
                         Lumina proposes to set up a <Coloured>Autonomous Zone</Coloured>, which is a city with it's own government, laws, and currency.
                     </p>
-                    <Button href="onboarding" right_icon={Settlement}>
+                    <Button href="onboarding" right_icon={Settlement} hug={true}>
                         Become a citizen
                     </Button>
                 </div>

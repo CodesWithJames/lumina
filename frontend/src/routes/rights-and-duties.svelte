@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
 import TopHero from "$components/banners/heros/TopHero.svelte"
 import RightsIntroBlock from "$components/pages/rights_and_duties/RightsIntroBlock.svelte"
 import IAmAPicker from "$components/general_components/IAmAPicker.svelte"
@@ -243,4 +243,4 @@ let detailedInfoSections = [
 .display-block
     max-width 900px
 
-</style>
+</style> -->
