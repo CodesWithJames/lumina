@@ -52,7 +52,7 @@ import Logo from '$lib/icons/Logo.svelte'
                 Become a citizen
             </div>
             <div>
-                Become a citizen of Lumina today!
+                Become a citizen of Lumina!
             </div>
             <Button
                 right_icon={ChevronRight}>
