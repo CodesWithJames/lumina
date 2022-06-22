@@ -1,37 +1,64 @@
 <script lang="ts">
-export let name: string
-export let placeholder: string = ''
-export let type: string = ''
-export let left_icon: any = undefined
-export let right_icon: any = undefined
-export let right_icon_fn: any = undefined
-export let value: any = undefined
+import { onMount } from 'svelte';
 
-let input: HTMLInputElement
+export let name: string;
+export let placeholder: string = '';
+export let type: string = '';
+export let left_icon: any = undefined;
+export let right_icon: any = undefined;
+export let left_icon_handler: ((e: Event) => void) | undefined = undefined;
+export let right_icon_handler: ((e: Event) => void) | undefined = undefined;
+export let focus_on_mount = false;
+export let value: any = undefined;
 
-function right_icon_click(event) {
-    event.stopPropagation()
-    if(right_icon_fn) right_icon_fn()
+export let input_ref: HTMLInputElement = undefined;
+
+function handle_icon_click(e: Event, handler: ((e: Event) => void) | undefined) {
+    if (handler) {
+        e.stopPropagation();
+        handler(e);
+    }
 }
 
+onMount(() => {
+    if (focus_on_mount) {
+        input_ref.focus();
+    }
+});
 </script>
-<div class="input-wrapper" on:click={() => input.focus()}>
+
+<div class="input-wrapper" on:click={() => input_ref.focus()}>
     <span class="input-label">{name}</span>
     <div class="input-pseudo-wrapper">
         {#if left_icon}
-            <div class="icon">
-                <svelte:component this={left_icon}/>
+            <div class="icon"
+                class:clickable={!!left_icon_handler}
+                on:click={e => handle_icon_click(e, right_icon_handler)}>
+                <svelte:component this={left_icon} />
             </div>
         {/if}
-        <input bind:this={input} {placeholder} {type} on:input={event => value = event.currentTarget.value} {value}>
+        <input
+            on:keypress
+            on:keydown
+            on:keyup
+            bind:this={input_ref}
+            {placeholder}
+            {type}
+            on:input={(event) => (value = event.currentTarget.value)}
+            {value}
+        />
         {#if right_icon}
-            <div class="icon" class:clickable={!!right_icon_fn} on:click={right_icon_click}>
-                <svelte:component this={right_icon}/>
+            <div class="icon"
+                class:clickable={!!right_icon_handler}
+                on:click={e => handle_icon_click(e, right_icon_handler)}>
+                <svelte:component this={right_icon} />
             </div>
         {/if}
     </div>
 </div>
+
 <style lang="stylus">
+@import 'variables';
 
 .input-wrapper
     display grid
@@ -44,7 +71,7 @@ function right_icon_click(event) {
     cursor pointer
     border-radius 50px
     &:hover
-        background transparify(white, 4%)
+        background transparify(white, 6%)
     &:active
         background transparify(white, 12%)
 

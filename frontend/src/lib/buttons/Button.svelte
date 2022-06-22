@@ -6,25 +6,31 @@
     export let href: string = undefined;
     export let left_icon: any = undefined;
     export let right_icon: any = undefined;
-    export let style: 'translucent' | 'transparent' | '' = '';
-    export let disabled = false;
+    export let style: 'translucent' | 'transparent' | 'branded' = 'branded';
     export let hug = false;
+    export let disabled = false;
 
     $: tag = href ? 'a' : 'div';
+
+    function clicked(e: Event) {
+        !disabled && dispatch('click', e)
+    }
 </script>
 
 <svelte:element
     this={tag}
     href={href}
-    on:click={(e) => !disabled && dispatch('click', e)}
-    class:disabled
+    tabindex={disabled ? -1 : 0}
+    on:click={clicked}
+    on:keypress={clicked}
     class:hug
+    class:disabled
     class="button {style}"
-    class:has_right_icon={!!right_icon}
     class:has_left_icon={!!left_icon}
+    class:has_right_icon={!!right_icon}
 >
     {#if left_icon}
-        <span class="icon">
+    <span class="icon">
             <svelte:component this={left_icon} />
         </span>
     {/if}
@@ -43,7 +49,6 @@
 
 .button
     padding 10px 16px
-    background: $brand
     color white
     display inline-flex
     align-items: center
@@ -63,28 +68,40 @@
         padding-top: 10px
         padding-right: 10px
         padding-bottom: 10px
-
     &.has_left_icon
         padding-top: 10px
         padding-left: 10px
         padding-bottom: 10px
-    &:hover
-        background: lighten($brand, 12%)
-    &.translucent
-        background transparify(white, 8%)
-        &:hover
-            background: transparify(white, 14%)
-    &.transparent
-        color transparify(white, 60%)
-        background transparify(white, 0%)
-        &:hover
-            background: transparify(white, 8%)
-            color white
+    &:not(.disabled)
+        &:focus-visible
+            outline $brand 2px dashed
+            outline-offset 2px
+        &.branded
+            background: $brand
+            &:hover, &:focus
+                background: lighten($brand, 12%)
+            &:active
+                background $brand
+        &.translucent
+            background transparify(white, 8%)
+            &:hover, &:focus
+                background: transparify(white, 14%)
+            &:active
+                background: transparify(white, 8%)
+        &.transparent
+            color transparify(white, 60%)
+            background transparify(white, 0%)
+            &:hover, &:focus
+                background: transparify(white, 12%)
+                color white
+            &:active
+                background: transparify(white, 6%)
     &.disabled
         cursor default
         opacity 0.5
         background transparent
-        border 1px solid transparify(white, 10%)
+        outline 1px solid transparify(white, 10%)
+        outline-offset 1px
 
 
 </style>

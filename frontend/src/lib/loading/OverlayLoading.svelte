@@ -1,9 +1,11 @@
 <script>
 import Loading from './Loading.svelte';
+import LogoLoading from './LogoLoading.svelte';
 
 </script>
 <div class="overlay-spinner">
-    <Loading/>
+    <!-- <Loading/> -->
+    <LogoLoading/>
 </div>
 <style lang="stylus">
 .overlay-spinner

@@ -15,7 +15,7 @@ export let size = "48px"
     font-size var(--size)
     display inline-flex
     color $brand
-    animation spin 2s infinite ease-in-out
+    animation spin 1s infinite ease-in-out
 
 @keyframes spin
     from

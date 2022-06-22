@@ -1,6 +1,7 @@
 /// <reference types="@sveltejs/kit" />
 
 import type { AlertsStore } from '$stores/alerts'
+import type { GraphStore } from '$stores/graph'
 import type { User } from '$types/user'
 import type { Message } from './types/message'
 
@@ -15,11 +16,11 @@ declare global {
             user: User | null
             messages: Message[];
             auth_token?: string;
-            BACKENDAPI_HOST: string;
         }
         interface Stuff {
             user: User | null;
             alerts: AlertsStore,
+            graph: GraphStore
         }
     }
 }

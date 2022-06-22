@@ -14,27 +14,40 @@ images:
     build:
       buildKit:
         inCluster: {}
+  backend: # This image is called `backend` and this name `backend` is referenced multiple times in the config below
+    image: ${ECR}/backend
+    dockerfile: ./backend/Dockerfile
+    tags:
+      - dev-backend-${NAME}-######
+    context: backend/
+    # Build on the clusters architecture
+    build:
+      buildKit:
+        inCluster: {}
+  ingress:
+    image: ${ECR}/ingress
+    dockerfile: ./ingress/Dockerfile
+    tags:
+      - ingress-######
+    context: ingress/
+    # Build on the clusters architecture
+    build:
+      buildKit:
+        inCluster: {}
 
-  # backend: # This image is called `backend` and this name `backend` is referenced multiple times in the config below
-  #   image: ${ECR}/backend
-  #   dockerfile: ./backend/Dockerfile
-  #   tags:
-  #     - dev-${devspace.git.commit}-#####
-  #   context: backend/
-  #   # Build on the clusters architecture
-  #   build:
-  #     buildKit:
-  #       inCluster: {}
 
 # `deployments` tells DevSpace how to deploy this project
-
-
 deployments:
-- name: framework
+- name: lumina
   namespace: ${NAMESPACE}
   kubectl:
     # env_subst will replace the environment variables in the yml files
     manifests: $(./kubernetes/env_subst kubernetes/development/ NAME=${NAME} NAMESPACE=${NAMESPACE} ECR=${ECR} DOMAIN=${DOMAIN})
+- name: ingress
+  namespace: drawbridge-ingress
+  kubectl:
+    # env_subst will replace the environment variables in the yml files
+    manifests: $(./kubernetes/env_subst kubernetes/global/ NAME=${NAME} NAMESPACE=${NAMESPACE} ECR=${ECR} DOMAIN=${DOMAIN})
 
 dev:
   sync:
@@ -42,14 +55,12 @@ dev:
     localSubPath: './frontend'
     excludePaths:
       - node_modules/
-  # - imageSelector: ${ECR}/backend # Select the Pod that runs our `frontend` image
-  #   localSubPath: './backend'
 
 vars:
   - name: DOMAIN
     value: lumina.earth
   - name: ECR
-    value: 319923562419.dkr.ecr.ap-southeast-2.amazonaws.com/lumina-images
+    value: 739724808938.dkr.ecr.ap-southeast-2.amazonaws.com/lumina-images
   - name: NAME
     question: What is your first name?
     source: input
@@ -63,5 +74,5 @@ hooks:
     aws sts get-caller-identity || aws sso login
   events: ["devCommand:before:execute"]
 - command: |
-    aws ecr get-login-password | docker login --username AWS --password-stdin ${ECR}
+    aws ecr get-login-password --profile lumina | docker login --username AWS --password-stdin ${ECR}
   events: ["devCommand:before:execute"]

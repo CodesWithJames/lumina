@@ -2,7 +2,7 @@
     {#each $alerts as message}
         <div
             bind:this={elements[message.id]}
-            class={'action-bar ' + message.type}
+            class={'action-bar ' + MessageType[message.type]}
             on:click={() => remove(message.id)}>
             <div class="icon">
                 <svelte:component this={icons[message.type]} size="22px"/>

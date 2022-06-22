@@ -1,0 +1,22 @@
+[package]
+name = "api"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { version = "1.18.2", features = ["rt-multi-thread", "macros"]}
+tracing = "0.1.33"
+tracing-subscriber = "0.3.11"
+serde_json = "1.0.79"
+uuid = { version = "1.0.0", features = ["v4", "serde"] }
+jsonwebtoken = "8.1.0"
+secrets = { path = "../secrets" }
+serde = "1.0.137"
+lazy_static = "1.4.0"
+mongodb = { version = "2.2.1", features = ["tokio-runtime"] }
+bcrypt = "0.13.0"
+castle_api = "0.8.3"
+envoy_http = "0.2.0"
+anyhow = "1.0.57"

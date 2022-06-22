@@ -24,6 +24,7 @@ Select the `region` that the kubernetes cluster was created from (eg: `ap-southe
 By this point, the domain should be pointing correctly to the cluster.
 
 You may also need to add `A` and `AAAA` records for `example.com` and `www.example.com` to point to the load balancer for the production environment too. This involves leaving the record name field empty.
+Repeat the `A` and `AAAA` record and use `*.example.com` for the wildcard, so that the load balancer responds to any subdomain request as well (which we use for testing and development)
 
 ## Domain Setup
 If you have not already done so, the domain for the application should be configured to have it's nameservers pointing to the nameservers automatically configured within the zone.

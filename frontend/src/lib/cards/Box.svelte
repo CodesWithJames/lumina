@@ -10,7 +10,7 @@ $: is_clickable = href || click_handler
 $: tag = is_clickable ? 'a' : 'div'
 </script>
 <svelte:element
-    class="box"
+    class="box {padding ? 'padding' : ''} {direction}"
     this={tag}
     href={href}
     class:padding
