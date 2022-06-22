@@ -7,7 +7,7 @@
 - Install Git
 
 ## Installing repository
-In the directory you would like to install the repository, enter the following command.
+In the directory you would like to install the repository in, enter the following command.
 
 ```
 git clone https://github.com/lumina-gov/lumina.git
@@ -19,7 +19,7 @@ Authenticate with your github account as necessary.
 
 ### Install devspace globally
 
-**Note:** You will need to install the Node.JS for this command to work
+**Note:** You will need to install Node.JS for this command to work
 
 ```
 sudo npm i -g devspace
